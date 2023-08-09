@@ -9,6 +9,11 @@
   		<script id="MathJax-script" async
           		src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   		</script>
+  		<py-config>
+                plugins = [
+                 "https://pyscript.net/latest/plugins/python/py_tutor.py"
+                ]
+        </py-config>
 	</head>
 	<body class="is-preload">
 
@@ -43,7 +48,15 @@
 					</div>
 				</div>
 			</article>
-
+            <section class="pyscript">
+                Hello world! <br>
+                This is the current date and time, as computed by Python:
+                <py-script>
+                    from datetime import datetime
+                    now = datetime.now()
+                    display(now.strftime("%m/%d/%Y, %H:%M:%S"))
+                </py-script>
+            </section>
 		<!-- Work -->
 			<article id="work" class="wrapper style2">
 				<div class="container">
