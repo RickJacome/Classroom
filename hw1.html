@@ -47,22 +47,6 @@
 								Basic Electromagnetism<br>
 								<strong>P1.3</strong><br>
 								P1.3 asfdg<br>
-								<section class="pyscript">
-       								<h1>Input and Output</h1>
-							        <input type="number" id="test-input"/> 
-							        <button id="test-button" pys-onclick="my_function">Check</button>
-							        <p id="test-output" class="p-3"></p>
-							        <py-script>
-							        	def my_function(*args, **kwargs):
-										    test_number = Element("test-input").element.value
-										    if int(test_number)%2==0:
-										        Element("test-output").element.innerHTML = "Even"
-										        display("Even")
-										    else:
-										        Element("test-output").element.innerHTML = "Odd"
-										        display("Odd")
-									</py-script>
-								</section>
 								Introduction to Solid/Fluid Mechanics<br>
 								Control Systems<br>
 								Introductory Thermodynamics <br>		
@@ -81,6 +65,22 @@
 						</div>
 					</div>
 				</div>
+				<section class="pyscript">
+					<h1>Input and Output</h1>
+			        <input type="number" id="test-input"/> 
+			        <button id="test-button" pys-onclick="my_function">Check</button>
+			        <p id="test-output" class="p-3"></p>
+			        <py-script>
+			        	def my_function(*args, **kwargs):
+						    test_number = Element("test-input").element.value
+						    if int(test_number)%2==0:
+						        Element("test-output").element.innerHTML = "Even"
+						        display("Even")
+						    else:
+						        Element("test-output").element.innerHTML = "Odd"
+						        display("Odd")
+					</py-script>
+				</section>
 			</article>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
