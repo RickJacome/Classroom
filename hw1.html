@@ -67,24 +67,15 @@
 				</div>
 				<section class="pyscript">
 			        <input type="number" id="test-input"/> 
-			        <button id="test-button" py-onclick="my_function()">Check</button>
-			        <p id="test-output" class="p-3"></p>
-			        <py-script>
-			        	def my_function(*args, **kwargs):
-						    test_number = Element("test-input").element.value
-						    if int(test_number)%2==0:
-						        Element("test-output").element.innerHTML = "Even"
-						        display("Even")
-						    else:
-						        Element("test-output").element.innerHTML = "Odd"
-						        display("Odd")
-					</py-script>
-					<div id="replOutput"></div>
-					<py-repl output="replOutput">
-					    print("Hello!")
-					    hello = "World!"
-					    hello
-					</py-repl>
+			        <button py-click="current_time()" id="get-time" class="py-button">Get current time</button>
+					<p id="current-time"></p>
+
+					        <py-script>
+					            import datetime
+
+					            def current_time():
+					                now = datetime.datetime.now()
+					        </py-script>		
 				</section>
 			</article>
 		<!-- Scripts -->
