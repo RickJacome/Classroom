@@ -27,6 +27,11 @@
 							<header>
 								<h1>Homework 1</h1>
 							</header>
+							<py-config>
+					                plugins = [
+					                 "https://pyscript.net/latest/plugins/python/py_tutor.py"
+					                ]
+					        </py-config>
 							<p align = "justify"> Hello, here you will find one of the topics I enjoy the most: teaching.
 								I always strive to offer good quality teaching to everyone who is interested in learning. Overall I have about 8 years of experience teaching as a tutor. This included peer to peer tutoring and up to full classrooms of 30 or more people. Officially, I am certified as a CRLA Level 2 tutor, which basically says I have experience in this area.</p>
 								<h3>Classes I have tutored in:</h3> 
@@ -43,15 +48,23 @@
 								<strong>P1.3</strong><br>
 								When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]<br>
 								Dynamics<br>
+								 <div class="col-9 col-10-large col-15-medium">
+       								<h1>Input and Output</h1>
+							        <input type="number" id="test-input"/> 
+							        <button id="test-button" pys-onclick="my_function">Click me</button>
+							        <p id="test-output" class="p-3"></p>
+							        <py-script>
+							        	def my_function(*args, **kwargs):
+										    test_number = Element("test-input").element.value
+										    if int(test_number)%2==0:
+										        Element("test-output").element.innerHTML = "Even"
+										    else:
+										        Element("test-output").element.innerHTML = "Odd"
+									</py-script>
 								Introduction to Solid/Fluid Mechanics<br>
 								Control Systems<br>
 								Introductory Thermodynamics <br>		
 								</ul>
-								<py-config>
-					                plugins = [
-					                 "https://pyscript.net/latest/plugins/python/py_tutor.py"
-					                ]
-					        	</py-config>
 					            <section class="pyscript">
 					                Hello world! <br>
 					                This is the current date and time, as computed by Python:
