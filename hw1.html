@@ -70,10 +70,16 @@
 			        <button py-click="current_time()" id="get-time" class="py-button">Get current time</button>
 					<p id="current-time"></p>
 					        <py-script>
+					            from pyscript import Element
 					            import datetime
 					            def current_time():
 					                now = datetime.datetime.now()
-					                display(now.strftime("%m/%d/%Y, %H:%M:%S"))
+
+					                # Get paragraph element by id
+					                paragraph = Element("current-time")
+
+					                # Add current time to the paragraph element
+					                paragraph.write(now.strftime("%Y-%m-%d %H:%M:%S"))
 					        </py-script>		
 				</section>
 			</article>
