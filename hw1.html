@@ -90,7 +90,22 @@
 								<p align = "justify"> Hello, here you will find one of the topics I enjoy the most: teaching.
 					I always strive to offer good quality teaching to everyone who is interested in learning. Overall I have about 8 years of experience teaching as a tutor. This included peer to peer tutoring and up to full classrooms of 30 or more people. Officially, I am certified as a CRLA Level 2 tutor, which basically says I have experience in this area.</p>
 				</div>
+				<input type="number" id="test-input"/> 
 				<button py-click="current_time()" id="get-time" class="py-button">Get current time</button>
+				<p id="current-time"></p>
+					        <py-script>
+					            from pyscript import Element
+					            import datetime
+					            def current_time():
+					                now = datetime.datetime.now()
+
+					                # Get paragraph element by id
+					                paragraph = Element("current-time")
+
+					                # Add current time to the paragraph element
+					                paragraph.write(now.strftime("%Y-%m-%d %H:%M:%S"))   
+					        </py-script>		
+				</section>
 			</article>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
