@@ -43,15 +43,17 @@
 								<p id="check_answer"></p>
 					        	<py-script>
 						            from pyscript import Element
-						            import datetime
 						            def check_answer():
-						                now = datetime.datetime.now()
 
 						                # Get paragraph element by id
 						                paragraph = Element("check_answer")
 
-						                # Add current time to the paragraph element
-						                paragraph.write('answer')   
+						                # Add answer to the paragraph element   
+
+										text = Element('test-input').element.value
+
+										paragraph.write(text)
+
 					        	</py-script><br>
 								<strong>P1.2</strong><br>
 								Basic Classical Mechanics<br>
