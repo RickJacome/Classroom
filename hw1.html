@@ -42,7 +42,21 @@
 								Linear Algebra<br>
 								Calculus 1,2,3<br>
 								Differential Equations<br>
-								Pollo <br>
+								<input type="number" id="test-input"/> 
+			        			<button py-click="current_time3()" id="get-time" class="py-button">Get current time</button>
+								<p id="current-time3"></p>
+					        	<py-script>
+						            from pyscript import Element
+						            import datetime
+						            def current_time3():
+						                now = datetime.datetime.now()
+
+						                # Get paragraph element by id
+						                paragraph = Element("current-time3")
+
+						                # Add current time to the paragraph element
+						                paragraph.write(now.strftime("%Y-%m-%d %H:%M:%S"))   
+					        	</py-script><br>
 								<strong>P1.2</strong><br>
 								Basic Classical Mechanics<br>
 								Basic Electromagnetism<br>
