@@ -43,7 +43,7 @@
 								<p id="check_answer"></p>
 					        	<py-script>
 						            from pyscript import Element
-						            def check_answer():
+						            def check_answer(*args,**kwargs):
 
 						                # Get paragraph element by id
 						                paragraph = Element("check_answer")
@@ -51,6 +51,7 @@
 						                # Add answer to the paragraph element   
 
 										text = Element('test-input').element.value
+										console.log(text)
 
 										paragraph.write(text)
 
