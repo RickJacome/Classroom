@@ -38,16 +38,18 @@
 								<ul>
 								<strong>P1.1</strong><br>
 								When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]<br>
-								<input type="text" id="test-input"/> 
-			        			<button id="test-button" pys-onclick="check_answer()">Check</button>
+								<input id="test-input" type="text"/> 
+			        	
+								<button type="submit" py-click="check_answer()">Submit</button>
 								<p id="test-output"></p>
 					        	<py-script>
-						            from pyscript import Element
+						            from js import document,alert
+						            
 						            def check_answer(*args,**kwargs):
 
-										text = Element("test-input").element.value
-										console.log(text)
-										Element("test-output").element.innerHTML = text
+										text = document.getElementById("test-input").value;
+										pyscript.write(text)
+									
 
 					        	</py-script><br>
 								<strong>P1.2</strong><br>
