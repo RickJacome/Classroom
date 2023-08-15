@@ -38,20 +38,24 @@
 								<ul>
 								<strong>P1.1</strong><br>
 								When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]<br>
-								<input id="test-input" type="text"/> 
-			        	
-								<button type="submit" py-click="check_answer()">Submit</button>
-								<p id="test-output"></p>
-					        	<py-script>
-						            from js import document,alert
-						            
-						            def check_answer(*args,**kwargs):
 
-										text = document.getElementById("test-input").value;
-										pyscript.write(text)
-									
+								<section class="pyscript">
+							        <input type="number" id="test-input"/> 
+							        <button py-click="current_time3()" id="get-time" class="py-button">Get current time</button>
+									<p id="current-time3"></p>
+									        <py-script>
+									            from pyscript import Element
+									            import datetime
+									            def current_time3():
+									                now = datetime.datetime.now()
 
-					        	</py-script><br>
+									                # Get paragraph element by id
+									                paragraph = Element("current-time3")
+
+									                # Add current time to the paragraph element
+									                paragraph.write(now.strftime("%Y-%m-%d %H:%M:%S"))   
+									        </py-script>		
+								</section><br>
 								<strong>P1.2</strong><br>
 								Basic Classical Mechanics<br>
 								Basic Electromagnetism<br>
