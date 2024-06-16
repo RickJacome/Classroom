@@ -37,7 +37,7 @@
 								<h3>Problem Set:</h3> 
 								<ul>
 								<strong>P1.1</strong><br>
-								When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]<br>
+								If the velocity of a car goes from 20 m/s to 45 m/s in 6 seconds, calculate its acceleration: <br>
 
 								<section class="pyscript">
 							        <input type="number" id="test-input"/> 
@@ -46,14 +46,14 @@
 									        <py-script>
 									            from pyscript import Element
 									            import datetime
-									            def current_time3():
-									                now = datetime.datetime.now()
+												first_number = int(input("Enter first number "))
+												second_number = int(input("Enter second number "))
 
-									                # Get paragraph element by id
-									                paragraph = Element("current-time3")
-
-									                # Add current time to the paragraph element
-									                paragraph.write(now.strftime("%Y-%m-%d %H:%M:%S"))   
+												print("\n")
+												print("First Number:", first_number)
+												print("Second Number:", second_number)
+												sum1 = first_number + second_number
+												print("Addition of two number is: ", sum1) 
 									        </py-script>		
 								</section><br>
 								<strong>P1.2</strong><br>
