@@ -26,43 +26,31 @@
 			</nav>
 	</body>
 	<body>
+	  <div>Type an sample input here</div>
+	  <input type="text" id="test-input"/>
+	  <button id="submit-button" type="submit" pys-onClick="my_function">OK</button>
+	  <div id="test-output"></div>
 
-	<!-- write your Python code in py-script tag -->
 	<py-script>
-	    from js import document,alert
+	from js import console
 
-	def farh(cel):
-	    return (float(cel) *(9/5)) + 32
-	        
-	    
-	def convert(*ags, **kws):
-	    
-	    celsius = document.getElementById('celsius').value;
-	    result= farh(celsius)
-	    pyscript.write("Fahrenheit",result)    
-	</py-script>    
+	def my_function(*args, **kwargs):
 
-	    <div class="container">
-	        
-	        <h1 class="text-center">
-	            Celsius to Fahrenheit Converter
-	        </h1>
-	        <br />
-	        <p><h3>Enter Temp in Calsius number:</h3>
-	        <input id="celsius" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Temp in Celsius" /></p>
-	        <center>
-	            <button id="convert" type="submit"  class="btn btn-info" pys-onClick="convert">Convert</button>
+	    #print('args:', args)
+	    #print('kwargs:', kwargs)
 
-	        </center>
-	        
-	        <p>
-	        <h4>Result:</h4>
-	        <textarea id="Fahrenheit" class="form-control" rows="2" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Result"></textarea></p>
+	    console.log(f'args: {args}')
+	    console.log(f'kwargs: {kwargs}')
 	    
-	        
-	    </div>    
-	    
-	    </body>
+	    text = Element('test-input').element.value
+
+	    #print('text:', text)
+	    console.log(f'text: {text}')
+
+	    Element('test-output').element.innerText = text
+	</py-script>
+
+	  </body>
 
 
 		<!-- Scripts -->
