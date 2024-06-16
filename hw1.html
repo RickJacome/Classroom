@@ -19,19 +19,21 @@
 
 	  <ul>
 
-	  <li> <div>If the velocity of a car goes from 15 m/s to 35 m/s in 6 seconds, what is the acceleration of the vehicle? </div> </li>
+	  <li> <p>If the velocity of a car goes from 15 m/s to 35 m/s in 6 seconds, what is the acceleration of the vehicle? </p> </li>
 	  
 
 	  <input type="text" id="test-input"/>
 	  <button id="submit-button" type="submit" pys-onClick="my_function">Submit</button>
-	  
-
 	  <div id="test-output"></div>
 	  
 
-	  <li> <div>If the velocity of a car goes from 15 m/s to 35 m/s in 6 seconds, what is the acceleration of the vehicle? </div> </li>
+	  <li> <p>If the velocity of a car goes from  to 35 m/s in <div id = "apple"></div> seconds, what is the acceleration of the vehicle? </p> </li>
 	
+
+
 	  </ul>
+
+		
 
 		<py-script>
 		from js import console
@@ -45,6 +47,8 @@
 		    console.log(f'text: {text}')
 
 		    Element('test-output').element.innerText = text
+
+			Element('test-output') = 44		    
 		</py-script>
 
 	  </body>
