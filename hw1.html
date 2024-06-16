@@ -1,11 +1,10 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-	 	<title>Homework for Engineering Dynamics</title>
 	  <!--<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />-->
  		<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 	</head>
-
+	 	
 	<body class="is-preload">
 		<!-- Navigation panel -->
 			<nav id="nav">
@@ -15,38 +14,30 @@
 			</nav>
 	</body>
 	<body>
+	  <title>Homework for Engineering Dynamics</title>
 	  <div>Type an sample input here</div>
 	  <input type="text" id="test-input"/>
 	  <button id="submit-button" type="submit" pys-onClick="my_function">OK</button>
 	  <div id="test-output"></div>
 
-	<py-script>
-	from js import console
+		<py-script>
+		from js import console
 
-	def my_function(*args, **kwargs):
+		def my_function(*args, **kwargs):
 
-	    #print('args:', args)
-	    #print('kwargs:', kwargs)
+		    #print('args:', args)
+		    #print('kwargs:', kwargs)
 
-	    console.log(f'args: {args}')
-	    console.log(f'kwargs: {kwargs}')
-	    
-	    text = Element('test-input').element.value
+		    console.log(f'args: {args}')
+		    console.log(f'kwargs: {kwargs}')
+		    
+		    text = Element('test-input').element.value
 
-	    #print('text:', text)
-	    console.log(f'text: {text}')
+		    #print('text:', text)
+		    console.log(f'text: {text}')
 
-	    Element('test-output').element.innerText = text
-	</py-script>
+		    Element('test-output').element.innerText = text
+		</py-script>
 
 	  </body>
-
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
 </html>
