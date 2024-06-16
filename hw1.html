@@ -17,7 +17,7 @@
 	<body>
 		<header>  <h1> <strong>Engineering Dynamics Homework 1 </strong></h1>   </header>
 
-	  <ul>
+	  <ol>
 
 	  <li> <p>If the velocity of a car goes from 15 m/s to 35 m/s in 6 seconds, what is the acceleration of the vehicle? </p> </li>
 	  
@@ -31,7 +31,7 @@
 	
 
 
-	  </ul>
+	  </ol>
 
 		
 
@@ -39,11 +39,14 @@
 		from js import console
 		def my_function(*args, **kwargs):  ## Note my_function operates on "pys-onClick"
 
+		    #print('args:', args)
+		    #print('kwargs:', kwargs)
 		    console.log(f'args: {args}')
 		    console.log(f'kwargs: {kwargs}')
 		    
 		    text = Element('test-input').element.value  ## Note that test-input is used as the id in input from html 
 
+		    #print('text:', text)
 		    console.log(f'text: {text}')
 
 		    Element('test-output').element.innerText = text	    
