@@ -24,101 +24,47 @@
 					<li><a href="index.html">Home</a></li>
 				</ul>
 			</nav>
-		<!-- Project -->
-			<article id="debeading" class="wrapper style1">
-				<div class="container">
-					<div class="row">	
-						<div class="col-9 col-10-large col-15-medium">
-							<header>
-								<h1>Homework 1</h1>
-							</header>
-							<p align = "justify"> The following problem set is on the topic of: Vectors. Each problem will only have 3 opportunies. Use the "Check" button to submit each answer. Round the nearest tenth (e.g., 4.78 rounded up to 4.8) </p>
-								
-								<h3>Problem Set:</h3> 
-								<ul>
-								<strong>P1.1</strong><br>
-								If the velocity of a car goes from 20 m/s to 45 m/s in 6 seconds, calculate its acceleration: <br>
 
-								<section class="pyscript">
-							        <input type="number" id="test-input"/> 
-							        <button py-click="current_time3()" id="get-time" class="py-button">Get current time</button>
-									<p id="current-time3"></p>
-									        <py-script>
-									            from pyscript import Element
-									            import datetime
-												first_number = int(input("Enter first number "))
-												second_number = int(input("Enter second number "))
+	<body>
 
-												print("\n")
-												print("First Number:", first_number)
-												print("Second Number:", second_number)
-												sum1 = first_number + second_number
-												print("Addition of two number is: ", sum1) 
-									        </py-script>		
-								</section><br>
-								<strong>P1.2</strong><br>
-								Basic Classical Mechanics<br>
-								Basic Electromagnetism<br>
-								<strong>P1.3</strong><br>
-								Introduction to Solid/Fluid Mechanics<br>
-								Control Systems<br>
-								Introductory Thermodynamics <br>
+	<!-- write your Python code in py-script tag -->
+	<py-script>
+	    from js import document,alert
 
+	def farh(cel):
+	    return (float(cel) *(9/5)) + 32
+	        
+	    
+	def convert(*ags, **kws):
+	    
+	    celsius = document.getElementById('celsius').value;
+	    result= farh(celsius)
+	    pyscript.write("Fahrenheit",result)    
+	</py-script>    
 
+	    <div class="container">
+	        
+	        <h1 class="text-center">
+	            Celsius to Fahrenheit Converter
+	        </h1>
+	        <br />
+	        <p><h3>Enter Temp in Calsius number:</h3>
+	        <input id="celsius" type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Enter Temp in Celsius" /></p>
+	        <center>
+	            <button id="convert" type="submit"  class="btn btn-info" pys-onClick="convert">Convert</button>
+
+	        </center>
+	        
+	        <p>
+	        <h4>Result:</h4>
+	        <textarea id="Fahrenheit" class="form-control" rows="2" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Result"></textarea></p>
+	    
+	        
+	    </div>    
+	    
+	    </body>
 
 
-								</ul>				
-							</p>
-							<img src="images/beach.jpg" alt="a" width="500" height="333">		
-						</div>
-					</div>
-				</div>
-				<div id="helloDiv">
-							<p align = "justify"> Hello, here you will find one of the topics I enjoy the most: teaching.
-								I always strive to offer good quality teaching to everyone who is interested in learning. Overall I have about 8 years of experience teaching as a tutor. This included peer to peer tutoring and up to full classrooms of 30 or more people. Officially, I am certified as a CRLA Level 2 tutor, which basically says I have experience in this area.</p>
-				</div>
-				<section class="pyscript">
-			        <input type="number" id="test-input"/> 
-			        <button py-click="current_time()" id="get-time" class="py-button">Get current time</button>
-					<p id="current-time"></p>
-					        <py-script>
-					            from pyscript import Element
-					            import datetime
-					            def current_time():
-					                now = datetime.datetime.now()
-
-					                # Get paragraph element by id
-					                paragraph = Element("current-time")
-
-					                # Add current time to the paragraph element
-					                paragraph.write(now.strftime("%Y-%m-%d %H:%M:%S"))   
-					        </py-script>		
-				</section>
-				<div id="paragraa">
-								<p align = "justify"> Hello, here you will find one of the topics I enjoy the most: teaching.
-					I always strive to offer good quality teaching to everyone who is interested in learning. Overall I have about 8 years of experience teaching as a tutor. This included peer to peer tutoring and up to full classrooms of 30 or more people. Officially, I am certified as a CRLA Level 2 tutor, which basically says I have experience in this area.</p>
-				</div>
-				<input type="number" id="test-input"/> 
-				<button py-click="current_time2()" id="get-time" class="py-button">Get current time 2</button>
-				<p id="current-time2"></p>
-					        <py-script>
-					            from pyscript import Element
-					            import datetime
-					            def current_time2():
-					                now = datetime.datetime.now()
-
-					                # Get paragraph element by id
-					                paragraph = Element("current-time2")  # Here it is decided where will the value appear
-
-					                # Add current time to the paragraph element
-					                paragraph.write(now.strftime("%Y-%m-%d %H:%M:%S"))   
-					        </py-script>		
-				</section>
-				<div id="paragraa">
-					<p align = "justify"> Hello, here you will find one of the topics I enjoy the most: teaching.
-					I always strive to offer good quality teaching to everyone who is interested in learning. Overall I have about 8 years of experience teaching as a tutor. This included peer to peer tutoring and up to full classrooms of 30 or more people. Officially, I am certified as a CRLA Level 2 tutor, which basically says I have experience in this area.</p>
-				</div>
-			</article>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
