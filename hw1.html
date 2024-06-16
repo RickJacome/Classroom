@@ -33,7 +33,11 @@
 
 	  </ol>
 
-		
+	  <py-script>
+		import numpy as np
+		integers = np.random.randint(0,100,100)
+		print(integers)
+	  </py-script>	
 
 		<py-script>
 		from js import console
@@ -43,9 +47,7 @@
 		    #print('kwargs:', kwargs)
 		    console.log(f'args: {args}')
 		    console.log(f'kwargs: {kwargs}')
-		    
 		    text = Element('test-input').element.value  ## Note that test-input is used as the id in input from html 
-
 		    #print('text:', text)
 		    console.log(f'text: {text}')
 
