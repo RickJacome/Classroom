@@ -76,6 +76,23 @@ The importance of this <em>grabbing a HTML element directly from within the Pyth
 <div><button id="clear" type="button" class="btn btn-primary" pys-onClick="clear">
         Clear random variates</div>
 <br>
+<h4>Choose the type of distribution you want to generate random variates from</h4>
+<p>As you expect, every time the <input type="button" class="btn btn-primary" value="Show distribution"> button is clicked, you will see a new histogram. 
+	<strong>All that computation is happening with pure Python code and in your browser!</strong></p>
+<select name="dist" id="dist" class="form-select" aria-label="Default select example">
+  <option value="Gaussian">Gaussian</option>
+  <option value="Beta">Beta</option>
+  <option value="Exponential">Exponential</option>
+</select>
+<div>
+	<p style="margin-top:10px;">Adjust the number of random variates</p>
+	<input type="range" id="slider-num-var" value="500" min="100" max="1000" step="100" 
+	oninput="this.nextElementSibling.value = this.value" style="width:50%;">
+	<output>500</output>
+  </div>
+<div><button id="show-dist" style="margin-top: 10px;margin-bottom: 10px;" type="button" class="btn btn-primary" pys-onClick="show_dist">
+        Show distribution</div>
+  <div id="outputDiv2" class="container-md"></div>
   
   
 <py-script>
