@@ -1,25 +1,24 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Homework for Engineering Dynamics</title>
-	  <!--<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />-->
- 		<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
- 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>	
-  		<py-env>
-  			- numpy
-  		</py-env>
-	</head>
+<head>
+	<title>Homework for Engineering Dynamics</title>
+	<!--<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />-->
+	<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>	
+	<py-env>
+	</py-env>
+</head>
 	 	
-	<body class="is-preload">
-		<!-- Navigation panel -->
-			<nav id="nav">
-				<ul class="container">
-					<li><a href="index.html">Home</a></li>
-				</ul>
-			</nav>
-	</body>
-	<body>
+<body class="is-preload">
+	<!-- Navigation panel -->
+		<nav id="nav">
+			<ul class="container">
+				<li><a href="index.html">Home</a></li>
+			</ul>
+		</nav>
+</body>
+<body>
 		<header>  <h1> <strong>Engineering Dynamics Homework 1 </strong></h1>   </header>
 
 	  <ol>
@@ -39,21 +38,21 @@
 	  </ol>
 
 
-		<py-script>
-		from js import console
-		import numpy as np
-		def my_function(*args, **kwargs):  ## Note my_function operates on "pys-onClick"
+	<py-script>
+from js import console
+import numpy as np
+def my_function(*args, **kwargs):  ## Note my_function operates on "pys-onClick"
 
-		    #print('args:', args)
-		    #print('kwargs:', kwargs)
-		    console.log(f'args: {args}')
-		    console.log(f'kwargs: {kwargs}')
-		    text = Element('test-input').element.value  ## Note that test-input is used as the id in input from html 
-		    #print('text:', text)
-		    console.log(f'text: {text}')
+    #print('args:', args)
+    #print('kwargs:', kwargs)
+    console.log(f'args: {args}')
+    console.log(f'kwargs: {kwargs}')
+    text = Element('test-input').element.value  ## Note that test-input is used as the id in input from html 
+    #print('text:', text)
+    console.log(f'text: {text}')
 
-		    Element('test-output').element.innerText = text	    
-		</py-script>
+    Element('test-output').element.innerText = text	    
+	</py-script>
 
-	  </body>
+</body>
 </html>
