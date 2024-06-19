@@ -59,24 +59,23 @@ print('if a = ' + str(a) + ' and b = ' + str(b) + '. What is a + b = ? ')
 <py-script>
 import numpy as np
 import matplotlib.pyplot as plt
-		
-out = Element("outputDiv")
-input_num = Element("how-many")
-test_input = Element("how-much")
 
-def clear(*ags, **kws):
-	out = Element("outputDiv")
-	out.clear()
+input_num = Element("how-many")
+test_input = Element("how-much")		
+
+out = Element("outputDiv") # Output
 
 def print_num(*ags, **kws):
 	if input_num.value=='':
 		out.write(f"Blank value provided, please try again.")
-	elif input_num.value == '10':
+	elif input_num.value == str(a+b):
 		out.write(f"Correct!")
 	else:
 		out.write(f"You typed in {input_num.value}, that is not correct")
 
-	
+def clear(*ags, **kws):
+	out = Element("outputDiv")
+	out.clear()	
 
 </py-script>
 </div>
