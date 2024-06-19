@@ -30,12 +30,12 @@
 
 <py-script>
 print( 'Page is Ready!')
-import numpy as np
-a = np.random.randint(1, 5)
-b = np.random.randint(4, 10)
-print('if a = ' + str(a) + ' and b = ' + str(b) + '. What is a + b = ? ')
-
 </py-script>
+
+    <section class="pyscript">
+        <div id="mpl"></div>
+        <script type="py" src="./Test.py"></script>
+    </section>
 <br>
 
 <py-inputbox id="how-many" style="margin-bottom: 10px;"> </py-inputbox>
@@ -44,11 +44,9 @@ print('if a = ' + str(a) + ' and b = ' + str(b) + '. What is a + b = ? ')
 <div id="outputDiv" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 
 
+
 <div> <button id="clear" type="button" class="btn btn-primary" pys-onClick="clear"> Clear Responses</div>
-
-
 <br>
-  
 <py-script>
 def clear(*ags, **kws):
 	out = Element("outputDiv")
