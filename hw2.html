@@ -59,7 +59,7 @@ fig1
 <p>In the next section, we generate histogram based on the type of the distribution that the user (you) choses. </p>
 
 <h2 style="border:5px; border-radius: 10px; padding:10px;background-color:gray; color:cyan">User-defined random variate generation</h2>
-<h4 > Answer the question: </h4>
+<h4 > Answer the question:</h4>
 
 <py-inputbox id="how-many" style="margin-bottom: 10px;"> </py-inputbox>
 
@@ -96,10 +96,11 @@ def clear(*ags, **kws):
 
 def print_num(*ags, **kws):
 	if input_num.value=='':
-		n = 10
-		out.write(f"Correct")
+		out.write(f"Blank value provided, please try again.")
+	elif input_num.value == 10:
+		out.write(f"Correct!)
 	else:
-		out.write(f"You typed in {n}, but the correct answer is  {r}")
+		out.write(f"You typed in {input_num.value}, that is not correct")
 
 	
 
