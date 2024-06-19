@@ -69,6 +69,7 @@ fig1
 <div><button id="clear" type="button" class="btn btn-primary" pys-onClick="clear"> Clear random variates</div>
 
 <p>In the next section, we generate histogram based on the type of the distribution that the user (you) choses. </p>
+
 <py-inputbox id="how-much" style="margin-bottom: 10px;"> </py-inputbox>
 
 <br>
@@ -79,7 +80,7 @@ import matplotlib.pyplot as plt
 		
 out = Element("outputDiv")
 input_num = Element("how-many")
-
+test_input = Element("how-much")
 def random_num(n):
 	"""
 	"""
