@@ -76,24 +76,7 @@ The importance of this <em>grabbing a HTML element directly from within the Pyth
 <div><button id="clear" type="button" class="btn btn-primary" pys-onClick="clear">
         Clear random variates</div>
 <br>
-<h4>Choose the type of distribution you want to generate random variates from</h4>
-<p>As you expect, every time the <input type="button" class="btn btn-primary" value="Show distribution"> button is clicked, you will see a new histogram. 
-	<strong>All that computation is happening with pure Python code and in your browser!</strong></p>
-<select name="dist" id="dist" class="form-select" aria-label="Default select example">
-  <option value="Gaussian">Gaussian</option>
-  <option value="Beta">Beta</option>
-  <option value="Exponential">Exponential</option>
-</select>
-<div>
-	<p style="margin-top:10px;">Adjust the number of random variates</p>
-	<input type="range" id="slider-num-var" value="500" min="100" max="1000" step="100" 
-	oninput="this.nextElementSibling.value = this.value" style="width:50%;">
-	<output>500</output>
-  </div>
-<div><button id="show-dist" style="margin-top: 10px;margin-bottom: 10px;" type="button" class="btn btn-primary" pys-onClick="show_dist">
-        Show distribution</div>
-  <div id="outputDiv2" class="container-md"></div>
-  
+
   
 <py-script>
 import numpy as np
@@ -122,26 +105,6 @@ def print_num(*ags, **kws):
 	r = random_num(n)
 	out.write(f"Here are {n} random variates from Normal distribution: {r}")
 	
-def show_dist(*ags, **kws):
-	dist_type = Element("dist").value
-	dist_size = int(Element("slider-num-var").value)
-	fig1,ax1 = plt.subplots(1,1,dpi=150,figsize=(6,4))
-	fig1.subplots_adjust(hspace=0.25)
-	if dist_type=='Gaussian':
-		data = np.random.normal(size=dist_size)
-		ax1.hist(data,bins=20,edgecolor='k',color='blue')
-		ax1.set_title(f"Histogram of Normal (Gaussian) Distribution \nwith {dist_size} random variates",fontsize=11)
-		out2.write(fig1)
-	if dist_type=='Beta':
-		data = np.random.beta(1,3,size=dist_size)
-		ax1.hist(data,bins=20,edgecolor='k',color='blue')
-		ax1.set_title(f"Histogram of Beta Distribution \nwith {dist_size} random variates",fontsize=11)
-		out2.write(fig1)
-	if dist_type=='Exponential':
-		data = np.random.exponential(0.5,size=dist_size)
-		ax1.hist(data,bins=20,edgecolor='k',color='blue')
-		ax1.set_title(f"Histogram of Exponential Distribution \nwith {dist_size} random variates",fontsize=11)
-		out2.write(fig1)
 </py-script>
 </div>
   </body>
