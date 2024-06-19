@@ -30,12 +30,13 @@
 
 <py-script>
 print( 'Page is Ready!')
+import numpy as np
+a = np.random.randint(1, 5)
+b = np.random.randint(4, 10)
+print('if a = ' + str(a) + ' and b = ' + str(b) + '. What is a + b = ? ')
 </py-script>
 
-<section class="pyscript">
-    <div id="mpl"></div>
-    <script type="py" src="./Test.py" config="./pyscript.toml"></script>
-</section>
+
 <br>
 
 <py-inputbox id="how-many" style="margin-bottom: 10px;"> </py-inputbox>
