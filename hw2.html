@@ -57,6 +57,12 @@ print('if a = ' + str(a) + ' and b = ' + str(b) + '. What is a + b = ? ')
 <br>
   
 <py-script>
+def clear(*ags, **kws):
+	out = Element("outputDiv")
+	out.clear()	
+</py-script>
+
+<py-script>
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -72,10 +78,6 @@ def print_num(*ags, **kws):
 		out.write(f"Correct!")
 	else:
 		out.write(f"You typed in {input_num.value}, that is not correct")
-
-def clear(*ags, **kws):
-	out = Element("outputDiv")
-	out.clear()	
 
 </py-script>
 </div>
