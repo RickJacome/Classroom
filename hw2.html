@@ -77,6 +77,9 @@ The importance of this <em>grabbing a HTML element directly from within the Pyth
         Clear random variates</div>
 <br>
 
+
+
+
   
 <py-script>
 import numpy as np
@@ -85,7 +88,7 @@ import matplotlib.pyplot as plt
 out = Element("outputDiv")
 input_num = Element("how-many")
 dist_type = Element("dist").value
-out2 = Element("outputDiv2")
+
 
 def random_num(n):
 	"""
@@ -105,6 +108,7 @@ def print_num(*ags, **kws):
 	r = random_num(n)
 	out.write(f"Here are {n} random variates from Normal distribution: {r}")
 	
+
 </py-script>
 </div>
   </body>
