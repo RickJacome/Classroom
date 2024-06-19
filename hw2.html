@@ -65,7 +65,7 @@ fig1
 <py-inputbox id="how-many" style="margin-bottom: 10px;">
 </py-inputbox>
 <div><button id="gen" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num">
-        Generate random variates</div>
+        Submit</div>
   <div id="outputDiv" style="margin-top: 10px;margin-bottom: 10px;"></div>
 <div><button id="clear" type="button" class="btn btn-primary" pys-onClick="clear">
         Clear random variates</div>
@@ -77,8 +77,6 @@ import matplotlib.pyplot as plt
 		
 out = Element("outputDiv")
 input_num = Element("how-many")
-
-
 
 def random_num(n):
 	"""
