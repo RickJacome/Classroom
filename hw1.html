@@ -1,59 +1,79 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-	<title>Homework for Engineering Dynamics</title>
-	<!--<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />-->
-	<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>	
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Homework for Engineering Dynamics</title>
+
+     <link rel="icon" type="image/png" href="favicon.png" />
+	 <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<py-env>
-		- numpy
+      - matplotlib
+      - numpy
 	</py-env>
-</head>
-	 	
-<body class="is-preload">
-	<!-- Navigation panel -->
-		<nav id="nav">
-			<ul class="container">
-				<li><a href="index.html">Home</a></li>
-			</ul>
-		</nav>
-</body>
-<body>
-		<header>  <h1> <strong>Engineering Dynamics Homework 1 - s </strong></h1>   </header>
+  </head>
 
-	  <ol>
+  <body style="margin: 25px 75px 25px 75px;">
+	<div class="container-fluid">
+	<div class="p-5 text-center bg-light">
+		<h1 class="mb-3">Engineering Dynamics Homework 1</h1>
+		<p> by Dr. R.O. Jácome </p>
+		<a class="btn btn-primary" href="index.html" role="button"> Home </a>
+	  </div>
+<br>
+<div class="alert alert-primary" role="alert">
+	<h3>Please make sure to wait for the page to load properly...</h3>
+  </div>
+<p> This is Homework 1, it will be used as a basic example of how this website works and how you can get confortable with answering the questions. The numbers for your problems will be randomly generated, so each student will have unique answers. Each question will have 3 attempts before it is counted against your score. If you refresh the page you will recover all of your attempts but you will have to restart from the first question (feel free to attempt that on this homework). </p>
 
-	  <li> <p>If the velocity of a car goes from 15 m/s to 35 m/s in 6 seconds, what is the acceleration of the vehicle? </p> </li>
-	  
-
-	  <input type="text" id="test-input"/>
-	  <button id="submit-button" type="submit" pys-onClick="my_function">Submit</button>
-	  <div id="test-output"></div>
-	  
-
-	  <li> <p>If the velocity of a car goes from  to 35 m/s in 3 seconds, what is the acceleration of the vehicle? </p> </li>
-	
-
-
-	  </ol>
-
-
-	<py-script>
-from js import console
+<py-script>
+print( 'Page is Ready!')
 import numpy as np
-def my_function(*args, **kwargs):  ## Note my_function operates on "pys-onClick"
+a = np.random.randint(1, 5)
+b = np.random.randint(4, 10)
+print('if a = ' + str(a) + ' and b = ' + str(b) + '. What is a + b = ? ')
+</py-script>
 
-    #print('args:', args)
-    #print('kwargs:', kwargs)
-    console.log(f'args: {args}')
-    console.log(f'kwargs: {kwargs}')
-    text = Element('test-input').element.value  ## Note that test-input is used as the id in input from html 
-    #print('text:', text)
-    console.log(f'text: {text}')
 
-    Element('test-output').element.innerText = text	    
-	</py-script>
+<br>
 
-</body>
+<py-inputbox id="how-many" style="margin-bottom: 10px;"> </py-inputbox>
+<div><button id="gen" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num">
+        Submit</div>
+<div id="outputDiv" style="margin-top: 10px;margin-bottom: 10px;"></div> 
+
+
+
+<div> <button id="clear" type="button" class="btn btn-primary" pys-onClick="clear"> Clear Responses</div>
+<br>
+<py-script>
+def clear(*ags, **kws):
+	out = Element("outputDiv")
+	out.clear()	
+</py-script>
+
+<py-script>
+import numpy as np
+import matplotlib.pyplot as plt
+
+input_num = Element("how-many")
+test_input = Element("how-much")		
+
+out = Element("outputDiv") # Output
+
+def print_num(*ags, **kws):
+	if input_num.value=='':
+		out.write(f"Blank value provided, please try again.")
+	elif input_num.value == str(a+b):
+		out.write(f"Correct!")
+	else:
+		out.write(f"You typed in {input_num.value}, that is not correct")
+
+</py-script>
+</div>
+  </body>
+  
 </html>
