@@ -56,19 +56,22 @@ fig1
 </div>
 <br>
 <h4>Changing the image output method</h4>
-<p>In the next section, we generate histogram based on the type of the distribution that the user (you) choses. 
-	We slightly change the output method for this
-	as <strong>we grab the <code>div</code> element</strong> where we want to display the image and write the figure object with a code like <code>out.write(fig1)</code></p>
+<p>In the next section, we generate histogram based on the type of the distribution that the user (you) choses. </p>
 
 <h2 style="border:5px; border-radius: 10px; padding:10px;background-color:gray; color:cyan">User-defined random variate generation</h2>
 <h4 >How many random variates to generate? (if left blank, 10 values will be generated)</h4>
-<py-inputbox id="how-many" style="margin-bottom: 10px;">
-</py-inputbox>
+
+<py-inputbox id="how-many" style="margin-bottom: 10px;"> </py-inputbox>
+
 <div><button id="gen" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num">
         Submit</div>
   <div id="outputDiv" style="margin-top: 10px;margin-bottom: 10px;"></div>
 <div><button id="clear" type="button" class="btn btn-primary" pys-onClick="clear">
         Clear random variates</div>
+
+
+<py-inputbox id="how-much" style="margin-bottom: 10px;"> </py-inputbox>
+
 <br>
   
 <py-script>
