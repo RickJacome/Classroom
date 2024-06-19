@@ -98,7 +98,7 @@ def clear(*ags, **kws):
 def print_num(*ags, **kws):
 	if input_num.value=='':
 		out.write(f"Blank value provided, please try again.")
-	elif input_num.value == 10:
+	elif input_num.value == '10':
 		out.write(f"Correct!")
 	else:
 		out.write(f"You typed in {input_num.value}, that is not correct")
