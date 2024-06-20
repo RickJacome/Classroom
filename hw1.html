@@ -32,15 +32,20 @@
 <p> Please write your name below. <strong> Do not forget your name. </strong>	</p>
 <py-inputbox id="student-name" style="margin-bottom: 10px;"> </py-inputbox>
 <br>
-
 <py-script>
 print( 'Page is Ready!')
+</py-script>
+<br>
+<py-script>
 import numpy as np
 a = np.random.randint(1, 5)
 b = np.random.randint(4, 10)
-print('if a = ' + str(a) + ' and b = ' + str(b) + '. What is a + b = ? ')
+print('if a = ' + str(a) + ' and b = ' + str(b) ')
 </py-script>
-
+<br>
+<py-script>
+print('What is a + b = ? ')
+</py-script>
 <br>
 <py-inputbox id="Question1" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen1" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num1">
@@ -57,19 +62,28 @@ print('What is a - b = ? ')
 <div id="outputDiv2" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 
 
-<div> <button id="clear" type="button" class="btn btn-primary" pys-onClick="clear"> Clear Responses</div>
-<br>
+
+
+<div> <button id="clear" type="button" class="btn btn-primary" pys-onClick="clear"> Clear all Responses</div>
+<div> <button id="final-submission" type="button" class="btn btn-primary" pys-onClick="final-sub"> Submit and Send All Answers</div>
+<div id="outputFinal" style="margin-top: 10px;margin-bottom: 10px;"></div> 
+
 <py-script>
 def clear(*ags, **kws):
 	out1 = Element("outputDiv1")
 	out2 = Element("outputDiv2")
 	out1.clear()	
 	out2.clear()
+def final-sub(*ags, **kws):
+	name = Element('student-name')
+	out_final = Element('outputFinal')
+	out_final.write(f" Thank you {name.value}, your answers have been submitted")
+
 </py-script>
+
 
 <py-script>
 import numpy as np
-import matplotlib.pyplot as plt
 
 input_num1 = Element("Question1")
 input_num2 = Element("Question2")
@@ -93,8 +107,6 @@ def print_num2(*ags, **kws):
 		out2.write(f"Correct!")
 	else:
 		out2.write(f"You typed in {input_num2.value}, that is not correct")
-
-
 </py-script>
 </div>
   </body>
