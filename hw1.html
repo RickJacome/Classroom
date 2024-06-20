@@ -32,7 +32,7 @@
 
 <p> Please write your name below </p>
 <py-inputbox id="student-name" style="margin-bottom: 10px;"> </py-inputbox>
-
+<br>
 
 
 
@@ -44,40 +44,59 @@ b = np.random.randint(4, 10)
 print('if a = ' + str(a) + ' and b = ' + str(b) + '. What is a + b = ? ')
 </py-script>
 
-
 <br>
-
-<py-inputbox id="how-many" style="margin-bottom: 10px;"> </py-inputbox>
-<div><button id="gen" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num">
+<py-inputbox id="Question1" style="margin-bottom: 10px;"> </py-inputbox>
+<div><button id="gen1" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num1">
         Submit</div>
-<div id="outputDiv" style="margin-top: 10px;margin-bottom: 10px;"></div> 
+<div id="outputDiv1" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 
+<py-script>
+print('What is a - b = ? ')
+</py-script>
+<br>
+<py-inputbox id="Question2" style="margin-bottom: 10px;"> </py-inputbox>
+<div><button id="gen2" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num2">
+        Submit</div>
+<div id="outputDiv2" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 
 
 <div> <button id="clear" type="button" class="btn btn-primary" pys-onClick="clear"> Clear Responses</div>
 <br>
 <py-script>
 def clear(*ags, **kws):
-	out = Element("outputDiv")
-	out.clear()	
+	out1 = Element("outputDiv1")
+	out2 = Element("outputDiv2")
+	out1.clear()	
+	out2.clear()
 </py-script>
 
 <py-script>
 import numpy as np
 import matplotlib.pyplot as plt
 
-input_num = Element("how-many")
-test_input = Element("how-much")		
+input_num1 = Element("Question1")
+input_num2 = Element("Question2")
+	
 
-out = Element("outputDiv") # Output
+out1 = Element("outputDiv1") # Output
+out2 = Element("outputDiv2") # Output
 
-def print_num(*ags, **kws):
-	if input_num.value=='':
-		out.write(f"Blank value provided, please try again.")
-	elif input_num.value == str(a+b):
-		out.write(f"Correct!")
+def print_num1(*ags, **kws):
+	if input_num1.value=='':
+		out1.write(f"Blank value provided, please try again.")
+	elif input_num1.value == str(a+b):
+		out1.write(f"Correct!")
 	else:
-		out.write(f"You typed in {input_num.value}, that is not correct")
+		out1.write(f"You typed in {input_num1.value}, that is not correct")
+
+def print_num2(*ags, **kws):
+	if input_num2.value=='':
+		out2.write(f"Blank value provided, please try again.")
+	elif input_num2.value == str(a-b):
+		out2.write(f"Correct!")
+	else:
+		out2.write(f"You typed in {input_num2.value}, that is not correct")
+
 
 </py-script>
 </div>
