@@ -43,9 +43,11 @@ b = np.random.randint(4, 10)
 print('if a = ' + str(a) + ' and b = ' + str(b))
 </py-script>
 <br>
-<py-script>
-print('What is a + b = ? ')
-</py-script>
+      <section class="pyscript">
+            <div id="altair"></div>
+            <script type="py" src="./main.py" config="./pyscript.toml"></script>
+       </section>
+
 <br>
 <py-inputbox id="Question1" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen1" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num1">
@@ -78,7 +80,7 @@ def clear(*ags, **kws):
 def final_sub(*ags, **kws):
 	name = Element('student-name')
 	out_final = Element('outputFinal')
-	out_final.write(f" Thank you {name.value}, your answers have been submitted")
+	out_final.write(f" Thank you {name.value}, your answers have been submitted.")
 
 </py-script>
 
