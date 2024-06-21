@@ -96,6 +96,16 @@ def print_num2(*ags, **kws):
 		grd2 = 0
 	return grd2
 
+def clear(*ags, **kws):
+	out1 = Element("outputDiv1")
+	out2 = Element("outputDiv2")
+	out1.clear()	
+	out2.clear()
+def final_sub(*ags, **kws):
+	fnl_grd = ((grd1 + grd2)/2)*100
+	name = Element('student-name')
+	out_final = Element('outputFinal')
+	out_final.write(f" Thank you {name.value}, your answers have been submitted. Your grade is: {fnl_grd} ")
 </py-script>
 
 <div> <button id="clear" type="button" class="btn btn-primary" pys-onClick="clear"> Clear all Responses</div>
@@ -103,19 +113,6 @@ def print_num2(*ags, **kws):
 <div> <button id="final-submission" type="button" class="btn btn-primary" pys-onClick="final_sub"> Submit and Send All Answers</div>
 <div id="outputFinal" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 
-<py-script>
-def clear(*ags, **kws):
-	out1 = Element("outputDiv1")
-	out2 = Element("outputDiv2")
-	out1.clear()	
-	out2.clear()
-def final_sub(*ags, **kws, grd1, grd2):
-	fnl_grd = ((grd1 + grd2)/2)*100
-	name = Element('student-name')
-	out_final = Element('outputFinal')
-	out_final.write(f" Thank you {name.value}, your answers have been submitted. Your grade is: {fnl_grd} ")
-
-</py-script>
 </div>
   </body>
   
