@@ -109,9 +109,8 @@ def clear(*ags, **kws):
 	out2 = Element("outputDiv2")
 	out1.clear()	
 	out2.clear()
-def final_sub(*ags, **kws):
+def final_sub(*ags, **kws, grd1, grd2):
 	fnl_grd = ((grd1 + grd2)/2)*100
-
 	name = Element('student-name')
 	out_final = Element('outputFinal')
 	out_final.write(f" Thank you {name.value}, your answers have been submitted. Your grade is: {fnl_grd} ")
