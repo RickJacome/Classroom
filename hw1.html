@@ -60,6 +60,12 @@ print('What is a - b = ? ')
         Submit</div>
 <div id="outputDiv2" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 
+<div> <button id="clear" type="button" class="btn btn-primary" pys-onClick="clear"> Clear all Responses</div>
+<br>
+<div> <button id="final-submission" type="button" class="btn btn-primary" pys-onClick="final_sub"> Submit and Send All Answers</div>
+<div id="outputFinal" style="margin-top: 10px;margin-bottom: 10px;"></div> 
+
+
 <py-script>
 import numpy as np
 
@@ -109,10 +115,6 @@ def final_sub(*ags, **kws):
 
 </py-script>
 
-<div> <button id="clear" type="button" class="btn btn-primary" pys-onClick="clear"> Clear all Responses</div>
-<br>
-<div> <button id="final-submission" type="button" class="btn btn-primary" pys-onClick="final_sub"> Submit and Send All Answers</div>
-<div id="outputFinal" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 
 </div>
   </body>
