@@ -69,6 +69,7 @@ input_num2 = Element("Question2")
 out1 = Element("outputDiv1") # Output
 out2 = Element("outputDiv2") # Output
 
+
 def print_num1(*ags, **kws):
 	if input_num1.value=='':
 		out1.write(f"Blank value provided, please try again.")
@@ -102,9 +103,14 @@ def clear(*ags, **kws):
 	out1.clear()	
 	out2.clear()
 def final_sub(*ags, **kws):
+	out1 = Element("outputDiv1")
+	out2 = Element("outputDiv2")
+	if out1.startswith('Correct') == 'True'
+		ans1 = 1
+
 	name = Element('student-name')
 	out_final = Element('outputFinal')
-	out_final.write(f" Thank you {name.value}, your answers have been submitted. ")
+	out_final.write(f" Thank you {name.value}, your answers have been submitted. Your final score is {ans1}")
 
 </py-script>
 
