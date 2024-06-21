@@ -14,7 +14,7 @@
       - matplotlib
       - numpy
 	</py-env>
-	
+
   </head>
 
   <body style="margin: 25px 75px 25px 75px;">
@@ -64,8 +64,41 @@ print('What is a - b = ? ')
         Submit</div>
 <div id="outputDiv2" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 
+<py-script>
+import numpy as np
 
+input_num1 = Element("Question1")
+input_num2 = Element("Question2")
+	
+out1 = Element("outputDiv1") # Output
+out2 = Element("outputDiv2") # Output
 
+def print_num1(*ags, **kws):
+	if input_num1.value=='':
+		out1.write(f"Blank value provided, please try again.")
+	elif input_num1.value == str(a+b):
+		out1.write(f"Correct!")
+		grd1 += 1
+	else:
+		out1.write(f"You typed in {input_num1.value}, that is not correct")
+		trik1 += 1
+	if trik1 >= 3:
+		grd1 = 0
+
+def print_num2(*ags, **kws):
+	if input_num2.value=='':
+		out2.write(f"Blank value provided, please try again.")
+	elif input_num2.value == str(a-b):
+		out2.write(f"Correct!")
+		grd2 += 1
+	else:
+		out2.write(f"You typed in {input_num2.value}, that is not correct")
+	if trik2 >= 3:
+		grd2 = 0
+
+fnl_grd = ((grd1 + grd2)/2)*100
+
+</py-script>
 
 <div> <button id="clear" type="button" class="btn btn-primary" pys-onClick="clear"> Clear all Responses</div>
 <br>
@@ -81,36 +114,8 @@ def clear(*ags, **kws):
 def final_sub(*ags, **kws):
 	name = Element('student-name')
 	out_final = Element('outputFinal')
-	out_final.write(f" Thank you {name.value}, your answers have been submitted.")
+	out_final.write(f" Thank you {name.value}, your answers have been submitted. Your grade is: {fnl_grd} ")
 
-</py-script>
-
-
-<py-script>
-import numpy as np
-
-input_num1 = Element("Question1")
-input_num2 = Element("Question2")
-	
-
-out1 = Element("outputDiv1") # Output
-out2 = Element("outputDiv2") # Output
-
-def print_num1(*ags, **kws):
-	if input_num1.value=='':
-		out1.write(f"Blank value provided, please try again.")
-	elif input_num1.value == str(a+b):
-		out1.write(f"Correct!")
-	else:
-		out1.write(f"You typed in {input_num1.value}, that is not correct")
-
-def print_num2(*ags, **kws):
-	if input_num2.value=='':
-		out2.write(f"Blank value provided, please try again.")
-	elif input_num2.value == str(a-b):
-		out2.write(f"Correct!")
-	else:
-		out2.write(f"You typed in {input_num2.value}, that is not correct")
 </py-script>
 </div>
   </body>
