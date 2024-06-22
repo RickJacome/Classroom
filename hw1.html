@@ -62,7 +62,7 @@ print('What is a - b = ? ')
 
 <py-script>
 import numpy as np
-
+x = 32
 input_num1 = Element("Question1")
 input_num2 = Element("Question2")
 	
@@ -108,7 +108,7 @@ def final_sub(*ags, **kws):
 	a = 32
 	name = Element('student-name')
 	out_final = Element('outputFinal')
-	out_final.write(f" Thank you {name.value}, your answers have been submitted. {input_num1.value}")
+	out_final.write(f" Thank you {name.value}, your answers have been submitted. {input_num1.value} and {x}")
 
 </py-script>
 
