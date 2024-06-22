@@ -94,8 +94,7 @@ def print_num2(*ags, **kws):
 		pnt2 = 1
 	else:
 		strk2 += 1
-		out2.write(f"You typed in {input_num2.value}, that is not correct")
-		out2.write(f"You have {strk2}/3 attempts left")
+		out2.write(f"You typed in {input_num2.value}, that is not correct. You have {strk2}/3 attempts left")
 		if strk2 >= 3:		
 			pnt2 = 0
 
