@@ -115,10 +115,10 @@ def final_sub(*ags, **kws):
 	input_num1 = Element("Question1")
 	
 	
-	grade = (pnt1+pnt2)/2
+	grade = ((pnt1+pnt2)/2)*100
 	name = Element('student-name')
 	out_final = Element('outputFinal')
-	out_final.write(f" Thank you {name.value}, your answers have been submitted. {grade}")
+	out_final.write(f" Thank you {name.value}, your answers have been submitted. Your score is: {grade} %")
 
 </py-script>
 
