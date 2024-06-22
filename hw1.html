@@ -63,7 +63,6 @@ print('What is a - b = ? ')
 <py-script>
 import numpy as np
 
-strk2 = 0
 
 input_num1 = Element("Question1")
 input_num2 = Element("Question2")
@@ -94,10 +93,8 @@ def print_num2(*ags, **kws):
 		out2.write(f"Correct!")
 		pnt2 = 1
 	else:
-		strk2 += 1
-		out2.write(f"You typed in {input_num2.value}, that is not correct. You have {strk2}/3 attempts left")
-		if strk2 >= 3:		
-			pnt2 = 0
+		out2.write(f"You typed in {input_num2.value}, that is not correct.")
+		pnt2 = 0		
 
 </py-script>
 
