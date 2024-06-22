@@ -71,9 +71,11 @@ out2 = Element("outputDiv2") # Output
 
 
 def print_num1(*ags, **kws):
+	global ans1
+	ans1 = a+b
 	if input_num1.value=='':
 		out1.write(f"Blank value provided, please try again.")
-	elif input_num1.value == str(a+b):
+	elif input_num1.value == str(ans1):
 		out1.write(f"Correct!")
 	else:
 		out1.write(f"You typed in {input_num1.value}, that is not correct")
@@ -108,7 +110,7 @@ def final_sub(*ags, **kws):
 	
 	name = Element('student-name')
 	out_final = Element('outputFinal')
-	out_final.write(f" Thank you {name.value}, your answers have been submitted. {input_num1.value} and {x}")
+	out_final.write(f" Thank you {name.value}, your answers have been submitted. {input_num1.value} and {ans1}")
 
 </py-script>
 
