@@ -63,6 +63,8 @@ print('What is a - b = ? ')
 <py-script>
 import numpy as np
 
+strk2 = 0
+
 input_num1 = Element("Question1")
 input_num2 = Element("Question2")
 
@@ -84,7 +86,6 @@ def print_num1(*ags, **kws):
 
 def print_num2(*ags, **kws):
 	global pnt2
-	strk2 = 0
 	ans2 = a-b
 
 	if input_num2.value=='':
