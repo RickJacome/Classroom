@@ -65,10 +65,9 @@ import numpy as np
 
 input_num1 = Element("Question1")
 input_num2 = Element("Question2")
-	
+
 out1 = Element("outputDiv1") # Output
 out2 = Element("outputDiv2") # Output
-
 
 def print_num1(*ags, **kws):
 	global pnt1
@@ -85,15 +84,20 @@ def print_num1(*ags, **kws):
 
 def print_num2(*ags, **kws):
 	global pnt2
+	strk2 = 0
 	ans2 = a-b
+
 	if input_num2.value=='':
 		out2.write(f"Blank value provided, please try again.")
 	elif input_num2.value == str(ans2):
 		out2.write(f"Correct!")
 		pnt2 = 1
 	else:
+		strk2 += 1
 		out2.write(f"You typed in {input_num2.value}, that is not correct")
-		pnt2 = 0
+		out2.write(f"You have {strk2}/3 attempts left")
+		if strk2 >= 3:		
+			pnt2 = 0
 
 </py-script>
 
@@ -113,7 +117,6 @@ def final_sub(*ags, **kws):
 	out1 = Element("outputDiv1")
 	out2 = Element("outputDiv2")
 	input_num1 = Element("Question1")
-	
 	
 	grade = ((pnt1+pnt2)/2)*100
 	name = Element('student-name')
