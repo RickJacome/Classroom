@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Homework for Engineering Dynamics</title>
+
+     <link rel="icon" type="image/png" href="favicon.png" />
+	 <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<py-env>
+      - matplotlib
+      - numpy
+	</py-env>
+
+  </head>
+
+  <body style="margin: 25px 75px 25px 75px;">
+	<div class="container-fluid">
+	<div class="p-5 text-center bg-light">
+		<h1 class="mb-3">Engineering Dynamics Homework 1</h1>
+		<p> by Dr. R.O. Jácome </p>
+		<a class="btn btn-primary" href="index.html" role="button"> Home </a>
+	  </div>
+<br>
+<div class="alert alert-primary" role="alert">
+	<h3>Please make sure to wait for the page to load properly...</h3>
+  </div>
+<p> This is Homework 1, it will be used as a basic example of how this website works and how you can get comfortable with answering the questions. The numbers for your problems will be randomly generated, so each student will have unique answers. Each question will have 3 attempts before it is counted against your score. If you refresh the page you will recover all of your attempts but you will have to restart from the first question (feel free to attempt that on this homework). After you </p>
+<br>
+<p> Please write your name below. <strong> Do not forget your name. </strong>	</p>
+<py-inputbox id="student-name" style="margin-bottom: 10px;"> </py-inputbox>
+<br>
+<py-script>
+print( 'Page is Ready!')
+</py-script>
+<br>
+<py-script>
+import numpy as np
+a = np.random.randint(1, 5)
+b = np.random.randint(4, 10)
+print('if a = ' + str(a) + ' and b = ' + str(b))
+print('What is a + b = ? ')
+</py-script>
+
+<br>
+<py-inputbox id="Question1" style="margin-bottom: 10px;"> </py-inputbox>
+<div><button id="gen1" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num1">
+        Submit</div>
+<div id="outputDiv1" style="margin-top: 10px;margin-bottom: 10px;"></div> 
+
+<py-script>
+print('What is a - b = ? ')
+</py-script>
+<br>
+<py-inputbox id="Question2" style="margin-bottom: 10px;"> </py-inputbox>
+<div><button id="gen2" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num2">
+        Submit</div>
+<div id="outputDiv2" style="margin-top: 10px;margin-bottom: 10px;"></div> 
+
+<py-script>
+import numpy as np
+
+
+input_num1 = Element("Question1")
+input_num2 = Element("Question2")
+
+out1 = Element("outputDiv1") # Output
+out2 = Element("outputDiv2") # Output
+
+def print_num1(*ags, **kws):
+	global pnt1
+	ans1 = a+b
+	
+	if input_num1.value=='':
+		out1.write(f"Blank value provided, please try again.")
+	elif input_num1.value == str(ans1):
+		out1.write(f"Correct!")
+		pnt1 = 1
+	else:
+		out1.write(f"You typed in {input_num1.value}, that is not correct")
+		pnt1 = 0
+
+def print_num2(*ags, **kws):
+	global pnt2
+	ans2 = a-b
+
+	if input_num2.value=='':
+		out2.write(f"Blank value provided, please try again.")
+	elif input_num2.value == str(ans2):
+		out2.write(f"Correct!")
+		pnt2 = 1
+	else:
+		out2.write(f"You typed in {input_num2.value}, that is not correct.")
+		pnt2 = 0		
+
+</py-script>
+
+<div> <button id="clear" type="button" class="btn btn-primary" pys-onClick="clear"> Clear all Responses</div>
+<br>
+<p> Do not click the buttom below until you are done with all the questions</p>
+<div> <button id="final-submission" type="button" class="btn btn-primary" pys-onClick="final_sub"> Submit and Send All Answers</div>
+<div id="outputFinal" style="margin-top: 10px;margin-bottom: 10px;"></div> 
+</div>
+<py-script>
+def clear(*ags, **kws):
+	out1 = Element("outputDiv1")
+	out2 = Element("outputDiv2")
+	out1.clear()	
+	out2.clear()
+def final_sub(*ags, **kws):
+	out1 = Element("outputDiv1")
+	out2 = Element("outputDiv2")
+	input_num1 = Element("Question1")
+	
+	grade = ((pnt1+pnt2)/2)*100
+	name = Element('student-name')
+	out_final = Element('outputFinal')
+	out_final.write(f" Thank you {name.value}, your answers have been submitted. Your score is: {grade} %")
+
+	del out_final
+
+</py-script>
+
+  </body>
+  
+</html>
