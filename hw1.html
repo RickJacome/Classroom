@@ -147,7 +147,7 @@ def final_sub(*ags, **kws):
 	out3 = Element("outputDiv3")
 
 	
-	grade = ((pnt1+pnt2+pnt3)/3)*100
+	grade = round(((pnt1+pnt2+pnt3)/3)*100,2)
 	name = Element('student-name')
 	out_final = Element('outputFinal')
 	out_final.write(f" Thank you {name.value}, your answers have been submitted. Your score is: {grade} %")
