@@ -43,11 +43,13 @@ a = np.random.randint(1, 5)
 b = np.random.randint(4, 10)
 x = np.random.randint(30,40)
 t = np.random.randint(2,5)
+v1 = np.random.randint(10,15)
+v2 = np.random.randint(25,35)
 </py-script>
 
 <py-script>
 print('if a = ' + str(a) + ' and b = ' + str(b))
-print('What is a + b = ? ')
+print(' 1) What is a + b = ? ')
 </py-script>
 
 <br>
@@ -57,7 +59,7 @@ print('What is a + b = ? ')
 <div id="outputDiv1" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 
 <py-script>
-print('What is a - b = ? ')
+print(' 2) What is a - b = ? ')
 </py-script>
 <br>
 <py-inputbox id="Question2" style="margin-bottom: 10px;"> </py-inputbox>
@@ -65,25 +67,35 @@ print('What is a - b = ? ')
         Submit</div>
 <div id="outputDiv2" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <br>
-
 <py-script>
-print('If a car traveled ' + str(x) + ' meters in about ' + str(t) + ' seconds. What is the velocity of the car? [m/s]. Rounded to the nearest tenth.')
+print('3) - If a car traveled ' + str(x) + ' meters in about ' + str(t) + ' seconds. What is the velocity of the car? [m/s]. Rounded to the nearest tenth.')
 </py-script>
-
 <py-inputbox id="Question3" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen3" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num3">
         Submit</div>
 <div id="outputDiv3" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <br>
+<py-script>
+print('4) - If a car changed its speed from ' + str(v1) + ' (m/s) to ' + str(v2) + ' (m/s). What is the velocity of the car? [m/s^{2}]. Rounded to the nearest tenth.')
+</py-script>
+<py-inputbox id="Question4" style="margin-bottom: 10px;"> </py-inputbox>
+<div><button id="gen4" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num4">
+        Submit</div>
+<div id="outputDiv4" style="margin-top: 10px;margin-bottom: 10px;"></div> 
+<br>
+
+
 
 <py-script>
 input_num1 = Element("Question1")
 input_num2 = Element("Question2")
 input_num3 = Element("Question3")
+input_num4 = Element("Question4")
 
-out1 = Element("outputDiv1") # Output
-out2 = Element("outputDiv2") # Output
-out3 = Element("outputDiv3") # Output
+out1 = Element("outputDiv1") 
+out2 = Element("outputDiv2") 
+out3 = Element("outputDiv3") 
+out4 = Element("outputDiv4") 
 
 def print_num1(*ags, **kws):
 	global pnt1
@@ -120,7 +132,20 @@ def print_num3(*ags, **kws):
 		pnt3 = 1
 	else:
 		out3.write(f"You typed in {input_num3.value}, that is not correct.")
-		pnt3 = 0	
+		pnt3 = 0
+def print_num4(*ags, **kws):
+	global pnt4
+	ans4 = round(x/t,1)
+
+	if input_num4.value=='':
+		out4.write(f"Blank value provided, please try again.")
+	elif input_num4.value == str(ans4):
+		out4.write(f"Correct!")
+		pnt4 = 1
+	else:
+		out4.write(f"You typed in {input_num4.value}, that is not correct.")
+		pnt4 = 0	
+
 </py-script>
 
 <div> <button id="clear" type="button" class="btn btn-primary" pys-onClick="clear"> Clear all Responses</div>
@@ -134,16 +159,18 @@ def clear(*ags, **kws):
 	out1 = Element("outputDiv1")
 	out2 = Element("outputDiv2")
 	out3 = Element("outputDiv3")
+	out4 = Element("outputDiv4")
 	out1.clear()	
 	out2.clear()
 	out3.clear()
+	out4.clear()
 def final_sub(*ags, **kws):
 	out1 = Element("outputDiv1")
 	out2 = Element("outputDiv2")
 	out3 = Element("outputDiv3")
-
+	out4 = Element("outputDiv4")
 	
-	grade = round(((pnt1+pnt2+pnt3)/3)*100,1)
+	grade = round(((pnt1+pnt2+pnt3+pnt4)/4)*100,1)
 	name = Element('student-name')
 	out_final = Element('outputFinal')
 	out_final.write(f" Thank you {name.value}, your answers have been submitted. Your score is: {grade} %")
