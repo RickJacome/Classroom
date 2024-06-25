@@ -13,6 +13,7 @@
 	<py-env>
       - matplotlib
       - numpy
+      - csv
 	</py-env>
 
   </head>
@@ -152,6 +153,7 @@ def print_num4(*ags, **kws):
 <div id="outputFinal" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 </div>
 <py-script>
+
 def clear(*ags, **kws):
 	out1 = Element("outputDiv1")
 	out2 = Element("outputDiv2")
@@ -171,8 +173,10 @@ def final_sub(*ags, **kws):
 	name = Element('student-name')
 	out_final = Element('outputFinal')
 	out_final.write(f" Thank you {name.value}, your answers have been submitted. Your score is: {grade} %")
-
-	del out_final
+	dirx = 'list.csv'
+	with open(dirx,'w',newline ='') as csvfile:
+		csvwriter = csv.writeR(csvfile)
+		csvwriter.writerow([name.value,grade])
 
 </py-script>
 
