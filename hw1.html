@@ -174,9 +174,7 @@ def final_sub(*ags, **kws):
 	out_final = Element('outputFinal')
 	out_final.write(f" Thank you {name.value}, your answers have been submitted. Your score is: {grade} %")
 	dirx = 'list.csv'
-	with open(dirx,'w',newline ='') as csvfile:
-		csvwriter = csv.writeR(csvfile)
-		csvwriter.writerow([name.value,grade])
+
 
 </py-script>
 
