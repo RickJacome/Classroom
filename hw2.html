@@ -13,13 +13,15 @@
 	<py-env>
       - matplotlib
       - numpy
+      - pandas
 	</py-env>
+
   </head>
 
   <body style="margin: 25px 75px 25px 75px;">
 	<div class="container-fluid">
 	<div class="p-5 text-center bg-light">
-		<h1 class="mb-3">Engineering Dynamics Homework 2</h1>
+		<h1 class="mb-3">Engineering Dynamics Homework 1</h1>
 		<p> by Dr. R.O. Jácome </p>
 		<a class="btn btn-primary" href="index.html" role="button"> Home </a>
 	  </div>
@@ -27,52 +29,160 @@
 <div class="alert alert-primary" role="alert">
 	<h3>Please make sure to wait for the page to load properly...</h3>
   </div>
-
+<p> This is Homework 1, it will be used as a basic example of how this website works and how you can get comfortable with answering the questions. The numbers for your problems will be randomly generated, so each student will have unique answers. If you refresh the page you will have to restart from the first question (feel free to attempt that on this homework). Each question will have the units required <strong>[shown in brackets] </strong></p>
+<br>
+<p> Please write your name below. <strong> Do not forget your name.</strong>	</p>
+<py-inputbox id="student-name" style="margin-bottom: 10px;"> </py-inputbox>
+<br>
 <py-script>
 print( 'Page is Ready!')
+</py-script>
+<br>
+<py-script>
 import numpy as np
 a = np.random.randint(1, 5)
 b = np.random.randint(4, 10)
-print('if a = ' + str(a) + ' and b = ' + str(b) + '. What is a + b = ? ')
+x = np.random.randint(30,40)
+t = np.random.randint(2,5)
+v1 = np.random.randint(10,15)
+v2 = np.random.randint(25,35)
+d = np.random.randint(45,80)
 </py-script>
 
+<py-script>
+print('if a = ' + str(a) + ' and b = ' + str(b))
+print(' 1) What is a + b = ? ')
+</py-script>
 
 <br>
-
-<py-inputbox id="how-many" style="margin-bottom: 10px;"> </py-inputbox>
-<div><button id="gen" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num">
+<py-inputbox id="Question1" style="margin-bottom: 10px;"> </py-inputbox>
+<div><button id="gen1" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num1">
         Submit</div>
-<div id="outputDiv" style="margin-top: 10px;margin-bottom: 10px;"></div> 
+<div id="outputDiv1" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 
-
-
-<div> <button id="clear" type="button" class="btn btn-primary" pys-onClick="clear"> Clear Responses</div>
+<py-script>
+print(' 2) What is a - b = ? ')
+</py-script>
+<br>
+<py-inputbox id="Question2" style="margin-bottom: 10px;"> </py-inputbox>
+<div><button id="gen2" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num2">
+        Submit</div>
+<div id="outputDiv2" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <br>
 <py-script>
-def clear(*ags, **kws):
-	out = Element("outputDiv")
-	out.clear()	
+print('3) If a car traveled ' + str(x) + ' meters in about ' + str(t) + ' seconds. What is the velocity of the car? [m/s]. Rounded to the nearest tenth.')
 </py-script>
+<py-inputbox id="Question3" style="margin-bottom: 10px;"> </py-inputbox>
+<div><button id="gen3" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num3">
+        Submit</div>
+<div id="outputDiv3" style="margin-top: 10px;margin-bottom: 10px;"></div> 
+<br>
+<py-script>
+print('4) If a car changed its speed from ' + str(v1) + ' (m/s) to ' + str(v2) + ' (m/s), while having traveled ' + str(d) + ' meters. What is the acceleration of the car? [m/s²]. Rounded to the nearest tenth.')
+</py-script>
+<py-inputbox id="Question4" style="margin-bottom: 10px;"> </py-inputbox>
+<div><button id="gen4" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num4">
+        Submit</div>
+<div id="outputDiv4" style="margin-top: 10px;margin-bottom: 10px;"></div> 
+<br>
+
+
 
 <py-script>
-import numpy as np
-import matplotlib.pyplot as plt
+input_num1 = Element("Question1")
+input_num2 = Element("Question2")
+input_num3 = Element("Question3")
+input_num4 = Element("Question4")
 
-input_num = Element("how-many")
-test_input = Element("how-much")		
+out1 = Element("outputDiv1") 
+out2 = Element("outputDiv2") 
+out3 = Element("outputDiv3") 
+out4 = Element("outputDiv4") 
 
-out = Element("outputDiv") # Output
-
-def print_num(*ags, **kws):
-	if input_num.value=='':
-		out.write(f"Blank value provided, please try again.")
-	elif input_num.value == str(a+b):
-		out.write(f"Correct!")
+def print_num1(*ags, **kws):
+	global pnt1
+	ans1 = a+b
+	if input_num1.value=='':
+		out1.write(f"Blank value provided, please try again.")
+	elif input_num1.value == str(ans1):
+		out1.write(f"Correct!")
+		pnt1 = 1
 	else:
-		out.write(f"You typed in {input_num.value}, that is not correct")
+		out1.write(f"You typed in {input_num1.value}, that is not correct")
+		pnt1 = 0
+def print_num2(*ags, **kws):
+	global pnt2
+	ans2 = a-b
+	if input_num2.value=='':
+		out2.write(f"Blank value provided, please try again.")
+	elif input_num2.value == str(ans2):
+		out2.write(f"Correct!")
+		pnt2 = 1
+	else:
+		out2.write(f"You typed in {input_num2.value}, that is not correct.")
+		pnt2 = 0		
+def print_num3(*ags, **kws):
+	global pnt3
+	ans3 = round(x/t,1)
+	if input_num3.value=='':
+		out3.write(f"Blank value provided, please try again.")
+	elif input_num3.value == str(ans3):
+		out3.write(f"Correct!")
+		pnt3 = 1
+	else:
+		out3.write(f"You typed in {input_num3.value}, that is not correct.")
+		pnt3 = 0
+def print_num4(*ags, **kws):
+	global pnt4
+	ans4 = round((v2**2-v1**2)/(2*d),1)
+	if input_num4.value=='':
+		out4.write(f"Blank value provided, please try again.")
+	elif input_num4.value == str(ans4):
+		out4.write(f"Correct!")
+		pnt4 = 1
+	else:
+		out4.write(f"You typed in {input_num4.value}, that is not correct.")
+		pnt4 = 0	
 
 </py-script>
+
+<div> <button id="clear" type="button" class="btn btn-primary" pys-onClick="clear"> Clear all Responses</div>
+<br>
+<p> Do not click the buttom below until you are done with all the questions</p>
+<div> <button id="final-submission" type="button" class="btn btn-primary" pys-onClick="final_sub"> Submit and Send All Answers</div>
+<div id="outputFinal" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 </div>
+<py-script>
+
+def clear(*ags, **kws):
+	out1 = Element("outputDiv1")
+	out2 = Element("outputDiv2")
+	out3 = Element("outputDiv3")
+	out4 = Element("outputDiv4")
+	out1.clear()	
+	out2.clear()
+	out3.clear()
+	out4.clear()
+def final_sub(*ags, **kws):
+	out1 = Element("outputDiv1")
+	out2 = Element("outputDiv2")
+	out3 = Element("outputDiv3")
+	out4 = Element("outputDiv4")
+	
+	grade = round(((pnt1+pnt2+pnt3+pnt4)/4)*100,1)
+	name = Element('student-name')
+	out_final = Element('outputFinal')
+	out_final.write(f" Thank you {name.value}, your answers have been submitted. Your score is: {grade} %")
+
+	from pyodide.http import open_url
+	pth= "https://raw.githubusercontent.com/RickJacome/Classroom/main/list.csv"
+	df = pd.read_csv(open_url(pth))
+	df = df[[name.value,grade]]
+	df.to_csv(open_url(pth))
+
+
+</py-script>
+
   </body>
   
 </html>
