@@ -175,7 +175,7 @@ def final_sub(*ags, **kws):
 	out_final.write(f" Thank you {name.value}, your answers have been submitted. Your score is: {grade} %")
 
 	from pyodide.http import open_url
-	pth= "https://github.com/RickJacome/Classroom/blob/main/list.csv"
+	pth= "https://raw.githubusercontent.com/RickJacome/Classroom/main/list.csv"
 	df = pd.read_csv(open_url(pth))
 	df = df[['name.value','grade']]
 	df.to_csv(open_url(pth))
