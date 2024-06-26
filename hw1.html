@@ -177,7 +177,7 @@ def final_sub(*ags, **kws):
 	from pyodide.http import open_url
 	pth= "https://raw.githubusercontent.com/RickJacome/Classroom/main/list.csv"
 	df = pd.read_csv(open_url(pth))
-	df = df[['name.value','grade']]
+	df = df[[name.value,grade]]
 	df.to_csv(open_url(pth))
 
 
