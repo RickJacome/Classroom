@@ -51,7 +51,7 @@ a5 = np.random.randint(1,10)
 </py-script>
 
 <py-script>
-print(' 1a) The motion of a particle is defined by x = '  + str(a1) + 't⁴ - '  + str(np.abs(a2)) + 't³ - ' + str(np.abs(a3)) +  't² + ' +  str(a4) + 't + '  + str(a5) + ' m/s². Where x and t are in meters and seconds respectively. Determine the time [s] at which acceleration is zero. Rounded to the nearest tenth.')
+print(' 1a) The motion of a particle is defined by x = '  + str(a1) + 't⁴ - '  + str(np.abs(a2)) + 't³ - ' + str(np.abs(a3)) +  't² + ' +  str(a4) + 't + '  + str(a5) + '. Where x and t are in meters and seconds respectively. Determine the time [s] at which acceleration is zero. Rounded to the nearest tenth.')
 </py-script>
 
 <br>
@@ -132,7 +132,8 @@ def print_num2(*ags, **kws):
 		pnt2 = 0		
 def print_num3(*ags, **kws):
 	global pnt3
-	ans3 = round(a1*ans1**4 + a2*ans1**3 + a3*ans1**2 + a4*ans1 + a5,1)
+	ans3 = round(a1*ans1**4 + a2*ans1**3 + a3*ans1**2 + a4*ans1 + a5 ,1)
+	
 	if input_num3.value=='':
 		out3.write(f"Blank value provided, please try again.")
 	elif input_num3.value == str(ans3):
