@@ -29,7 +29,7 @@
 <div class="alert alert-primary" role="alert">
 	<h3>Please make sure to wait for the page to load properly...</h3>
   </div>
-<p> Welcome to Homework 2. Each question will have the units required <strong>[shown in brackets] </strong></p>
+<p> Welcome to Homework 2. Each question will have the units required <strong>[shown in brackets]. Some notes: On questions asking to round to the nearest hundred, if the answer is 0.70, input 0.7 into your answer. </strong></p>
 <br>
 <p> Please write your name below. <strong> Do not forget your name.</strong>	</p>
 <py-inputbox id="student-name" style="margin-bottom: 10px;"> </py-inputbox>
@@ -94,11 +94,13 @@ input_num1 = Element("Question1")
 input_num2 = Element("Question2")
 input_num3 = Element("Question3")
 input_num4 = Element("Question4")
+input_num5 = Element("Question5")
 
 out1 = Element("outputDiv1") 
 out2 = Element("outputDiv2") 
 out3 = Element("outputDiv3") 
 out4 = Element("outputDiv4") 
+out5 = Element("outputDiv5") 
 
 def print_num1(*ags, **kws):
 	global pnt1
@@ -145,6 +147,7 @@ def print_num3(*ags, **kws):
 		pnt3 = 0
 def print_num4(*ags, **kws):
 	global pnt4
+	global ans4
 	ans4 = round(np.sqrt(v**2-2*a*x),1)
 	if input_num4.value=='':
 		out4.write(f"Blank value provided, please try again.")
@@ -154,6 +157,18 @@ def print_num4(*ags, **kws):
 	else:
 		out4.write(f"You typed in {input_num4.value}, that is not correct.")
 		pnt4 = 0	
+def print_num5(*ags, **kws):
+	global pnt5
+	ans5 = round(-ans4/a,1)
+	if input_num5.value=='':
+		out5.write(f"Blank value provided, please try again.")
+	elif input_num5.value == str(ans5):
+		out5.write(f"Correct!")
+		pnt5 = 1
+	else:
+		out5.write(f"You typed in {input_num5.value}, that is not correct.")
+		pnt5 = 0	
+
 
 </py-script>
 
@@ -170,26 +185,22 @@ def clear(*ags, **kws):
 	out2 = Element("outputDiv2")
 	out3 = Element("outputDiv3")
 	out4 = Element("outputDiv4")
+	out5 = Element("outputDiv5")
 	out1.clear()	
 	out2.clear()
 	out3.clear()
 	out4.clear()
+	out5.clear()
 def final_sub(*ags, **kws):
 	out1 = Element("outputDiv1")
 	out2 = Element("outputDiv2")
 	out3 = Element("outputDiv3")
 	out4 = Element("outputDiv4")
-	
-	grade = round(((pnt1+pnt2+pnt3+pnt4)/4)*100,1)
+	out5 = Element("outputDiv5")
+	grade = round(((pnt1+pnt2+pnt3+pnt4+pnt5)/5)*100,1)
 	name = Element('student-name')
 	out_final = Element('outputFinal')
 	out_final.write(f" Thank you {name.value}, your answers have been submitted. Your score is: {grade} %")
-
-	#from pyodide.http import open_url
-	#pth= "https://raw.githubusercontent.com/RickJacome/Classroom/main/list.csv"
-	#df = pd.read_csv(open_url(pth))
-	#df = df[[name.value,grade]]
-	#df.to_csv(open_url(pth))
 
 
 </py-script>
