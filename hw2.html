@@ -120,7 +120,7 @@ def print_num2(*ags, **kws):
 		pnt2 = 0		
 def print_num3(*ags, **kws):
 	global pnt3
-	ans3 = round(x/t,1)
+	ans3 = round(x+t,1)
 	if input_num3.value=='':
 		out3.write(f"Blank value provided, please try again.")
 	elif input_num3.value == str(ans3):
@@ -131,7 +131,7 @@ def print_num3(*ags, **kws):
 		pnt3 = 0
 def print_num4(*ags, **kws):
 	global pnt4
-	ans4 = round((v2**2-v1**2)/(2*d),1)
+	ans4 = round(t+x,1)
 	if input_num4.value=='':
 		out4.write(f"Blank value provided, please try again.")
 	elif input_num4.value == str(ans4):
