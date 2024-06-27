@@ -51,8 +51,7 @@ a5 = np.random.randint(1,10)
 </py-script>
 
 <py-script>
-print('if x = ' + str(x) + ' and t = ' + str(t))
-print(' 1) If the acceleration of a particle is described by: a = '  + str(a1) + 't⁴ - '  + str(np.abs(a2)) + 't³ - ' + str(np.abs(a3)) +  't² + ' +  str(a4) + 't + '  + str(a5) + '. Calculate the time at max speed.')
+print(' 1a) If the acceleration of a particle is described by: a = '  + str(a1) + 't⁴ - '  + str(np.abs(a2)) + 't³ - ' + str(np.abs(a3)) +  't² + ' +  str(a4) + 't + '  + str(a5) + '. Calculate the time at max speed.')
 </py-script>
 
 <br>
@@ -62,7 +61,7 @@ print(' 1) If the acceleration of a particle is described by: a = '  + str(a1) +
 <div id="outputDiv1" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 
 <py-script>
-print(' 2) What is the velocity of the car? [m/s]. Rounded to the nearest tenth.')
+print(' 1b) What is the velocity of the particle at this time? [m/s]. Rounded to the nearest tenth.')
 </py-script>
 <br>
 <py-inputbox id="Question2" style="margin-bottom: 10px;"> </py-inputbox>
@@ -71,8 +70,7 @@ print(' 2) What is the velocity of the car? [m/s]. Rounded to the nearest tenth.
 <div id="outputDiv2" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <br>
 <py-script>
-print('if x = ' + str(x) + ' and t = ' + str(t))
-print(' 3) Calculate the acceleration [m/s²]. Rounded to the nearest tenth.')
+print(' 1c) What is the total traveled distance of the particle at this time? [m]. Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question3" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen3" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num3">
@@ -103,7 +101,15 @@ out4 = Element("outputDiv4")
 
 def print_num1(*ags, **kws):
 	global pnt1
-	ans1 = round(2*x/t**2,1)
+	
+	t1 = (-1*3*2*a2 + np.sqrt( (3*2*a2)**2 -4*(4*3*a1)*(a3*2) )) / (2*4*3*a1)
+	t2 = (-1*3*2*a2 - np.sqrt( (3*2*a2)**2 -4*(4*3*a1)*(a3*2) )) / (2*4*3*a1)
+
+	if t1 >= 0:
+	    ans1 = round(t1,1)
+	else:
+	    ans1 = round(t2,1)
+
 	if input_num1.value=='':
 		out1.write(f"Blank value provided, please try again.")
 	elif input_num1.value == str(ans1):
@@ -114,7 +120,7 @@ def print_num1(*ags, **kws):
 		pnt1 = 0
 def print_num2(*ags, **kws):
 	global pnt2
-	ans2 = round(2*x/t,1)
+	ans2 = round(4*a1*ta**3 + 3*a2*ta**2 + 2*a3*ta + a4,1)
 	if input_num2.value=='':
 		out2.write(f"Blank value provided, please try again.")
 	elif input_num2.value == str(ans2):
@@ -125,7 +131,7 @@ def print_num2(*ags, **kws):
 		pnt2 = 0		
 def print_num3(*ags, **kws):
 	global pnt3
-	ans3 = round(2*x/t**2,1)
+	ans3 = round(a1*ta**4 + a2*ta**3 + a3*ta**2 + a4*ta + a5,1)
 	if input_num3.value=='':
 		out3.write(f"Blank value provided, please try again.")
 	elif input_num3.value == str(ans3):
