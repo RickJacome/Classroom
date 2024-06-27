@@ -41,8 +41,9 @@ print( 'Page is Ready!')
 <py-script>
 import numpy as np
 v = 0
+a = np.random.randint(-15,-1)
 t = np.random.randint(25,35)
-x = np.random.randint(800,950)
+x = np.random.randint(150,230)
 a1 = np.random.randint(1,10)
 a2 = np.random.randint(-10,-1)
 a3 = np.random.randint(-15,-5)
@@ -144,7 +145,7 @@ def print_num3(*ags, **kws):
 		pnt3 = 0
 def print_num4(*ags, **kws):
 	global pnt4
-	ans4 = round(2*x/t,1)
+	ans4 = round(np.sqrt(v**2-2*a*x),1)
 	if input_num4.value=='':
 		out4.write(f"Blank value provided, please try again.")
 	elif input_num4.value == str(ans4):
