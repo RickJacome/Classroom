@@ -101,7 +101,7 @@ out4 = Element("outputDiv4")
 
 def print_num1(*ags, **kws):
 	global pnt1
-	
+	gloabl ans1
 	t1 = (-1*3*2*a2 + np.sqrt( (3*2*a2)**2 -4*(4*3*a1)*(a3*2) )) / (2*4*3*a1)
 	t2 = (-1*3*2*a2 - np.sqrt( (3*2*a2)**2 -4*(4*3*a1)*(a3*2) )) / (2*4*3*a1)
 
@@ -120,7 +120,7 @@ def print_num1(*ags, **kws):
 		pnt1 = 0
 def print_num2(*ags, **kws):
 	global pnt2
-
+	global ans2
 	ans2 = round(4*a1*ans1**3 + 3*a2*ans1**2 + 2*a3*ans1 + a4,1)
 	
 	if input_num2.value=='':
