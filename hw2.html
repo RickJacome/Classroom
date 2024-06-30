@@ -43,9 +43,9 @@ import numpy as np
 v = 0
 a = np.random.randint(-15,-1)
 t = np.random.randint(25,35)
-t2 = np.random.randint(25,35)
+t2 = np.random.randint(28,33) #Subject change
 x = np.random.randint(150,230)
-x2 = np.random.randint(150,230)
+x2 = np.random.randint(800,1200) #Subject change
 a1 = np.random.randint(1,10)
 a2 = np.random.randint(-10,-1)
 a3 = np.random.randint(-15,-5)
@@ -205,7 +205,7 @@ def print_num5(*ags, **kws):
 
 def print_num6(*ags, **kws):
 	global pnt6
-	ans6 = round(-ans4/a,1)
+	ans6 = round(2*x2/t2**2,1)
 	if input_num6.value=='':
 		out6.write(f"Blank value provided, please try again.")
 	elif input_num6.value == str(ans6):
@@ -217,7 +217,7 @@ def print_num6(*ags, **kws):
 
 def print_num7(*ags, **kws):
 	global pnt7
-	ans7 = round(-ans4/a,1)
+	ans7 = round(2*x2/t2,1)
 	if input_num7.value=='':
 		out7.write(f"Blank value provided, please try again.")
 	elif input_num7.value == str(ans7):
