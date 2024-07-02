@@ -54,7 +54,7 @@ a5 = np.random.randint(1,10)
 </py-script>
 
 <py-script>
-print('A motorist is traveling at 54 km/h and observers that a traffic light 240 m ahead has turned red. The traffic light is timed to stay red 24 s. If the motorist wishes to pass the light without stopping just as it turns green again, determine a) the required uniform deceleration of the car for the car to cross without stopping.')
+print('A motorist is traveling at 54 km/h and observers that a traffic light 240 m ahead has turned red. The traffic light is timed to stay red 24 s. If the motorist wishes to pass the light without stopping just as it turns green again, determine a) the required uniform deceleration [m/s²] of the car for it to cross without stopping. Rounded to the nearest tenth.')
 </py-script>
 
 <br>
@@ -64,7 +64,7 @@ print('A motorist is traveling at 54 km/h and observers that a traffic light 240
 <div id="outputDiv1" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 
 <py-script>
-print(' 1 b) What is the velocity [m/s] of the particle at this time? Rounded to the nearest tenth.')
+print(' 1 b) What is the velocity [m/s] of the car as it passes the light? Rounded to the nearest tenth.')
 </py-script>
 <br>
 <py-inputbox id="Question2" style="margin-bottom: 10px;"> </py-inputbox>
@@ -73,7 +73,7 @@ print(' 1 b) What is the velocity [m/s] of the particle at this time? Rounded to
 <div id="outputDiv2" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <br>
 <py-script>
-print(' 1 c) What is the position [m] of the particle at this time? Rounded to the nearest tenth.')
+print(' 2 a) Automobiles A and B are traveling in adjacent highway lanes and at t = 0 have the positions and speeds shown. Knowing that automobile A has a constant acceleration of 1.8 ft/s² and that B has a constant deceleration of 1.2 ft/s². a) Determine at what time [s] car A will overtake  car B. Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question3" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen3" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num3">
@@ -81,7 +81,7 @@ print(' 1 c) What is the position [m] of the particle at this time? Rounded to t
 <div id="outputDiv3" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <br>
 <py-script>
-print(' 2 a) A car is driving at constant speed and starts applying the braking, causing it to slow down at a rate of ' + str(np.abs(a)) + ' ft/s². If the car stops in ' + str(x) + ' ft, determine how fast the car was traveling immediately before applying the brakes [m/s]. Rounded to the nearest tenth.')
+print(' 2 b) Calculate at which position [ft] will A overtake B. Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question4" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen4" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num4">
@@ -90,7 +90,7 @@ print(' 2 a) A car is driving at constant speed and starts applying the braking,
 <br>
 
 <py-script>
-print(' 2 b) Calculate the time required for the car to come to a stop [s]. Rounded to the nearest tenth.')
+print(' 2 c) Calculate the speed [ft/s] of car A at the time calculated in part a. Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question5" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen5" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num5">
@@ -100,7 +100,7 @@ print(' 2 b) Calculate the time required for the car to come to a stop [s]. Roun
 <br>
 
 <py-script>
-print(' 3 a) An airplane begins its take-off run at A with zero velocity and a constant acceleration a. Knowing that the airplane becomes airbone ' +  str(t2) + ' s later at B and that the distance AB is ' +  str(x2) + ' m. Determine the acceleration a [m/s²]. Rounded to the nearest tenth.')
+print(' 2 d) Calculate the speed [ft/s] of car B at the time calculated in part a. Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question6" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen6" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num6">
@@ -110,7 +110,7 @@ print(' 3 a) An airplane begins its take-off run at A with zero velocity and a c
 <br>
 
 <py-script>
-print(' 3 b) What is the take-off velocity [m/s] of the airplane? Rounded to the nearest tenth.')
+print(' 3 ? Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question7" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen7" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num7">
