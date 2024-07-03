@@ -46,15 +46,13 @@ t = np.random.randint(25,35)
 t2 = np.random.randint(28,33) #Subject change
 x = np.random.randint(150,230)
 x2 = np.random.randint(800,1200) #Subject change
-a1 = np.random.randint(1,10)
-a2 = np.random.randint(-10,-1)
-a3 = np.random.randint(-15,-5)
-a4 = np.random.randint(1,10)
 th = np.random.randint(20,50)
+d1 = np.random.randint(7,15)
+d2 = np.random.randint(16,23)
 </py-script>
 
 <py-script>
-print(' 1) A homeowner uses a snowblower to clear his driveway. Knowing that the snow is discharged at an average angle of 40 with the horizontal, determine the initial velocity v_0 of the snow. Rounded to the nearest hundred.')
+print(' 1 a) A basketball player shoots when she is 16 ft from the backboard. Knowing that the ball has an initial velocity v₀ at an angle of ' + str(th) + ' deg with the horizontal, determine the value of v₀ when d is equal to ' + str(d1) + ' in. Rounded to the nearest tenth.')
 </py-script>
 
 <br>
@@ -64,7 +62,7 @@ print(' 1) A homeowner uses a snowblower to clear his driveway. Knowing that the
 <div id="outputDiv1" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 
 <py-script>
-print(' 2 a) A basketball player shoots when she is 16 ft from the backboard. Knowing that the ball has an initial velocity v_0 at an angle of 30 deg with the horizontal, determine the value of v_0 when d is equal to 9 in. Rounded to the nearest tenth.')
+print(' 1 b) Calculate the value of v₀ when d is now equal to ' + str(d2) + ' in. Rounded to the nearest tenth.')
 </py-script>
 <br>
 <py-inputbox id="Question2" style="margin-bottom: 10px;"> </py-inputbox>
@@ -73,7 +71,7 @@ print(' 2 a) A basketball player shoots when she is 16 ft from the backboard. Kn
 <div id="outputDiv2" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <br>
 <py-script>
-print(' 2 b) Calculate the value of v_0 when d is now equal to 17 in. Rounded to the nearest tenth.')
+print(' 2 a) Three seconds after car B passes through the intersection shown, car A passes through the same intersection. Knowing that the speed of each car is constant, determine the relative velocity of B with respect to A. Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question3" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen3" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num3">
@@ -81,7 +79,7 @@ print(' 2 b) Calculate the value of v_0 when d is now equal to 17 in. Rounded to
 <div id="outputDiv3" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <br>
 <py-script>
-print(' 2 a) A car is driving at constant speed and starts applying the braking, causing it to slow down at a rate of ' + str(np.abs(a)) + ' ft/s². If the car stops in ' + str(x) + ' ft, determine how fast the car was traveling immediately before applying the brakes [m/s]. Rounded to the nearest tenth.')
+print(' 2 b) Calculte the change in position of B with respect to A during a 4 second interval. Rounded to the nearest tenth.
 </py-script>
 <py-inputbox id="Question4" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen4" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num4">
@@ -90,7 +88,7 @@ print(' 2 a) A car is driving at constant speed and starts applying the braking,
 <br>
 
 <py-script>
-print(' 2 b) Calculate the time required for the car to come to a stop [s]. Rounded to the nearest tenth.')
+print(' --time required for the car to come to a stop [s]. Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question5" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen5" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num5">
@@ -100,7 +98,7 @@ print(' 2 b) Calculate the time required for the car to come to a stop [s]. Roun
 <br>
 
 <py-script>
-print(' 3 a) An airplane begins its take-off run at A with zero velocity and a constant acceleration a. Knowing that the airplane becomes airbone ' +  str(t2) + ' s later at B and that the distance AB is ' +  str(x2) + ' m. Determine the acceleration a [m/s²]. Rounded to the nearest tenth.')
+print(' --- Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question6" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen6" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num6">
@@ -110,7 +108,7 @@ print(' 3 a) An airplane begins its take-off run at A with zero velocity and a c
 <br>
 
 <py-script>
-print(' 3 b) What is the take-off velocity [m/s] of the airplane? Rounded to the nearest tenth.')
+print(' --- Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question7" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen7" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num7">
