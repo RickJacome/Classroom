@@ -182,7 +182,7 @@ def print_num4(*ags, **kws):
 		pnt4 = 0	
 def print_num5(*ags, **kws):
 	global pnt5
-	ans5 = round(np.sqrt(A1**2 + A2**2) , 0)
+	ans5 = round(np.sqrt(A1**2 + A2**2) , 1)
 	if input_num5.value=='':
 		out5.write(f"Blank value provided, please try again.")
 	elif input_num5.value == str(ans5):
