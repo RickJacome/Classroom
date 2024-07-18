@@ -47,6 +47,9 @@ t = np.random.randint(2,5)
 v1 = np.random.randint(10,15)
 v2 = np.random.randint(25,35)
 d = np.random.randint(45,80)
+
+A1 = np.random.randint(2,10)
+A2 = np.random.randint(11,20)
 </py-script>
 
 <py-script>
@@ -86,7 +89,7 @@ print('3) If a car changed its speed from ' + str(v1) + ' (m/s) to ' + str(v2) +
 <div id="outputDiv4" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <br>
 <py-script>
-print(' 4) Calculate the time required for the car to come to a stop [s]. Rounded to the nearest tenth.')
+print(' 4) Given vector A = ' + str(A1) + 'i + ' + str(A2) + 'j. Calculate the the magnitude of A. Rounded to the nearest whole number.')
 </py-script>
 <py-inputbox id="Question5" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen5" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num5">
@@ -177,7 +180,7 @@ def print_num4(*ags, **kws):
 		pnt4 = 0	
 def print_num5(*ags, **kws):
 	global pnt5
-	ans5 = round(-ans4/a,1)
+	ans5 = round(np.sqrt(A1**2 + A2**2) , 0)
 	if input_num5.value=='':
 		out5.write(f"Blank value provided, please try again.")
 	elif input_num5.value == str(ans5):
@@ -245,13 +248,6 @@ def final_sub(*ags, **kws):
 	name = Element('student-name')
 	out_final = Element('outputFinal')
 	out_final.write(f" Thank you {name.value}, your answers have been submitted. Your score is: {grade} %")
-
-	#from pyodide.http import open_url
-	#pth= "https://raw.githubusercontent.com/RickJacome/Classroom/main/list.csv"
-	#df = pd.read_csv(open_url(pth))
-	#df = df[[name.value,grade]]
-	#df.to_csv(open_url(pth))
-
 
 </py-script>
 
