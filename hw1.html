@@ -50,6 +50,8 @@ d = np.random.randint(45,80)
 
 A1 = np.random.randint(2,10)
 A2 = np.random.randint(11,20)
+B1 = np.random.randint(4,10)
+B2 = np.random.randint(-10,-4)
 </py-script>
 
 <py-script>
@@ -89,7 +91,7 @@ print('3) If a car changed its speed from ' + str(v1) + ' (m/s) to ' + str(v2) +
 <div id="outputDiv4" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <br>
 <py-script>
-print(' 4) Given vector A = ' + str(A1) + 'i + ' + str(A2) + 'j. Calculate the the magnitude of A. Rounded to the nearest whole number.')
+print(' 4) Given vector A = ' + str(A1) + ' i + ' + str(A2) + ' j. Calculate the magnitude of A. Rounded to the nearest whole number.')
 </py-script>
 <py-inputbox id="Question5" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen5" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num5">
@@ -98,7 +100,7 @@ print(' 4) Given vector A = ' + str(A1) + 'i + ' + str(A2) + 'j. Calculate the t
 
 <br>
 <py-script>
-print(' 5) An airplane begins its take-off run at A with zero velocity and a constant acceleration a. Knowing that the airplane becomes airbone s later at B and that the distance AB is m. Determine the acceleration a [m/s²]. Rounded to the nearest tenth.')
+print(' 5) Given vector B = ' + str(B1) + ' i + ' + str(B2) + ' j. Calculate the angle in between vectors A and B. Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question6" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen6" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num6">
@@ -107,7 +109,7 @@ print(' 5) An airplane begins its take-off run at A with zero velocity and a con
 <br>
 
 <py-script>
-print(' 6) What is the take-off velocity [m/s] of the airplane? Rounded to the nearest tenth.')
+print(' 6) Calculate the i-component of the vector A-B. Rounded to the nearest whole number.')
 </py-script>
 <py-inputbox id="Question7" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen7" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num7">
@@ -191,7 +193,7 @@ def print_num5(*ags, **kws):
 		pnt5 = 0	
 def print_num6(*ags, **kws):
 	global pnt6
-	ans6 = round(2*x2/t2**2,1)
+	ans6 = round( (A1*B1+A2*B2)/( np.sqrt(A1**2 + A2**2)*np.sqrt(B1**2 + B2**2) ),1)
 	if input_num6.value=='':
 		out6.write(f"Blank value provided, please try again.")
 	elif input_num6.value == str(ans6):
@@ -202,7 +204,7 @@ def print_num6(*ags, **kws):
 		pnt6 = 0
 def print_num7(*ags, **kws):
 	global pnt7
-	ans7 = round(2*x2/t2,1)
+	ans7 = round(A1-B1,1)
 	if input_num7.value=='':
 		out7.write(f"Blank value provided, please try again.")
 	elif input_num7.value == str(ans7):
