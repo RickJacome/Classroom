@@ -51,6 +51,11 @@ a2 = np.random.randint(-10,-1)
 a3 = np.random.randint(-15,-5)
 a4 = np.random.randint(1,10)
 a5 = np.random.randint(1,10)
+
+v4a = np.random.randint(50,60)
+d4a = np.random.randint(800,950)
+t4a = np.random.randint(25,35)
+
 </py-script>
 
 <py-script>
@@ -118,6 +123,28 @@ print(' 3 b) What is the take-off velocity [m/s] of the airplane? Rounded to the
 <div id="outputDiv7" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 
 <br>
+
+<py-script>
+print(' 4 a) A motorist is traveling at ' + str(v4a) + 'km/h and observers that a traffic light ' + str(d4a) + ' m ahead has turned red. The traffic light is timed to stay red '+ str(t4a) +' s. If the motorist wishes to pass the light without stopping just as it turns green again, determine the required uniform deceleration [m/s²] of the car for it to cross without stopping. Rounded to the nearest tenth.')
+</py-script>
+<py-inputbox id="Question8" style="margin-bottom: 10px;"> </py-inputbox>
+<div><button id="gen8" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num8">
+        Submit</div>
+<div id="outputDiv8" style="margin-top: 10px;margin-bottom: 10px;"></div> 
+
+<br>
+
+<py-script>
+print(' 4 b) What is the velocity [m/s] of the car as it passes the light? Rounded to the nearest tenth.')
+</py-script>
+<py-inputbox id="Question9" style="margin-bottom: 10px;"> </py-inputbox>
+<div><button id="gen9" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num9">
+        Submit</div>
+<div id="outputDiv9" style="margin-top: 10px;margin-bottom: 10px;"></div> 
+
+
+
+<br>
 <py-script>
 input_num1 = Element("Question1")
 input_num2 = Element("Question2")
@@ -126,6 +153,8 @@ input_num4 = Element("Question4")
 input_num5 = Element("Question5")
 input_num6 = Element("Question6")
 input_num7 = Element("Question7")
+input_num8 = Element("Question8")
+input_num9 = Element("Question9")
 
 out1 = Element("outputDiv1") 
 out2 = Element("outputDiv2") 
@@ -133,7 +162,9 @@ out3 = Element("outputDiv3")
 out4 = Element("outputDiv4") 
 out5 = Element("outputDiv5")
 out6 = Element("outputDiv6")
-out7 = Element("outputDiv7") 
+out7 = Element("outputDiv7")
+out8 = Element("outputDiv8")
+out9 = Element("outputDiv9") 
 
 def print_num1(*ags, **kws):
 	global pnt1
@@ -226,6 +257,31 @@ def print_num7(*ags, **kws):
 		out7.write(f"You typed in {input_num7.value}, that is not correct.")
 		pnt7 = 0
 
+def print_num8(*ags, **kws):
+	global pnt8
+	global ans8
+	ans8 = round((d4a - (v4a*10/36)*t4a)*2/t4a**2,1)
+	if input_num8.value=='':
+		out8.write(f"Blank value provided, please try again.")
+	elif input_num8.value == str(ans8):
+		out8.write(f"Correct!")
+		pnt8 = 1
+	else:
+		out8.write(f"You typed in {input_num8.value}, that is not correct.")
+		pnt8 = 0
+
+def print_num9(*ags, **kws):
+	global pnt9
+	ans9 = round(np.sqrt((v4a*10/36)**2 + 2*d4a*ans8),1)
+	if input_num9.value=='':
+		out9.write(f"Blank value provided, please try again.")
+	elif input_num9.value == str(ans9):
+		out9.write(f"Correct!")
+		pnt9 = 1
+	else:
+		out9.write(f"You typed in {input_num9.value}, that is not correct.")
+		pnt9 = 0
+
 
 </py-script>
 
@@ -245,6 +301,9 @@ def clear(*ags, **kws):
 	out5 = Element("outputDiv5")
 	out6 = Element("outputDiv6")
 	out7 = Element("outputDiv7")
+	out8 = Element("outputDiv8")
+	out9 = Element("outputDiv9")
+
 	out1.clear()	
 	out2.clear()
 	out3.clear()
@@ -252,6 +311,9 @@ def clear(*ags, **kws):
 	out5.clear()
 	out6.clear()
 	out7.clear()
+	out8.clear()
+	out9.clear()
+
 def final_sub(*ags, **kws):
 	out1 = Element("outputDiv1")
 	out2 = Element("outputDiv2")
@@ -260,7 +322,10 @@ def final_sub(*ags, **kws):
 	out5 = Element("outputDiv5")
 	out6 = Element("outputDiv6")
 	out7 = Element("outputDiv7")
-	grade = round(((pnt1+pnt2+pnt3+pnt4+pnt5+pnt6+pnt7)/7)*100,1)
+	out8 = Element("outputDiv8")
+	out9 = Element("outputDiv9") 
+
+	grade = round(((pnt1+pnt2+pnt3+pnt4+pnt5+pnt6+pnt7+pnt8+pnt9)/7)*100,1)
 	name = Element('student-name')
 	out_final = Element('outputFinal')
 	out_final.write(f" Thank you {name.value}, your answers have been submitted. Your score is: {grade} %")
