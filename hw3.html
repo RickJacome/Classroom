@@ -49,7 +49,7 @@ x2 = np.random.randint(800,1200) #Subject change
 </py-script>
 
 <py-script>
-print('1 a) A motorist is traveling at 54 km/h and observers that a traffic light 240 m ahead has turned red. The traffic light is timed to stay red 24 s. If the motorist wishes to pass the light without stopping just as it turns green again, determine the required uniform deceleration [m/s²] of the car for it to cross without stopping. Rounded to the nearest tenth.')
+print('1 a) A ball is thrown so that the motion is defined by the equations x = 5t and y = 2 + 6t - 4.9t² , where x and y are expressed in meters and t is expressed in seconds. Determine the velocity [m/s] at t = 1 s. Rounded to the nearest tenth.')
 </py-script>
 
 <br>
@@ -59,7 +59,7 @@ print('1 a) A motorist is traveling at 54 km/h and observers that a traffic ligh
 <div id="outputDiv1" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 
 <py-script>
-print(' 1 b) What is the velocity [m/s] of the car as it passes the light? Rounded to the nearest tenth.')
+print('1 b) Calculate the horizontal distance [m] the ball travels before hitting the ground.')
 </py-script>
 <br>
 <py-inputbox id="Question2" style="margin-bottom: 10px;"> </py-inputbox>
@@ -68,7 +68,7 @@ print(' 1 b) What is the velocity [m/s] of the car as it passes the light? Round
 <div id="outputDiv2" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <br>
 <py-script>
-print(' 2 a) Automobiles A and B are traveling in adjacent highway lanes and at t = 0 have the positions and speeds shown. Knowing that automobile A has a constant acceleration of 1.8 ft/s² and that B has a constant deceleration of 1.2 ft/s². a) Determine at what time [s] car A will overtake  car B. Rounded to the nearest tenth.')
+print(' 2 a) A basketball player shoots when she is 16 ft from the backboard. Knowing that the ball has an initial velocity v₀ at an angle of 35 deg with the horizontal, determine the value of v₀ [/s] when d is equal to 8 in. Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question3" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen3" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num3">
@@ -76,41 +76,44 @@ print(' 2 a) Automobiles A and B are traveling in adjacent highway lanes and at 
 <div id="outputDiv3" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <br>
 <py-script>
-print(' 2 b) Calculate at which position [ft] will A overtake B. Rounded to the nearest tenth.')
+print(' 2 b) Calculate the value of v₀ [/s] when d is now equal to 20 in. Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question4" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen4" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num4">
         Submit</div>
 <div id="outputDiv4" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <br>
-
 <py-script>
-print(' 2 c) Calculate the speed [ft/s] of car A at the time calculated in part a. Rounded to the nearest tenth.')
+print(' 3 a) A golfer hits a golf ball from point A with an initial velocity of 50 m/s at an angle of 25° with the horizontal axis. Determine the radius of curvature [m] of the trajectory described by the ball at point A. Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question5" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen5" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num5">
         Submit</div>
 <div id="outputDiv5" style="margin-top: 10px;margin-bottom: 10px;"></div> 
-
 <br>
-
 <py-script>
-print(' 2 d) Calculate the speed [ft/s] of car B at the time calculated in part a. Rounded to the nearest tenth.')
+print(' 3 b) Determine the radius of curvature [m] at the highest point of the trajectory. Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question6" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen6" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num6">
         Submit</div>
 <div id="outputDiv6" style="margin-top: 10px;margin-bottom: 10px;"></div> 
-
 <br>
-
 <py-script>
-print(' 3 ? Rounded to the nearest tenth.')
+print(' 4 a) The oscillation of rod OA about O is defined by the relation θ = (3/π)(sin πt), where θ and t are expressed in radians and seconds, respectively. Collar B slides along the rod so that its distance from O is r = 6(1- exp(-2t) ) where r and t are expressed in inches and seconds, respectively. When t = 1 s, determine the velocity [in/s] of the collar. Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question7" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen7" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num7">
         Submit</div>
 <div id="outputDiv7" style="margin-top: 10px;margin-bottom: 10px;"></div> 
+<br>
+<py-script>
+print(' 4 b) Calculate the acceleration [in/s²] of the collar. Rounded to the nearest tenth.')
+</py-script>
+<py-inputbox id="Question8" style="margin-bottom: 10px;"> </py-inputbox>
+<div><button id="gen8" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num8">
+        Submit</div>
+<div id="outputDiv8" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 
 <br>
 <py-script>
@@ -121,6 +124,7 @@ input_num4 = Element("Question4")
 input_num5 = Element("Question5")
 input_num6 = Element("Question6")
 input_num7 = Element("Question7")
+input_num8 = Element("Question8")
 
 out1 = Element("outputDiv1") 
 out2 = Element("outputDiv2") 
@@ -129,6 +133,7 @@ out4 = Element("outputDiv4")
 out5 = Element("outputDiv5")
 out6 = Element("outputDiv6")
 out7 = Element("outputDiv7") 
+out8 = Element("outputDiv8") 
 
 def print_num1(*ags, **kws):
 	global pnt1
@@ -221,6 +226,17 @@ def print_num7(*ags, **kws):
 		out7.write(f"You typed in {input_num7.value}, that is not correct.")
 		pnt7 = 0
 
+def print_num8(*ags, **kws):
+	global pnt8
+	ans8 = round(2*x2/t2,1)
+	if input_num8.value=='':
+		out8.write(f"Blank value provided, please try again.")
+	elif input_num8.value == str(ans8):
+		out8.write(f"Correct!")
+		pnt8 = 1
+	else:
+		out8.write(f"You typed in {input_num8.value}, that is not correct.")
+		pnt8 = 0
 
 </py-script>
 
@@ -240,6 +256,7 @@ def clear(*ags, **kws):
 	out5 = Element("outputDiv5")
 	out6 = Element("outputDiv6")
 	out7 = Element("outputDiv7")
+	out8 = Element("outputDiv8")
 	out1.clear()	
 	out2.clear()
 	out3.clear()
@@ -247,6 +264,7 @@ def clear(*ags, **kws):
 	out5.clear()
 	out6.clear()
 	out7.clear()
+	out8.clear()
 def final_sub(*ags, **kws):
 	out1 = Element("outputDiv1")
 	out2 = Element("outputDiv2")
@@ -255,7 +273,8 @@ def final_sub(*ags, **kws):
 	out5 = Element("outputDiv5")
 	out6 = Element("outputDiv6")
 	out7 = Element("outputDiv7")
-	grade = round(((pnt1+pnt2+pnt3+pnt4+pnt5+pnt6+pnt7)/7)*100,1)
+	out8 = Element("outputDiv8")
+	grade = round(((pnt1+pnt2+pnt3+pnt4+pnt5+pnt6+pnt7+pnt8)/8)*100,1)
 	name = Element('student-name')
 	out_final = Element('outputFinal')
 	out_final.write(f" Thank you {name.value}, your answers have been submitted. Your score is: {grade} %")
