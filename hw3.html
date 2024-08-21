@@ -162,11 +162,16 @@ def print_num1(*ags, **kws):
 
 def print_num2(*ags, **kws):
 	global pnt2
-	th = np.arctan2(y_dot,x_dot)*180/np.pi
+	x = a1_1*t_1
+	x_dot = a1_1
+	x_ddot = 0
+	y = a2_1 + a3_1*t_1 + a4_1*t_1**2
+	y_dot = a3_1 + a4_1*2*t_1
+	y_ddot = a4_1*2
 	y0_dot = a3_1;
 	y0 = a2_1;
 	y_del = 0 - y0;
-	y_ddot = a4_1*2
+	th = np.arctan2(y_dot,x_dot)*180/np.pi
 
 	t1_1b = (-1*y0_dot + np.sqrt( (y0_dot)**2 -4*(-y_del)*(0.5*y_ddot) )) / (2*0.5*y_ddot)
 	t2_1b = (-1*y0_dot - np.sqrt( (y0_dot)**2 -4*(-y_del)*(0.5*y_ddot) )) / (2*0.5*y_ddot)
