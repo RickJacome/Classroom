@@ -47,6 +47,8 @@ a3_1 = np.random.randint(4,8)
 a4_1 = -4.9
 t_1 = np.random.randint(1,5)
 
+v_3 = np.random.randint(40,60)
+th_3 = np.random.randint(20,30)
 
 </py-script>
 
@@ -181,10 +183,6 @@ def print_num2(*ags, **kws):
 		out2.write(f"You typed in {input_num2.value}, that is not correct.")
 		pnt2 = 0		
 
-
-
-
-
 def print_num3(*ags, **kws):
 	global pnt3
 	ans3 = round(a1*ans1**4 + a2*ans1**3 + a3*ans1**2 + a4*ans1 + a5 ,1)
@@ -209,9 +207,13 @@ def print_num4(*ags, **kws):
 	else:
 		out4.write(f"You typed in {input_num4.value}, that is not correct.")
 		pnt4 = 0	
+
 def print_num5(*ags, **kws):
 	global pnt5
-	ans5 = round(-ans4/a,1)
+
+	th_d = th_3*np.pi/180;
+
+	ans5 = round(v_3**2/(np.cos(th_d)*9.81),1)
 	if input_num5.value=='':
 		out5.write(f"Blank value provided, please try again.")
 	elif input_num5.value == str(ans5):
@@ -223,7 +225,7 @@ def print_num5(*ags, **kws):
 
 def print_num6(*ags, **kws):
 	global pnt6
-	ans6 = round(2*x2/t2**2,1)
+	ans6 = round((v_3*np.cos(th_d))**2/(9.81),1)
 	if input_num6.value=='':
 		out6.write(f"Blank value provided, please try again.")
 	elif input_num6.value == str(ans6):
