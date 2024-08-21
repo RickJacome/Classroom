@@ -275,7 +275,7 @@ def print_num8(*ags, **kws):
 
 def print_num9(*ags, **kws):
 	global pnt9
-	ans9 = round(np.sqrt( (v4a*10/36)**2 + 2*d4a*ans8),1)
+	ans9 = round(np.sqrt( (v4a*10/36)**2 + 2*d4a*ans8) ,1)
 	if input_num9.value=='':
 		out9.write(f"Blank value provided, please try again.")
 	elif input_num9.value == str(ans9):
