@@ -53,7 +53,7 @@ th_3 = np.random.randint(20,30)
 </py-script>
 
 <py-script>
-print('1 a) A ball is thrown so that the motion is defined by the equations x = ' + str(a1_1) + 't and y =' + str(a2_1) + ' + ' + str(a3_1) + 't - ' + str(a4_1) + 't² , where x and y are expressed in meters and t is expressed in seconds. Determine the velocity [m/s] at t = ' + str(t_1) + ' s. Rounded to the nearest tenth.')
+print('1 a) A ball is thrown so that the motion is defined by the equations x = ' + str(a1_1) + 't and y = ' + str(a2_1) + ' + ' + str(a3_1) + 't ' + str(a4_1) + 't² , where x and y are expressed in meters and t is expressed in seconds. Determine the velocity [m/s] at t = ' + str(t_1) + ' s. Rounded to the nearest tenth.')
 </py-script>
 
 <br>
@@ -170,9 +170,13 @@ def print_num2(*ags, **kws):
 	t2_1b = (-1*y0_dot - np.sqrt( (y0_dot)**2 -4*(-y_del)*(0.5*y_ddot) )) / (2*0.5*y_ddot)
 
 	if t1_1b >= 0:
-	    ans2 = round(t1_1b,2)
+	    ta = t1_1b
 	else:
-	    ans2 = round(t2_1b,2)
+	    ta = t2_1b
+
+	x_del = ta*x_dot
+
+	ans2 = round(x_del,1)
 
 	if input_num2.value=='':
 		out2.write(f"Blank value provided, please try again.")
