@@ -40,17 +40,20 @@ print( 'Page is Ready!')
 <br>
 <py-script>
 import numpy as np
-v = 0
-a = np.random.randint(-15,-1)
-t = np.random.randint(25,35)
-t2 = np.random.randint(28,33) #Subject change
-x = np.random.randint(150,230)
-x2 = np.random.randint(800,1200) #Subject change
+
 a1 = np.random.randint(1,10)
 a2 = np.random.randint(-10,-1)
 a3 = np.random.randint(-15,-5)
 a4 = np.random.randint(1,10)
 a5 = np.random.randint(1,10)
+
+v2a = 0
+a2a = np.random.randint(-15,-1)
+x2a = np.random.randint(150,230)
+
+t3a = np.random.randint(25,35)
+x3a = np.random.randint(800,950)
+
 
 v4a = np.random.randint(50,60)
 d4a = np.random.randint(800,950)
@@ -86,7 +89,7 @@ print(' 1 c) What is the position [m] of the particle at this time? Rounded to t
 <div id="outputDiv3" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <br>
 <py-script>
-print(' 2 a) A car is driving at constant speed and starts applying the braking, causing it to slow down at a rate of ' + str(np.abs(a)) + ' ft/s². If the car stops in ' + str(x) + ' ft, determine how fast the car was traveling immediately before applying the brakes [m/s]. Rounded to the nearest tenth.')
+print(' 2 a) A car is driving at constant speed and starts applying the braking, causing it to slow down at a rate of ' + str(np.abs(a2a)) + ' ft/s². If the car stops in ' + str(x2a) + ' ft, determine how fast the car was traveling immediately before applying the brakes [m/s]. Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question4" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen4" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num4">
@@ -105,7 +108,7 @@ print(' 2 b) Calculate the time required for the car to come to a stop [s]. Roun
 <br>
 
 <py-script>
-print(' 3 a) An airplane begins its take-off run at A with zero velocity and a constant acceleration a. Knowing that the airplane becomes airbone ' +  str(t2) + ' s later at B and that the distance AB is ' +  str(x2) + ' m. Determine the acceleration a [m/s²]. Rounded to the nearest tenth.')
+print(' 3 a) An airplane begins its take-off run at A with zero velocity and a constant acceleration a. Knowing that the airplane becomes airbone ' +  str(t3a) + ' s later at B and that the distance AB is ' +  str(x3a) + ' m. Determine the acceleration a [m/s²]. Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question6" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen6" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num6">
@@ -212,7 +215,7 @@ def print_num3(*ags, **kws):
 def print_num4(*ags, **kws):
 	global pnt4
 	global ans4
-	ans4 = round(np.sqrt(v**2-2*a*x),1)
+	ans4 = round(np.sqrt(v2a**2-2*a2a*x2a),1)
 	if input_num4.value=='':
 		out4.write(f"Blank value provided, please try again.")
 	elif input_num4.value == str(ans4):
@@ -223,7 +226,7 @@ def print_num4(*ags, **kws):
 		pnt4 = 0	
 def print_num5(*ags, **kws):
 	global pnt5
-	ans5 = round(-ans4/a,1)
+	ans5 = round(-ans4/a2a,1)
 	if input_num5.value=='':
 		out5.write(f"Blank value provided, please try again.")
 	elif input_num5.value == str(ans5):
@@ -235,7 +238,7 @@ def print_num5(*ags, **kws):
 
 def print_num6(*ags, **kws):
 	global pnt6
-	ans6 = round(2*x2/t2**2,1)
+	ans6 = round(2*x3a/t3a**2,1)
 	if input_num6.value=='':
 		out6.write(f"Blank value provided, please try again.")
 	elif input_num6.value == str(ans6):
@@ -247,7 +250,7 @@ def print_num6(*ags, **kws):
 
 def print_num7(*ags, **kws):
 	global pnt7
-	ans7 = round(2*x2/t2,1)
+	ans7 = round(2*x3a/t3a,1)
 	if input_num7.value=='':
 		out7.write(f"Blank value provided, please try again.")
 	elif input_num7.value == str(ans7):
@@ -272,7 +275,7 @@ def print_num8(*ags, **kws):
 
 def print_num9(*ags, **kws):
 	global pnt9
-	ans9 = round(np.sqrt((v4a*10/36)**2 + 2*d4a*ans8),1)
+	ans9 = round(np.sqrt( (v4a*10/36)**2 + 2*d4a*ans8),1)
 	if input_num9.value=='':
 		out9.write(f"Blank value provided, please try again.")
 	elif input_num9.value == str(ans9):
