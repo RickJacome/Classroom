@@ -109,7 +109,7 @@ print(' 3 b) Determine the radius of curvature [m] at the highest point of the t
 <div id="outputDiv6" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <br>
 <py-script>
-print(' 4 a) The oscillation of rod OA about O is defined by the relation θ = ('+ str(C_th) +'/π)(sin π'+ str(t) +'), where θ and t are expressed in radians and seconds, respectively. Collar B slides along the rod so that its distance from O is r = '+ str(C1_r) +'(1- exp('+ str(C2_r) + 't) ) where r and t are expressed in inches and seconds, respectively. When t = 1 s, determine the velocity [in/s] of the collar. Rounded to the nearest tenth.')
+print(' 4 a) The oscillation of rod OA about O is defined by the relation θ = ('+ str(C_th) +'/π)(sin πt), where θ and t are expressed in radians and seconds, respectively. Collar B slides along the rod so that its distance from O is r = '+ str(C1_r) +'(1- exp('+ str(C2_r) + 't) ) where r and t are expressed in inches and seconds, respectively. When t = '+str(t_4)+' s, determine the velocity [in/s] of the collar. Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question7" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen7" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num7">
