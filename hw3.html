@@ -50,6 +50,10 @@ t_1 = np.random.randint(1,5)
 v_3 = np.random.randint(40,60)
 th_3 = np.random.randint(20,30)
 
+t_4 = np.random.randint(1,5,1)
+C_th = np.random.randint(2,5,1)
+C1_r = np.random.randint(4,8,1)
+C2_r = np.random.randint(-1,-5,-1)
 
 </py-script>
 
@@ -105,7 +109,7 @@ print(' 3 b) Determine the radius of curvature [m] at the highest point of the t
 <div id="outputDiv6" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <br>
 <py-script>
-print(' 4 a) The oscillation of rod OA about O is defined by the relation θ = (3/π)(sin πt), where θ and t are expressed in radians and seconds, respectively. Collar B slides along the rod so that its distance from O is r = 6(1- exp(-2t) ) where r and t are expressed in inches and seconds, respectively. When t = 1 s, determine the velocity [in/s] of the collar. Rounded to the nearest tenth.')
+print(' 4 a) The oscillation of rod OA about O is defined by the relation θ = ('+ str(C_th) +'/π)(sin π'+ str(t) +'), where θ and t are expressed in radians and seconds, respectively. Collar B slides along the rod so that its distance from O is r = '+ str(C1_r) +'(1- exp('+ str(C2_r) + 't) ) where r and t are expressed in inches and seconds, respectively. When t = 1 s, determine the velocity [in/s] of the collar. Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question7" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen7" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num7">
@@ -251,7 +255,18 @@ def print_num6(*ags, **kws):
 
 def print_num7(*ags, **kws):
 	global pnt7
-	ans7 = round(2*x2/t2,1)
+	
+	th = (C_th/np.pi)*(np.sin(t_4*np.pi))
+	th_dot = (C_th/np.pi)*(np.cos(t_4*np.pi))*np.pi
+	th_ddot =  (C_th/np.pi)*(np.sin(t_4*np.pi))*np.pi**2*(-1)
+	r = C1_r*(1-np.exp(C2_r*t_4))
+	r_dot = -C1_r*np.exp(C2_r*t_4)*C2_r
+	r_ddot = -C1_r*np.exp(C2_r*t_4)*(C2_r)**2
+	vB_er = r_dot
+	vB_et = r*th_dot
+	v_mag = np.sqrt(vB_er**2 + vB_et**2)
+
+	ans7 = round(v_mag,1)
 	if input_num7.value=='':
 		out7.write(f"Blank value provided, please try again.")
 	elif input_num7.value == str(ans7):
@@ -263,7 +278,20 @@ def print_num7(*ags, **kws):
 
 def print_num8(*ags, **kws):
 	global pnt8
-	ans8 = round(2*x2/t2,1)
+
+	th = (C_th/np.pi)*(np.sin(t_4*np.pi))
+	th_dot = (C_th/np.pi)*(np.cos(t_4*np.pi))*np.pi
+	th_ddot =  (C_th/np.pi)*(np.sin(t_4*np.pi))*np.pi**2*(-1)
+
+	r = C1_r*(1-np.exp(C2_r*t_4))
+	r_dot = -C1_r*np.exp(C2_r*t_4)*C2_r
+	r_ddot = -C1_r*np.exp(C2_r*t_4)*(C2_r)**2
+
+	B_er = r_ddot - r*th_dot**2 
+	aB_et =  r*th_ddot +  2*r_dot*th_dot
+	a_mag = np.sqrt(aB_er**2 + aB_et**2)
+
+	ans8 = round(a_mag,1)
 	if input_num8.value=='':
 		out8.write(f"Blank value provided, please try again.")
 	elif input_num8.value == str(ans8):
