@@ -282,16 +282,14 @@ def print_num8(*ags, **kws):
 	th = (C_th/np.pi)*(np.sin(t_4*np.pi))
 	th_dot = (C_th/np.pi)*(np.cos(t_4*np.pi))*np.pi
 	th_ddot =  (C_th/np.pi)*(np.sin(t_4*np.pi))*np.pi**2*(-1)
-
 	r = C1_r*(1-np.exp(C2_r*t_4))
 	r_dot = -C1_r*np.exp(C2_r*t_4)*C2_r
 	r_ddot = -C1_r*np.exp(C2_r*t_4)*(C2_r)**2
+	vB_er = r_dot
+	vB_et = r*th_dot
+	v_mag = np.sqrt(vB_er**2 + vB_et**2)
 
-	B_er = r_ddot - r*th_dot**2 
-	aB_et =  r*th_ddot +  2*r_dot*th_dot 
-	a_mag = np.sqrt(aB_er**2 + aB_et**2)
-
-	ans8 = round(a_mag,1)
+	ans8 = round(v_mag,1)
 	if input_num8.value=='':
 		out8.write(f"Blank value provided, please try again.")
 	elif input_num8.value == str(ans8):
