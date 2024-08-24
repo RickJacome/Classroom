@@ -288,7 +288,7 @@ def print_num8(*ags, **kws):
 	r_ddot = -C1_r*np.exp(C2_r*t_4)*(C2_r)**2
 
 	B_er = r_ddot - r*th_dot**2 
-	aB_et =  r*th_ddot +  2*r_dot*th_dot
+	aB_et =  r*th_ddot +  2*r_dot*th_dot 
 	a_mag = np.sqrt(aB_er**2 + aB_et**2)
 
 	ans8 = round(a_mag,1)
