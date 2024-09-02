@@ -21,7 +21,7 @@
   <body style="margin: 25px 75px 25px 75px;">
 	<div class="container-fluid">
 	<div class="p-5 text-center bg-light">
-		<h1 class="mb-3">Engineering Dynamics Homework 5</h1>
+		<h1 class="mb-3">Engineering Dynamics Homework 4</h1>
 		<p> by Dr. R.O. Jácome </p>
 		<a class="btn btn-primary" href="index.html" role="button"> Home </a>
 	  </div>
@@ -29,7 +29,7 @@
 <div class="alert alert-primary" role="alert">
 	<h3>Please make sure to wait for the page to load properly...</h3>
   </div>
-<p> Welcome to Homework 5. Each question will have the units required <strong>[shown in brackets]</strong>. Some notes: On questions asking to round to the nearest hundred, if the answer is 0.70, input 0.7 into your answer. </p>
+<p> Welcome to Homework 4. The topic of interest in this homework is 2D particle kinematics, specifically parabolic motion, and relative motion. Each question will have the units required <strong>[shown in brackets]</strong>. Some notes: On questions asking to round to the nearest hundred, if the answer is 0.70, input 0.7 into your answer. </p>
 <br>
 <p> Please write your name below. <strong> Do not forget your name.</strong>	</p>
 <py-inputbox id="student-name" style="margin-bottom: 10px;"> </py-inputbox>
@@ -40,21 +40,13 @@ print( 'Page is Ready!')
 <br>
 <py-script>
 import numpy as np
-v = 0
-a = np.random.randint(-15,-1)
-t = np.random.randint(25,35)
-t2 = np.random.randint(28,33) #Subject change
-x = np.random.randint(150,230)
-x2 = np.random.randint(800,1200) #Subject change
-a1 = np.random.randint(1,10)
-a2 = np.random.randint(-10,-1)
-a3 = np.random.randint(-15,-5)
-a4 = np.random.randint(1,10)
-a5 = np.random.randint(1,10)
+
+
+
 </py-script>
 
 <py-script>
-print(' 1 a) The motion of a particle is defined by x = '  + str(a1) + 't⁴ - '  + str(np.abs(a2)) + 't³ - ' + str(np.abs(a3)) +  't² + ' +  str(a4) + 't + '  + str(a5) + '. Where x and t are in meters and seconds respectively. Determine the time [s] at which acceleration is zero. Rounded to the nearest hundred.')
+print(' 1 a) Slider Block B moves to the right with a constant velocity of 300 mm/s. Determine the velocity [mm/s] of slider block A. Rounded to the nearest tenth.')
 </py-script>
 
 <br>
@@ -64,7 +56,7 @@ print(' 1 a) The motion of a particle is defined by x = '  + str(a1) + 't⁴ - '
 <div id="outputDiv1" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 
 <py-script>
-print(' 1 b) What is the velocity [m/s] of the particle at this time? Rounded to the nearest tenth.')
+print(' 1 b) Calculate the velocity [mm/s] of portion C of the cable. Rounded to the nearest tenth.')
 </py-script>
 <br>
 <py-inputbox id="Question2" style="margin-bottom: 10px;"> </py-inputbox>
@@ -73,7 +65,7 @@ print(' 1 b) What is the velocity [m/s] of the particle at this time? Rounded to
 <div id="outputDiv2" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <br>
 <py-script>
-print(' 1 c) What is the position [m] of the particle at this time? Rounded to the nearest tenth.')
+print(' 1 c) Deteminer the velocity [mm/s] of portion D of the cable. Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question3" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen3" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num3">
@@ -81,7 +73,7 @@ print(' 1 c) What is the position [m] of the particle at this time? Rounded to t
 <div id="outputDiv3" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <br>
 <py-script>
-print(' 2 a) A car is driving at constant speed and starts applying the braking, causing it to slow down at a rate of ' + str(np.abs(a)) + ' ft/s². If the car stops in ' + str(x) + ' ft, determine how fast the car was traveling immediately before applying the brakes [m/s]. Rounded to the nearest tenth.')
+print('1 d) Find the relative velocity [mm/s] of portion C of the cable with respect to slider block A. Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question4" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen4" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num4">
@@ -90,7 +82,7 @@ print(' 2 a) A car is driving at constant speed and starts applying the braking,
 <br>
 
 <py-script>
-print(' 2 b) Calculate the time required for the car to come to a stop [s]. Rounded to the nearest tenth.')
+print(' 2 a) Three seconds after car B passes through the intersection shown, car A passes through the same intersection. Knowing that the speed of each car is constant, determine the relative velocity [mph]')
 </py-script>
 <py-inputbox id="Question5" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen5" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num5">
@@ -100,7 +92,7 @@ print(' 2 b) Calculate the time required for the car to come to a stop [s]. Roun
 <br>
 
 <py-script>
-print(' 3 a) An airplane begins its take-off run at A with zero velocity and a constant acceleration a. Knowing that the airplane becomes airbone ' +  str(t2) + ' s later at B and that the distance AB is ' +  str(x2) + ' m. Determine the acceleration a [m/s²]. Rounded to the nearest tenth.')
+print(' 2 b) Calculate the change in position [miles] of B with respect to A during a 4 second interval. Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question6" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen6" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num6">
@@ -110,7 +102,7 @@ print(' 3 a) An airplane begins its take-off run at A with zero velocity and a c
 <br>
 
 <py-script>
-print(' 3 b) What is the take-off velocity [m/s] of the airplane? Rounded to the nearest tenth.')
+print(' 3 a) Race car A is traveling on a straight portion of the track while race car B is traveling on a circular portion of the track. At the instant shown, the speed of A is increasing at the rate of 10 m/s², and the speed of B is decreasing at the rate of 6 m/s². For the position shown, determine the velocity [m/s²] of B relative to A. Rounded to the nearest tenth. ')
 </py-script>
 <py-inputbox id="Question7" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen7" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num7">
@@ -118,6 +110,17 @@ print(' 3 b) What is the take-off velocity [m/s] of the airplane? Rounded to the
 <div id="outputDiv7" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 
 <br>
+
+<py-script>
+print(' 3 b) Calculate the acceleration [m/s²] of B relative to A. Rounded to the nearest tenth. ')
+</py-script>
+<py-inputbox id="Question8" style="margin-bottom: 10px;"> </py-inputbox>
+<div><button id="gen8" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num8">
+        Submit</div>
+<div id="outputDiv8" style="margin-top: 10px;margin-bottom: 10px;"></div> 
+
+<br>
+
 <py-script>
 input_num1 = Element("Question1")
 input_num2 = Element("Question2")
@@ -126,6 +129,7 @@ input_num4 = Element("Question4")
 input_num5 = Element("Question5")
 input_num6 = Element("Question6")
 input_num7 = Element("Question7")
+input_num8 = Element("Question8")
 
 out1 = Element("outputDiv1") 
 out2 = Element("outputDiv2") 
@@ -134,6 +138,7 @@ out4 = Element("outputDiv4")
 out5 = Element("outputDiv5")
 out6 = Element("outputDiv6")
 out7 = Element("outputDiv7") 
+out8 = Element("outputDiv8") 
 
 def print_num1(*ags, **kws):
 	global pnt1
@@ -226,6 +231,18 @@ def print_num7(*ags, **kws):
 		out7.write(f"You typed in {input_num7.value}, that is not correct.")
 		pnt7 = 0
 
+def print_num8(*ags, **kws):
+	global pnt8
+	ans8 = round(2*x2/t2,1)
+	if input_num8.value=='':
+		out8.write(f"Blank value provided, please try again.")
+	elif input_num8.value == str(ans8):
+		out8.write(f"Correct!")
+		pnt8 = 1
+	else:
+		out8.write(f"You typed in {input_num8.value}, that is not correct.")
+		pnt8 = 0
+
 
 </py-script>
 
@@ -245,6 +262,7 @@ def clear(*ags, **kws):
 	out5 = Element("outputDiv5")
 	out6 = Element("outputDiv6")
 	out7 = Element("outputDiv7")
+	out8 = Element("outputDiv8")
 	out1.clear()	
 	out2.clear()
 	out3.clear()
@@ -252,6 +270,8 @@ def clear(*ags, **kws):
 	out5.clear()
 	out6.clear()
 	out7.clear()
+	out8.clear()
+
 def final_sub(*ags, **kws):
 	out1 = Element("outputDiv1")
 	out2 = Element("outputDiv2")
@@ -260,7 +280,8 @@ def final_sub(*ags, **kws):
 	out5 = Element("outputDiv5")
 	out6 = Element("outputDiv6")
 	out7 = Element("outputDiv7")
-	grade = round(((pnt1+pnt2+pnt3+pnt4+pnt5+pnt6+pnt7)/7)*100,1)
+	out8 = Element("outputDiv8")
+	grade = round(((pnt1+pnt2+pnt3+pnt4+pnt5+pnt6+pnt7+pnt8)/8)*100,1)
 	name = Element('student-name')
 	out_final = Element('outputFinal')
 	out_final.write(f" Thank you {name.value}, your answers have been submitted. Your score is: {grade} %")
