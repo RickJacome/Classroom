@@ -21,7 +21,7 @@
   <body style="margin: 25px 75px 25px 75px;">
 	<div class="container-fluid">
 	<div class="p-5 text-center bg-light">
-		<h1 class="mb-3">Engineering Dynamics Homework 4</h1>
+		<h1 class="mb-3">Engineering Dynamics Homework 5</h1>
 		<p> by Dr. R.O. Jácome </p>
 		<a class="btn btn-primary" href="index.html" role="button"> Home </a>
 	  </div>
@@ -29,7 +29,7 @@
 <div class="alert alert-primary" role="alert">
 	<h3>Please make sure to wait for the page to load properly...</h3>
   </div>
-<p> Welcome to Homework 4. The topic of interest in this homework is 2D particle kinematics, specifically parabolic motion, and relative motion. Each question will have the units required <strong>[shown in brackets]</strong>. Some notes: On questions asking to round to the nearest hundred, if the answer is 0.70, input 0.7 into your answer. </p>
+<p> Welcome to Homework 5. The topic of interest in this homework is 2D particle kinematics, specifically parabolic motion, and relative motion. Each question will have the units required <strong>[shown in brackets]</strong>. Some notes: On questions asking to round to the nearest hundred, if the answer is 0.70, input 0.7 into your answer. </p>
 <br>
 <p> Please write your name below. <strong> Do not forget your name.</strong>	</p>
 <py-inputbox id="student-name" style="margin-bottom: 10px;"> </py-inputbox>
@@ -40,13 +40,10 @@ print( 'Page is Ready!')
 <br>
 <py-script>
 import numpy as np
-
-
-
 </py-script>
 
 <py-script>
-print(' 1 a) Slider Block B moves to the right with a constant velocity of 300 mm/s. Determine the velocity [mm/s] of slider block A. Rounded to the nearest tenth.')
+print('1 a)  A 0.2 lb model rocket is launched vertically from rest at time t = 0 with a constant thrust of 2 lb for one second and no thrust for t > 1 s. Neglecting air resistance and the decrease in mass of the rocket, determine the maximum height [ft] reached by the rocket. Rounded to the nearest tenth.')
 </py-script>
 
 <br>
@@ -56,7 +53,7 @@ print(' 1 a) Slider Block B moves to the right with a constant velocity of 300 m
 <div id="outputDiv1" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 
 <py-script>
-print(' 1 b) Calculate the velocity [mm/s] of portion C of the cable. Rounded to the nearest tenth.')
+print('1 b) Calculate the time [s] required to reach this maximum height. Rounded to the nearest tenth.')
 </py-script>
 <br>
 <py-inputbox id="Question2" style="margin-bottom: 10px;"> </py-inputbox>
@@ -65,7 +62,7 @@ print(' 1 b) Calculate the velocity [mm/s] of portion C of the cable. Rounded to
 <div id="outputDiv2" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <br>
 <py-script>
-print(' 1 c) Deteminer the velocity [mm/s] of portion D of the cable. Rounded to the nearest tenth.')
+print('2 a) The system shown is initially at rest. Neglecting axle friction and the mass of the pulley. Determine the acceleration [ft/s²] of block A. Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question3" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen3" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num3">
@@ -73,7 +70,7 @@ print(' 1 c) Deteminer the velocity [mm/s] of portion D of the cable. Rounded to
 <div id="outputDiv3" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <br>
 <py-script>
-print('1 d) Find the relative velocity [mm/s] of portion C of the cable with respect to slider block A. Rounded to the nearest tenth.')
+print('2 b) Calculate the velocity [ft/s] of block A after it has moved through 10 ft. Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question4" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen4" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num4">
@@ -82,7 +79,7 @@ print('1 d) Find the relative velocity [mm/s] of portion C of the cable with res
 <br>
 
 <py-script>
-print(' 2 a) Three seconds after car B passes through the intersection shown, car A passes through the same intersection. Knowing that the speed of each car is constant, determine the relative velocity [mph]')
+print('2 c) Determine the time [s] required for block A reach a velocity of 20 ft/s. Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question5" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen5" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num5">
@@ -92,7 +89,7 @@ print(' 2 a) Three seconds after car B passes through the intersection shown, ca
 <br>
 
 <py-script>
-print(' 2 b) Calculate the change in position [miles] of B with respect to A during a 4 second interval. Rounded to the nearest tenth.')
+print('3 a) A single wire ACB passes through a ring at C attached to a sphere that revolves at a constant speed v in the horizontal circle shown. Knowing that the tension is the same in both portions of the wire, determine the speed v [m/s]. Rounded to the nearest tenth. ')
 </py-script>
 <py-inputbox id="Question6" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen6" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num6">
@@ -102,7 +99,7 @@ print(' 2 b) Calculate the change in position [miles] of B with respect to A dur
 <br>
 
 <py-script>
-print(' 3 a) Race car A is traveling on a straight portion of the track while race car B is traveling on a circular portion of the track. At the instant shown, the speed of A is increasing at the rate of 10 m/s², and the speed of B is decreasing at the rate of 6 m/s². For the position shown, determine the velocity [m/s²] of B relative to A. Rounded to the nearest tenth. ')
+print('4 a) A turntable A is built into a stage for use in a theatrical production. It is observed during a rehearsal that a trunk B starts to slide outwards on the turntable 10 s after the turntable begins to rotate. Knowing that the trunk undergoes a constant tangential acceleration of 0.24 m/s², determine the coefficient of static friction between the trunk and the turntable. Rounded to the nearest hundred. ')
 </py-script>
 <py-inputbox id="Question7" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen7" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num7">
@@ -112,7 +109,7 @@ print(' 3 a) Race car A is traveling on a straight portion of the track while ra
 <br>
 
 <py-script>
-print(' 3 b) Calculate the acceleration [m/s²] of B relative to A. Rounded to the nearest tenth. ')
+print('5 a) The orbit of the planet Venus is nearly circular with an orbital velocity of 126.5 x 10³ km/hr. Knowing that the mean distance from the center of the sun to the center of Venus is 108 x 10⁶ km and that the radius of the sun is 695.5 x 10³ km. Determine the mass [kg] of the sun. Rounded to the nearest integer. ')
 </py-script>
 <py-inputbox id="Question8" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen8" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num8">
@@ -120,6 +117,17 @@ print(' 3 b) Calculate the acceleration [m/s²] of B relative to A. Rounded to t
 <div id="outputDiv8" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 
 <br>
+
+<py-script>
+print('5 b) Determine the acceleration [m/s²] of gravity at the surface of the sun. Rounded to the nearest tenth. ')
+</py-script>
+<py-inputbox id="Question9" style="margin-bottom: 10px;"> </py-inputbox>
+<div><button id="gen9" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num9">
+        Submit</div>
+<div id="outputDiv9" style="margin-top: 10px;margin-bottom: 10px;"></div> 
+
+<br>
+
 
 <py-script>
 input_num1 = Element("Question1")
@@ -130,6 +138,7 @@ input_num5 = Element("Question5")
 input_num6 = Element("Question6")
 input_num7 = Element("Question7")
 input_num8 = Element("Question8")
+input_num9 = Element("Question9")
 
 out1 = Element("outputDiv1") 
 out2 = Element("outputDiv2") 
@@ -139,6 +148,7 @@ out5 = Element("outputDiv5")
 out6 = Element("outputDiv6")
 out7 = Element("outputDiv7") 
 out8 = Element("outputDiv8") 
+out9 = Element("outputDiv9") 
 
 def print_num1(*ags, **kws):
 	global pnt1
@@ -243,6 +253,17 @@ def print_num8(*ags, **kws):
 		out8.write(f"You typed in {input_num8.value}, that is not correct.")
 		pnt8 = 0
 
+def print_num9(*ags, **kws):
+	global pnt9
+	ans9 = round(2*x2/t2,1)
+	if input_num9.value=='':
+		out9.write(f"Blank value provided, please try again.")
+	elif input_num9.value == str(ans9):
+		out9.write(f"Correct!")
+		pnt9 = 1
+	else:
+		out9.write(f"You typed in {input_num9.value}, that is not correct.")
+		pnt9 = 0
 
 </py-script>
 
@@ -263,6 +284,8 @@ def clear(*ags, **kws):
 	out6 = Element("outputDiv6")
 	out7 = Element("outputDiv7")
 	out8 = Element("outputDiv8")
+	out9 = Element("outputDiv9")
+
 	out1.clear()	
 	out2.clear()
 	out3.clear()
@@ -271,6 +294,7 @@ def clear(*ags, **kws):
 	out6.clear()
 	out7.clear()
 	out8.clear()
+	out9.clear()
 
 def final_sub(*ags, **kws):
 	out1 = Element("outputDiv1")
@@ -281,7 +305,9 @@ def final_sub(*ags, **kws):
 	out6 = Element("outputDiv6")
 	out7 = Element("outputDiv7")
 	out8 = Element("outputDiv8")
-	grade = round(((pnt1+pnt2+pnt3+pnt4+pnt5+pnt6+pnt7+pnt8)/8)*100,1)
+	out9 = Element("outputDiv9")
+
+	grade = round(((pnt1+pnt2+pnt3+pnt4+pnt5+pnt6+pnt7+pnt8+pnt9)/9)*100,1)
 	name = Element('student-name')
 	out_final = Element('outputFinal')
 	out_final.write(f" Thank you {name.value}, your answers have been submitted. Your score is: {grade} %")
