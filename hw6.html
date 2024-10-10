@@ -44,7 +44,7 @@ import numpy as np
 </py-script>
 
 <py-script>
-print(' 1 a) The motion of a particle is defined by x = '  + str(a1) + 't⁴ - '  + str(np.abs(a2)) + 't³ - ' + str(np.abs(a3)) +  't² + ' +  str(a4) + 't + '  + str(a5) + '. Where x and t are in meters and seconds respectively. Determine the time [s] at which acceleration is zero. Rounded to the nearest hundred.')
+print('1 a)  A 400-kg satellite is placed in a circular orbit 6394 km above the surface of the earth. At this elevation, the acceleration of gravity is 4.09 m/s². Knowing that its orbital speed is 20 000 km/h, determine the kinetic energy [GJ] of the satellite. Rounded to the nearest hundred. ')
 </py-script>
 
 <br>
@@ -54,7 +54,7 @@ print(' 1 a) The motion of a particle is defined by x = '  + str(a1) + 't⁴ - '
 <div id="outputDiv1" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 
 <py-script>
-print(' 1 b) What is the velocity [m/s] of the particle at this time? Rounded to the nearest tenth.')
+print('2 a) A 2000 kg automobile starts from rest at point A on a 6° incline and coasts through a distance of 150 m to point B. The brakes are then applied, causing the automobile to come to a stop at point C, which is 20 m from B. Knowing that slipping is impending during the braking period and neglecting air resistance and rolling resistance, determine the speed [m/s] of the automobile at point B. Rounded to the nearest tenth.')
 </py-script>
 <br>
 <py-inputbox id="Question2" style="margin-bottom: 10px;"> </py-inputbox>
@@ -63,7 +63,7 @@ print(' 1 b) What is the velocity [m/s] of the particle at this time? Rounded to
 <div id="outputDiv2" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <br>
 <py-script>
-print(' 1 c) What is the position [m] of the particle at this time? Rounded to the nearest tenth.')
+print('2 b) Calculate the coefficient of static friction between the tires and the road. Rounded to the nearest hundred.')
 </py-script>
 <py-inputbox id="Question3" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen3" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num3">
@@ -71,7 +71,7 @@ print(' 1 c) What is the position [m] of the particle at this time? Rounded to t
 <div id="outputDiv3" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <br>
 <py-script>
-print(' 2 a) A car is driving at constant speed and starts applying the braking, causing it to slow down at a rate of ' + str(np.abs(a)) + ' ft/s². If the car stops in ' + str(x) + ' ft, determine how fast the car was traveling immediately before applying the brakes [m/s]. Rounded to the nearest tenth.')
+print('3 a) A 7.5 lb collar is released from rest in the position shown, sliders down the inclined rod, and compresses the spring. The direction of motion is reversed, and the collar slides up the rod. Knowing that the maximum deflection of the spring is 5 in, determine the coefficient of kinetic friction between the collar and the rod. Rounded to the nearest hundred.')
 </py-script>
 <py-inputbox id="Question4" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen4" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num4">
@@ -80,7 +80,7 @@ print(' 2 a) A car is driving at constant speed and starts applying the braking,
 <br>
 
 <py-script>
-print(' 2 b) Calculate the time required for the car to come to a stop [s]. Rounded to the nearest tenth.')
+print('3 b) Determine the maximum speed of the collar [ft/s]. Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question5" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen5" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num5">
@@ -90,7 +90,7 @@ print(' 2 b) Calculate the time required for the car to come to a stop [s]. Roun
 <br>
 
 <py-script>
-print(' 3 a) An airplane begins its take-off run at A with zero velocity and a constant acceleration a. Knowing that the airplane becomes airbone ' +  str(t2) + ' s later at B and that the distance AB is ' +  str(x2) + ' m. Determine the acceleration a [m/s²]. Rounded to the nearest tenth.')
+print('4 a) A 4-lb collar can slide without friction along a horizontal rod and is in equilibrium at A when it is pushed 1 in. to the right and released from rest. The springs are undeformed when the collar is at a and the constant of each spring is 2800 lb/in. Determine the maximum velocity [ft/s] of the collar. Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question6" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen6" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num6">
@@ -100,7 +100,7 @@ print(' 3 a) An airplane begins its take-off run at A with zero velocity and a c
 <br>
 
 <py-script>
-print(' 3 b) What is the take-off velocity [m/s] of the airplane? Rounded to the nearest tenth.')
+print('4 b) Now in this case, starting from the same position shown. The 4-lb collar can slide without friction along a horizontal rod and is released from rest at A. The undeformed lengths of springs BA and CA are 10 in and 9 in respectively, and the constant of each spring is 2800 lb/in. Determine the velocity [ft/s] of the collar when it has moved 1 in to the right. Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question7" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen7" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num7">
@@ -108,6 +108,37 @@ print(' 3 b) What is the take-off velocity [m/s] of the airplane? Rounded to the
 <div id="outputDiv7" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 
 <br>
+
+<py-script>
+print('5 a) A 1-lb collar is attached to a spring and slides without friction along a circular rod in a vertical plane. The spring has undeformed length of 5 in and a constant k =  10 lb/ft. Knowing that the collar is released from bring held at A, determine the speed of the collar [ft/s] as the collar passes through B. Rounded to the nearest tenth. ')
+</py-script>
+<py-inputbox id="Question8" style="margin-bottom: 10px;"> </py-inputbox>
+<div><button id="gen8" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num8">
+        Submit</div>
+<div id="outputDiv8" style="margin-top: 10px;margin-bottom: 10px;"></div> 
+
+<br>
+
+<py-script>
+print('5 b) Calculate the normal force [lbs] in between the collar and the road as it passes through point B. Rounded to the nearest tenth.')
+</py-script>
+<py-inputbox id="Question9" style="margin-bottom: 10px;"> </py-inputbox>
+<div><button id="gen9" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num9">
+        Submit</div>
+<div id="outputDiv9" style="margin-top: 10px;margin-bottom: 10px;"></div> 
+
+<br>
+
+<py-script>
+print('6 a) A spacecraft is describing an elliptic orbit of minimum altitude at point A of 2400 km and maximum altitude at point B of 9600 km above the surface of the earth. Determine the speed [km/h] of the spacecraft at A. Rounded to the nearest integer. ')
+</py-script>
+<py-inputbox id="Question10" style="margin-bottom: 10px;"> </py-inputbox>
+<div><button id="gen10" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num10">
+        Submit</div>
+<div id="outputDiv10" style="margin-top: 10px;margin-bottom: 10px;"></div> 
+
+<br>
+
 <py-script>
 input_num1 = Element("Question1")
 input_num2 = Element("Question2")
@@ -116,6 +147,9 @@ input_num4 = Element("Question4")
 input_num5 = Element("Question5")
 input_num6 = Element("Question6")
 input_num7 = Element("Question7")
+input_num8 = Element("Question8")
+input_num9 = Element("Question9")
+input_num10 = Element("Question10")
 
 out1 = Element("outputDiv1") 
 out2 = Element("outputDiv2") 
@@ -124,6 +158,10 @@ out4 = Element("outputDiv4")
 out5 = Element("outputDiv5")
 out6 = Element("outputDiv6")
 out7 = Element("outputDiv7") 
+out8 = Element("outputDiv8") 
+out9 = Element("outputDiv9") 
+out10 = Element("outputDiv10") 
+
 
 def print_num1(*ags, **kws):
 	global pnt1
@@ -216,6 +254,41 @@ def print_num7(*ags, **kws):
 		out7.write(f"You typed in {input_num7.value}, that is not correct.")
 		pnt7 = 0
 
+def print_num8(*ags, **kws):
+	global pnt8
+	ans8 = round(2*x2/t2,1)
+	if input_num8.value=='':
+		out8.write(f"Blank value provided, please try again.")
+	elif input_num8.value == str(ans8):
+		out8.write(f"Correct!")
+		pnt8 = 1
+	else:
+		out8.write(f"You typed in {input_num8.value}, that is not correct.")
+		pnt8 = 0
+
+def print_num9(*ags, **kws):
+	global pnt9
+	ans9 = round(2*x2/t2,1)
+	if input_num9.value=='':
+		out9.write(f"Blank value provided, please try again.")
+	elif input_num9.value == str(ans9):
+		out9.write(f"Correct!")
+		pnt9 = 1
+	else:
+		out9.write(f"You typed in {input_num9.value}, that is not correct.")
+		pnt9 = 0
+
+def print_num10(*ags, **kws):
+	global pnt10
+	ans10 = round(2*x2/t2,1)
+	if input_num10.value=='':
+		out10.write(f"Blank value provided, please try again.")
+	elif input_num10.value == str(ans10):
+		out10.write(f"Correct!")
+		pnt10 = 1
+	else:
+		out10.write(f"You typed in {input_num10.value}, that is not correct.")
+		pnt10 = 0
 
 </py-script>
 
@@ -235,6 +308,10 @@ def clear(*ags, **kws):
 	out5 = Element("outputDiv5")
 	out6 = Element("outputDiv6")
 	out7 = Element("outputDiv7")
+	out8 = Element("outputDiv8")
+	out9 = Element("outputDiv9")
+	out10 = Element("outputDiv10")
+
 	out1.clear()	
 	out2.clear()
 	out3.clear()
@@ -242,6 +319,10 @@ def clear(*ags, **kws):
 	out5.clear()
 	out6.clear()
 	out7.clear()
+	out8.clear()
+	out9.clear()
+	out10.clear()
+
 def final_sub(*ags, **kws):
 	out1 = Element("outputDiv1")
 	out2 = Element("outputDiv2")
@@ -250,7 +331,11 @@ def final_sub(*ags, **kws):
 	out5 = Element("outputDiv5")
 	out6 = Element("outputDiv6")
 	out7 = Element("outputDiv7")
-	grade = round(((pnt1+pnt2+pnt3+pnt4+pnt5+pnt6+pnt7)/7)*100,1)
+	out8 = Element("outputDiv8")
+	out9 = Element("outputDiv9")
+	out10 = Element("outputDiv10")
+
+	grade = round(((pnt1+pnt2+pnt3+pnt4+pnt5+pnt6+pnt7+pnt8+pnt9+pnt10)/10)*100,1)
 	name = Element('student-name')
 	out_final = Element('outputFinal')
 	out_final.write(f" Thank you {name.value}, your answers have been submitted. Your score is: {grade} %")
