@@ -1,3 +1,1 @@
-name = "Fractals with Numpy and Canvas"
-description = "Render Fractals using Numpy, Canvas in Pyscript."
-packages = ["numpy"]
+packages = ["matplotlib", "scikit-learn", "seaborn"]
