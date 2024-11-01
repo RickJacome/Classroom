@@ -32,9 +32,16 @@
 print( 'Page is Ready!')
 import numpy as np
 import matplotlib.pyplot as plt
-x = np.linspace(0,10,100)
-y = np.cos(x*2*np.pi)
-plt.plot(x,y)
+
+# Generate x values using linspace
+x = np.linspace(0, 10, 100)
+
+# Calculate y values (e.g., a sine wave)
+y = np.sin(x)
+
+# Create the plot
+plt.plot(x, y)
+
 a = np.random.randint(1, 5)
 b = np.random.randint(4, 10)
 
@@ -44,21 +51,30 @@ print('now, if a = ' + str(a) + ' and b = ' + str(b) + '. What is a + b = ? ')
 <br>
 
 <py-inputbox id="how-many" style="margin-bottom: 10px;"> </py-inputbox>
-<div><button id="gen" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num">
-        Submit</div>
+<div><button id="gen" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num"> Submit</div>
 <div id="outputDiv" style="margin-top: 10px;margin-bottom: 10px;"></div> 
-
-
 <div> <button id="clear" type="button" class="btn btn-primary" pys-onClick="clear"> Clear Responses</div>
 
 
 <br>
+
+
+<py-inputbox id="how-plot" style="margin-bottom: 10px;"> </py-inputbox>
+<div><button id="gen" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_plot"> Submit</div>
   
 <py-script>
 def clear(*ags, **kws):
 	out = Element("outputDiv")
 	out.clear()	
 </py-script>
+
+<py-script>
+def print_plot(*ags, **kws):
+	input_plot = Element("how-plot")
+	out = Element("outputDiv")
+	out.clear()	
+</py-script>
+
 
 <py-script>
 import numpy as np
