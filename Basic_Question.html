@@ -47,8 +47,9 @@ print('if a = ' + str(a) + ' and b = ' + str(b) + '. What is a + b = ? ')
 
 
 <br>
-
-
+<py-script>
+	print('Plotting Section')
+</py-script>
 <py-inputbox id="how-plot" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_plot"> Submit</div>
 <div id="outputPlot" style="margin-top: 10px;margin-bottom: 10px;"></div> 
@@ -60,10 +61,11 @@ def clear(*ags, **kws):
 </py-script>
 
 <py-script>
+import matplotlib.pyplot as plt
 def print_plot(*ags, **kws):
 	input_plot = Element("how-plot")
-	x = [1,2,3,4]*input_plot
-	y = [1,2,3,4]*input_plot
+	x = [1,2,3,4]*input_plot.value
+	y = [1,2,3,4]*input_plot.value
 	fig = plt.plot(x,y,'o')
 	display(fig, target="outputPlot", append=False)
 </py-script>
