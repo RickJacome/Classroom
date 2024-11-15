@@ -45,7 +45,6 @@ print('if a = ' + str(a) + ' and b = ' + str(b) + '. What is a + b = ? ')
 <div id="outputDiv" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <div> <button id="clear" type="button" class="btn btn-primary" pys-onClick="clear"> Clear Responses</div>
 
-
 <br>
 <py-script>
 	print('Plotting Section')
@@ -62,12 +61,11 @@ def clear(*ags, **kws):
 
 <py-script>
 import matplotlib.pyplot as plt
-def print_plot(*ags, **kws):
-	input_plot = Element("how-plot")
-	x = [1,2,3,4]*input_plot.value
-	y = [1,2,3,4]*input_plot.value
-	fig = plt.plot(x,y,'o')
-	display(fig, target="outputPlot", append=False)
+
+fig1,ax1 = plt.subplots(1,1,dpi=150,figsize=(5,2))
+ax1.hist(integers,bins=20,edgecolor='k',color='blue')
+ax1.set_title("Histogram of random integers",fontsize=11)
+fig1
 </py-script>
 
 
