@@ -27,6 +27,13 @@
 		import matplotlib.pyplot as plt
 		import numpy as np
 		import matplotlib.animation as animation
+		
+		from matplotlib_pyodide.browser_backend import TimerWasm
+		class Timer(TimerWasm):
+		    def __init__(self, interval=None):
+		        self._timer = None
+		        super().__init__(interval=interval)
+
 		fig, ax = plt.subplots()
 		t = np.linspace(0, 3, 40); g = -9.81; v0 = 12
 		z = g * t**2 / 2 + v0 * t
