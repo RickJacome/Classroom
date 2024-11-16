@@ -25,6 +25,7 @@
 	<div class="container-md">
 	<py-script>
 		import matplotlib.pyplot as plt
+		import numpy as np
 		integers = np.random.randint(0,100,100)
 		fig1,ax1 = plt.subplots(1,1,dpi=150,figsize=(5,2))
 		ax1.hist(integers,bins=20,edgecolor='k',color='blue')
