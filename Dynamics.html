@@ -29,9 +29,11 @@
 		integers = np.random.randint(0,100,100)
 		fig,ax = plt.subplots(nrows=1, ncols=3, dpi=150,figsize=(8,2))
 		ax[0].hist(integers,bins=20,edgecolor='k',color='blue')
-		ax[0].set_title("Histogram of random integers",fontsize=11)
-		ax[1].hist(integers,bins=20,edgecolor='k',color='blue')
-		ax[1].set_title("Histogram of random integers",fontsize=11)
+		ax[0].set_title("0",fontsize=11)
+		ax[1].hist(integers,bins=20,edgecolor='k',color='red')
+		ax[1].set_title("1",fontsize=11)
+		ax[2].hist(integers,bins=20,edgecolor='k',color='green')
+		ax[2].set_title("2",fontsize=11)
 		fig
 
 	</py-script>
