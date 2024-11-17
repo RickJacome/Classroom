@@ -33,11 +33,11 @@
 
 		fig,ax = plt.subplots(nrows=1, ncols=3, dpi=120,figsize=(10,2))
 		ax[0].plot(x,y, c='blue')
-		ax[0].set_title("0",fontsize=11)
+		ax[0].set_title("Position (m)",fontsize=11)
 		ax[1].plot(x,dydx, c='red')
-		ax[1].set_title("1",fontsize=11)
+		ax[1].set_title("Velocity (m/s)",fontsize=11)
 		ax[2].plot(x,dydxx, c='green')
-		ax[2].set_title("2",fontsize=11)
+		ax[2].set_title("Acceleration (m/$s^{2}$",fontsize=11)
 		fig
 
 	</py-script>
