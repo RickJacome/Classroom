@@ -30,12 +30,20 @@
 		y = 0.5*x**3 + x - 10
 		dydx = (3/2)*x**2 + 1
 		dydxx = 3*x 
+		noise = np.random.normal(0,2, len(x)) #  μ = 0, σ = 2, size = length of x or y. Choose μ and σ wisely.
+		yn = y + noise
+		dyndx = np.gradient(yn,x)
+		dyndxx = np.gradient(dyndx,x)
+
 		fig,ax = plt.subplots(nrows=1, ncols=3, dpi=120,figsize=(10,2))
 		ax[0].plot(x,y, c='blue')
+		ax[0].plot(x,yn, c='red', '*')
 		ax[0].set_title("Position (m)",fontsize=11)
-		ax[1].plot(x,dydx, c='red')
+		ax[1].plot(x,dydx, c='blue')
+		ax[1].plot(x,dyndx, c='red', '*')
 		ax[1].set_title("Velocity (m/s)",fontsize=11)
-		ax[2].plot(x,dydxx, c='green')
+		ax[2].plot(x,dydxx, c='blue')
+		ax[2].plot(x,dyndxx, c='red', '*')
 		ax[2].set_title("Acceleration (m/s$^{2}$)",fontsize=11)
 		fig
 
