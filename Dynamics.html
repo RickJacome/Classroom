@@ -26,9 +26,11 @@
 	<py-script>
 		import numpy as np
 		import matplotlib.pyplot as plt
-		integers = np.random.randint(0,100,100)
+		x = np.linspace(0, 2 * np.pi, 400)
+		y1 = np.sin(x)
+		y2 = np.sin(x**2)
 		fig,ax = plt.subplots(nrows=1, ncols=3, dpi=150,figsize=(8,2))
-		ax[0].hist(integers,bins=20,edgecolor='k',color='blue')
+		ax[0].plot(x,y1, c='blue')
 		ax[0].set_title("0",fontsize=11)
 		ax[1].hist(integers,bins=20,edgecolor='k',color='red')
 		ax[1].set_title("1",fontsize=11)
