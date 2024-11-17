@@ -27,10 +27,9 @@
 		import numpy as np
 		import matplotlib.pyplot as plt
 		x = np.linspace(0, 15, 400)
-		y = 0.5*x**2 + x - 10
-		dydx = np.gradient(y,x)
-		dydxx = np.gradient(dydx,x)
-
+		y = 0.5*x**3 + x - 10
+		dydx = (3/2)*x**2 + 1
+		dydxx = 3*x 
 		fig,ax = plt.subplots(nrows=1, ncols=3, dpi=120,figsize=(10,2))
 		ax[0].plot(x,y, c='blue')
 		ax[0].set_title("Position (m)",fontsize=11)
