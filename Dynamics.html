@@ -26,11 +26,11 @@
 	<py-script>
 		import numpy as np
 		import matplotlib.pyplot as plt
-		x = np.linspace(0, 15, 50)
+		x = np.linspace(0, 15, 20)
 		y = 0.5*x**3 + x - 10
 		dydx = (3/2)*x**2 + 1
 		dydxx = 3*x 
-		noise = np.random.normal(0,2, len(x)) #  μ = 0, σ = 2, size = length of x or y. Choose μ and σ wisely.
+		noise = np.random.normal(0,1, len(x)) #  
 		yn = y + noise
 		dyndx = np.gradient(yn,x)
 		dyndxx = np.gradient(dyndx,x)
