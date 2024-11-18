@@ -1,1 +1,1 @@
-packages = ["matplotlib", "scikit-learn", "seaborn"]
+packages = ["numpy", "matplotlib", "scikit-learn", "seaborn"]
