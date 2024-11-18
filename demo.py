@@ -30,4 +30,5 @@ plt.plot(t, x)
 plt.xlabel('Time (s)'); plt.ylabel('Displacement (m)')
 plt.title('Underdamped Simple Harmonic Motion');
 
-display(fig, target="graph-area")
+#display(fig, target="graph-area")
+plt.show()
