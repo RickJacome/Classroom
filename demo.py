@@ -32,3 +32,4 @@ plt.title('Underdamped Simple Harmonic Motion');
 
 #display(fig, target="graph-area")
 plt.show()
+fig
