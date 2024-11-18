@@ -38,7 +38,6 @@ ax[2].set_xlabel('Time (s)');
 ax[2].set_ylabel('Displacement (m)')
 ax[2].set_title('Underdamped');
 
-plt.subplots_adjust(left=0.2, right=0.8, top=0.8, bottom=0.2)
 
 #display(fig, target="graph-area")
 fig
