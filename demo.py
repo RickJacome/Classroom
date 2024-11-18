@@ -26,9 +26,9 @@ ax[0].plot(t, x)
 ax[1].plot(t, x)
 ax[2].plot(t, x)
 
-plt.xlabel('Time (s)'); 
-plt.ylabel('Displacement (m)')
-plt.title('Underdamped');
+ax[0].set_xlabel('Time (s)'); 
+ax[0].set_ylabel('Displacement (m)')
+ax[0].set_title('Underdamped');
 
 #display(fig, target="graph-area")
 fig
