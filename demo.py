@@ -9,8 +9,6 @@ import matplotlib.pyplot as plt
 #
 #    x = x0 * np.exp(-zeta * omega0 * t) * np.cos(omega * t - np.arctan(zeta / np.sqrt(1 - zeta**2)))
 #    return x
-
-
 #def plotting():
 # Parameters
 m = 1.0  # Mass
@@ -28,9 +26,8 @@ x = x0 * np.exp(-zeta * omega0 * t) * np.cos(omega * t - np.arctan(zeta / np.sqr
 #x = underdamped_shm(m, k, b, x0, v0, t)
 # Plotting
 fig, ax = plt.subplots(figsize=(10,2))
-ax.plot(t, x)
-ax.set_aspect('equal')
+plt.plot(t, x)
 plt.xlabel('Time (s)'); plt.ylabel('Displacement (m)')
-plt.title('Underdamped Simple Harmonic Motion'); plt.show()
+plt.title('Underdamped Simple Harmonic Motion');
 
 display(fig, target="graph-area")
