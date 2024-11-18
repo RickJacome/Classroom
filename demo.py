@@ -27,9 +27,9 @@ x = x0 * np.exp(-zeta * omega0 * t) * np.cos(omega * t - np.arctan(zeta / np.sqr
 # Plotting
 fig, ax = plt.subplots(figsize=(10,2))
 plt.plot(t, x)
-plt.xlabel('Time (s)'); plt.ylabel('Displacement (m)')
+plt.xlabel('Time (s)'); 
+plt.ylabel('Displacement (m)')
 plt.title('Underdamped Simple Harmonic Motion');
 
 #display(fig, target="graph-area")
-plt.show()
 fig
