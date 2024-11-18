@@ -20,7 +20,7 @@ t = np.linspace(0, 10, 1000)
 # Calculate displacement
 x = underdamped_shm(m, k, b, x0, v0, t)
 # Plotting
-fig, ax = plt.subplots(1,3, dpi = 80, figsize=(14,4), constrained_layout=True)
+fig, ax = plt.subplots(1,3, dpi=120,figsize=(10,2), constrained_layout=True)
 
 ax[0].plot(t, x)
 ax[1].plot(t, x)
