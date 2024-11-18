@@ -35,7 +35,7 @@
 		dyndx = np.gradient(yn,x)
 		dyndxx = np.gradient(dyndx,x)
 
-		fig,ax = plt.subplots(nrows=1, ncols=3,figsize=(10,2))
+		fig,ax = plt.subplots(nrows=1, ncols=3, dpi=120,figsize=(10,2))
 		ax[0].plot(x,y, c='blue'); ax[0].plot(x,yn,'*' ,c='black')
 		ax[0].set_title("Position (m)",fontsize=11); 
 		ax[0].set_xlabel("Time (sec)", fontsize=11)
