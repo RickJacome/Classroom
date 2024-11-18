@@ -29,8 +29,9 @@ def plotting():
 	# Calculate displacement
 	#x = underdamped_shm(m, k, b, x0, v0, t)
 	# Plotting
-	fig, ax = plt.subplots()
-	plt.plot(t, x)
+	fig, ax = plt.subplots(figsize=(10,2))
+	ax.plot(t, x)
+	ax.set_aspect('equal')
 	plt.xlabel('Time (s)'); plt.ylabel('Displacement (m)')
 	plt.title('Underdamped Simple Harmonic Motion'); plt.show()
 
