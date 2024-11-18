@@ -22,33 +22,8 @@
 		<a class="btn btn-primary" href="about.html" role="button"> About </a>
 		</div>	
 	</div>
-	<div class="container-md">
-	<py-script>
-		import numpy as np
-		import matplotlib.pyplot as plt
-		x = np.linspace(0, 15, 30)
-		y = 0.5*x**3 + x - 10
-		dydx = (3/2)*x**2 + 1
-		dydxx = 3*x 
-		noise = np.random.normal(0,2, len(x)) #  
-		yn = y + noise
-		dyndx = np.gradient(yn,x)
-		dyndxx = np.gradient(dyndx,x)
-
-		fig,ax = plt.subplots(nrows=1, ncols=3, dpi=120,figsize=(10,2))
-		ax[0].plot(x,y, c='blue'); ax[0].plot(x,yn,'*' ,c='black')
-		ax[0].set_title("Position (m)",fontsize=11); 
-		ax[0].set_xlabel('Time (sec)')
-		ax[1].plot(x,dydx, c='blue'); ax[1].plot(x,dyndx, '*', c='black')
-		ax[1].set_title("Velocity (m/s)",fontsize=11); 
-		ax[1].set_xlabel('Time (sec)')
-		ax[2].plot(x,dydxx, c='blue'); ax[2].plot(x,dyndxx,'*', c='black')
-		ax[2].set_title("Acceleration (m/s$^{2}$)",fontsize=11);
-		ax[2].set_xlabel('Time (sec)')
-		fig
-
-	</py-script>
-	</div>
+	 <py-script src="./demo.py"></py-script>
+    <div id="graph-area"></div>
 	<br>
 	<article id="work" class="wrapper style2">
 		<div class="container">
