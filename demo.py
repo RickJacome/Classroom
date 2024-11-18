@@ -1,31 +1,32 @@
-from visualizer import Visualizer # Import Visualizer class
-# https://github.com/enesdemirag/programming-exercises/tree/master/exercises/materials/mass-spring-damper-simulation
-dt = 0.05 # ΔT (sampling period) seconds
+import numpy as np
+import matplotlib.pyplot as plt
 
-# Initial values
-position = 15
-velocity = 0
-acceleration = 0
 
-# Constants
-mass = 1 # mass
-k = 2.5 # spring coefficient
-b = 0.3 # damping coefficient
+def underdamped_shm(m, k, b, x0, v0, t):
+    """Simulates underdamped simple harmonic motion."""
+    omega0 = np.sqrt(k/m)
+    zeta = b/(2*np.sqrt(k*m))
+    omega = omega0 * np.sqrt(1 - zeta**2)
 
-# Callback Function
-def set(arg):
-    global dt, position, velocity, acceleration, mass, k, b # Get global variables
+    x = x0 * np.exp(-zeta * omega0 * t) * np.cos(omega * t - np.arctan(zeta / np.sqrt(1 - zeta**2)))
+    return x
 
-    spring_force = k * position # Fs = k * x
-    damper_force = b * velocity # Fb = b * x'
 
-    # If we leave the acceleration alone in equation
-    # acceleration = - ((b * velocity) + (k * position)) / mass
-    acceleration = - (spring_force + damper_force) / mass
-    velocity += (acceleration * dt) # Integral(a) = v
-    position += (velocity * dt) # Integral(v) = x
+def plotting():
+	# Parameters
+	m = 1.0  # Mass
+	k = 10.0  # Spring constant
+	b = 0.5  # Damping coefficient
+	x0 = 1.0  # Initial displacement
+	v0 = 0.0  # Initial velocity
+	# Time array
+	t = np.linspace(0, 10, 1000)
 
-    return (position, 0) # Return position
+	# Calculate displacement
+	x = underdamped_shm(m, k, b, x0, v0, t)
+	# Plotting
+	plt.plot(t, x)
+	plt.xlabel('Time (s)'); plt.ylabel('Displacement (m)')
+	plt.title('Underdamped Simple Harmonic Motion'); plt.show()
 
-# Start simulation
-Visualizer(callback=set, interval=dt * 1000, simulation_time=30, initial=(position, 0, velocity, 0, acceleration, 0))
+	display(fig, target="graph-area", append=False)
