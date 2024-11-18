@@ -35,4 +35,4 @@ ax.set_aspect('equal')
 plt.xlabel('Time (s)'); plt.ylabel('Displacement (m)')
 plt.title('Underdamped Simple Harmonic Motion'); plt.show()
 
-display(fig, target="graph-area", append=False)
+display(fig, target="graph-area")
