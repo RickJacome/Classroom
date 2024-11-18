@@ -27,7 +27,7 @@ def plotting():
 	t = np.linspace(0, 10, 1000)
 
 	# Calculate displacement
-	x = underdamped_shm(m, k, b, x0, v0, t)
+	#x = underdamped_shm(m, k, b, x0, v0, t)
 	# Plotting
 	plt.plot(t, x)
 	plt.xlabel('Time (s)'); plt.ylabel('Displacement (m)')
