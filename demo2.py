@@ -19,10 +19,13 @@ ax1 = fig.add_subplot(131, projection='3d')
 ax2 = fig.add_subplot(132, projection='3d')
 ax3 = fig.add_subplot(133, projection='3d')
 
-
 ax1.contour3D(X, Y, Z, 50, cmap='binary')
-ax1.set_xlabel('x')
-ax1.set_ylabel('y')
-ax1.set_zlabel('z');
+ax1.set_xlabel('x'); ax1.set_ylabel('y'); ax1.set_zlabel('z');
+
+ax2.contour3D(X, Y, Z, 50, cmap='binary')
+ax2.set_xlabel('x'); ax2.set_ylabel('y'); ax2.set_zlabel('z');
+
+ax3.contour3D(X, Y, Z, 50, cmap='binary')
+ax3.set_xlabel('x'); ax3.set_ylabel('y'); ax3.set_zlabel('z');
 
 fig
