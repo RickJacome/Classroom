@@ -14,12 +14,15 @@ Z = f(X, Y)
 #fig = plt.figure()
 #ax = plt.axes(projection='3d')
 
-fig, ax = plt.subplots(1,3, dpi=120,figsize=(10,2), constrained_layout=True)
-ax[0] = plt.axes(projection='3d')
+fig = plt.figure(figsize=(15, 5))
+ax1 = fig.add_subplot(131, projection='3d')
+ax2 = fig.add_subplot(132, projection='3d')
+ax3 = fig.add_subplot(133, projection='3d')
 
-ax[0].contour3D(X, Y, Z, 50, cmap='binary')
-ax[0].set_xlabel('x')
-ax[0].set_ylabel('y')
-ax[0].set_zlabel('z');
+
+ax1.contour3D(X, Y, Z, 50, cmap='binary')
+ax1.set_xlabel('x')
+ax1.set_ylabel('y')
+ax1.set_zlabel('z');
 
 fig
