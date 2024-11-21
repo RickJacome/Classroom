@@ -4,13 +4,15 @@ import matplotlib.pyplot as plt
 
 def f(x, y):
     return np.sin(np.sqrt(x ** 2 + y ** 2))
+def rosenbrock(x,y):
+    return 100 * (y - x**2)**2 + (1 - x)**2
 
 x = np.linspace(-6, 6, 30)
 y = np.linspace(-6, 6, 30)
 
 X, Y = np.meshgrid(x, y)
 Z = f(X, Y)
-
+Zr = rosenbrock(x,y)
 #fig = plt.figure()
 #ax = plt.axes(projection='3d')
 
@@ -22,7 +24,7 @@ ax3 = fig.add_subplot(133, projection='3d')
 ax1.contour3D(X, Y, Z, 50, cmap='binary')
 ax1.set_xlabel('x'); ax1.set_ylabel('y'); ax1.set_zlabel('z');
 
-ax2.contour3D(X, Y, Z, 50, cmap='binary')
+ax2.contour3D(X, Y, Zr, 50, cmap='binary')
 ax2.set_xlabel('x'); ax2.set_ylabel('y'); ax2.set_zlabel('z');
 
 ax3.contour3D(X, Y, Z, 50, cmap='binary')
