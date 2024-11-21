@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 def f(x, y):
     return np.sin(np.sqrt(x ** 2 + y ** 2))
 def rosenbrock(x,y):
-    return 100 * (y - x**2)**2 + (1 - x)**2
+    return 10 * (y - x**2)**2 + (1 - x)**2
 
 x = np.linspace(-6, 6, 30)
 y = np.linspace(-6, 6, 30)
