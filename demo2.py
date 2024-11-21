@@ -12,7 +12,7 @@ y = np.linspace(-6, 6, 30)
 
 X, Y = np.meshgrid(x, y)
 Z = f(X, Y)
-Zr = rosenbrock(x,y)
+Zr = rosenbrock(X,Y)
 #fig = plt.figure()
 #ax = plt.axes(projection='3d')
 
