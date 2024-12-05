@@ -1,5 +1,4 @@
-
-
+import pandas as pd
 import plotly.express as px
 df = px.data.gapminder()
 fig = px.scatter(df, x="gdpPercap", y="lifeExp", animation_frame="year", animation_group="country",
