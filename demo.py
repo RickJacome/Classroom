@@ -34,10 +34,10 @@ ax[2].set_xlabel('Time (s)');  ax[2].set_ylabel('Displacement (m)'); ax[2].set_t
 
 fig
 
+plt.figure()
 x = np.linspace(0, 10, 100)
 y = np.sin(x)
 # Create the figure and axes
 fig1, ax1 = plt.subplots()
-
 fig1
 
