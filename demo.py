@@ -26,18 +26,18 @@ ax[0].plot(t, x)
 ax[1].plot(t, x)
 ax[2].plot(t, x)
 
-ax[0].set_xlabel('Time (s)'); 
-ax[0].set_ylabel('Displacement (m)')
-ax[0].set_title('Underdamped');
+ax[0].set_xlabel('Time (s)');  ax[0].set_ylabel('Displacement (m)') ax[0].set_title('Underdamped');
 
-ax[1].set_xlabel('Time (s)'); 
-ax[1].set_ylabel('Displacement (m)')
-ax[1].set_title('Damped');
+ax[1].set_xlabel('Time (s)');  ax[1].set_ylabel('Displacement (m)') ax[1].set_title('Damped');
 
-ax[2].set_xlabel('Time (s)'); 
-ax[2].set_ylabel('Displacement (m)')
-ax[2].set_title('Underdamped');
+ax[2].set_xlabel('Time (s)');  ax[2].set_ylabel('Displacement (m)') ax[2].set_title('Underdamped');
 
-
-#display(fig, target="graph-area")
 fig
+
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+# Create the figure and axes
+fig1, ax1 = plt.subplots()
+
+fig1
+
