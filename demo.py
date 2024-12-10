@@ -39,5 +39,15 @@ x = np.linspace(0, 10, 100)
 y = np.sin(x)
 # Create the figure and axes
 fig1, ax1 = plt.subplots()
+# Animation function
+def animate(i):
+    line.set_ydata(np.sin(x + i/10))
+    return line,
+
+# Create the animation
+ani = animation.FuncAnimation(fig, animate, frames=100, interval=20, blit=True)
+# Save the animation as a GIF
+ani.save('animation.gif', writer='pillow')
+
 fig1
 
