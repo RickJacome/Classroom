@@ -29,8 +29,8 @@ ax[0].plot(t, x)
 ax[1].plot(t, dx_dt)
 ax[2].plot(freq, fft_result)
 
-ax[0].set_xlabel('Time (s)');  ax[0].set_ylabel('Displacement (m)'); ax[0].set_title('Theoretical Underdamped System');
-ax[1].set_xlabel('Time (s)');  ax[1].set_ylabel('Velocity (mm/s)'); ax[1].set_title('Derivative of Theoretical System');
+ax[0].set_xlabel('Time (sec)');  ax[0].set_ylabel('Displacement (m)'); ax[0].set_title('Theoretical Underdamped System');
+ax[1].set_xlabel('Time (sec)');  ax[1].set_ylabel('Velocity (mm/s)'); ax[1].set_title('Derivative of Theoretical System');
 ax[2].set_xlabel('Frequency (Hz)');  ax[2].set_ylabel('Amplitude'); ax[2].set_title('Fast Fourier Transform');
 
 fig
