@@ -26,7 +26,7 @@ freq = np.fft.fftfreq(len(x), 0.01)
 fig, ax = plt.subplots(1,3, dpi=120,figsize=(10,2), constrained_layout=True)
 
 ax[0].plot(t, x)
-ax[1].plot(t, dx_dt)
+ax[1].plot(t[1:-1], dx_dt)
 ax[2].plot(freq, fft_result)
 
 ax[0].set_xlabel('Time (sec)');  ax[0].set_ylabel('Displacement (m)'); ax[0].set_title('Theoretical Underdamped System');
