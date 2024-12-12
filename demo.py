@@ -20,7 +20,7 @@ t = np.linspace(0, 10, 1000)
 x = underdamped_shm(m, k, b, x0, v0, t)
 dx_dt = np.diff(x)/np.diff(t)
 
-fft_result = np.fft.fft(x)
+fft_result = np.abs(np.fft.fft(x))
 freq = np.fft.fftfreq(len(x), 0.01)
 # Plotting
 fig, ax = plt.subplots(1,3, dpi=120,figsize=(10,2), constrained_layout=True)
