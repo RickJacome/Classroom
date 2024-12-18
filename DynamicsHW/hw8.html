@@ -40,21 +40,11 @@ print( 'Page is Ready!')
 <br>
 <py-script>
 import numpy as np
-v = 0
-a = np.random.randint(-15,-1)
-t = np.random.randint(25,35)
-t2 = np.random.randint(28,33) #Subject change
-x = np.random.randint(150,230)
-x2 = np.random.randint(800,1200) #Subject change
-a1 = np.random.randint(1,10)
-a2 = np.random.randint(-10,-1)
-a3 = np.random.randint(-15,-5)
-a4 = np.random.randint(1,10)
-a5 = np.random.randint(1,10)
+# Define Variables here
 </py-script>
 
 <py-script>
-print(' 1 a) The motion of a particle is defined by x = '  + str(a1) + 't⁴ - '  + str(np.abs(a2)) + 't³ - ' + str(np.abs(a3)) +  't² + ' +  str(a4) + 't + '  + str(a5) + '. Where x and t are in meters and seconds respectively. Determine the time [s] at which acceleration is zero. Rounded to the nearest hundred.')
+print('1 a) A 20 kg base satellite deploys three sub-satellites, each which has its own thrust capabilities, to perform research on tether propulsion. The masses of sub-satellites, A, B and C, are 4 kg, 6 kg, and 8 kg, respectively, and their velocities expressed in m/s are given by v_A = 4i – 2j + 2k,  v_B = 1i + 4j, and v_C = 2i + 2j  + 4k. At the instant shown, calculate the i-component of the angular momentum H_o  [kg · m2 /s]  of the system about the base satellite. Rounded to the nearest integer.')
 </py-script>
 
 <br>
@@ -64,7 +54,7 @@ print(' 1 a) The motion of a particle is defined by x = '  + str(a1) + 't⁴ - '
 <div id="outputDiv1" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 
 <py-script>
-print(' 1 b) What is the velocity [m/s] of the particle at this time? Rounded to the nearest tenth.')
+print('1 b) Determine the maximum force [lb] exerted on the belt if the force-time diagram has the shape shown.')
 </py-script>
 <br>
 <py-inputbox id="Question2" style="margin-bottom: 10px;"> </py-inputbox>
@@ -73,7 +63,7 @@ print(' 1 b) What is the velocity [m/s] of the particle at this time? Rounded to
 <div id="outputDiv2" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <br>
 <py-script>
-print(' 1 c) What is the position [m] of the particle at this time? Rounded to the nearest tenth.')
+print('2 a) At an intersection, car B was traveling south and car A was traveling 30° north of east  when they slammed into each other. Upon investigation it was found that after the crash the two cars got stuck and skidded off at an angle of 10° north of east. Each driver claimed that he was going at the speed limit of 50 km/h and that he tried to slow down but could not avoid the crash because the other driver was going a lot faster. Knowing that the masses of cars A and B were 1500 kg and 1200 kg, respectively, determine which car was going faster [A or B?] .')
 </py-script>
 <py-inputbox id="Question3" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen3" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num3">
@@ -81,16 +71,16 @@ print(' 1 c) What is the position [m] of the particle at this time? Rounded to t
 <div id="outputDiv3" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <br>
 <py-script>
-print(' 2 a) A car is driving at constant speed and starts applying the braking, causing it to slow down at a rate of ' + str(np.abs(a)) + ' ft/s². If the car stops in ' + str(x) + ' ft, determine how fast the car was traveling immediately before applying the brakes [m/s]. Rounded to the nearest tenth.')
+print('2 b) Determine the speed [km/h] of the faster of the two cars if the slower car was traveling at the speed limit.')
 </py-script>
 <py-inputbox id="Question4" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen4" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num4">
         Submit</div>
 <div id="outputDiv4" style="margin-top: 10px;margin-bottom: 10px;"></div> 
-<br>
 
+<br>
 <py-script>
-print(' 2 b) Calculate the time required for the car to come to a stop [s]. Rounded to the nearest tenth.')
+print('3 a) A ballistic pendulum is used to measure the speed of high-speed projectiles. A 6-g bullet A is fired into a 1-kg wood block B suspended by a cord with a length of l = 2.2 m. The block then swings through a maximum angle of θ = 60°. Determine the initial speed [m/s] of the bullet v_0. ')
 </py-script>
 <py-inputbox id="Question5" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen5" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num5">
@@ -98,9 +88,8 @@ print(' 2 b) Calculate the time required for the car to come to a stop [s]. Roun
 <div id="outputDiv5" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 
 <br>
-
 <py-script>
-print(' 3 a) An airplane begins its take-off run at A with zero velocity and a constant acceleration a. Knowing that the airplane becomes airbone ' +  str(t2) + ' s later at B and that the distance AB is ' +  str(x2) + ' m. Determine the acceleration a [m/s²]. Rounded to the nearest tenth.')
+print('3 b) Calculate the impulse [m/s] imparted by the bullet on the block.')
 </py-script>
 <py-inputbox id="Question6" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen6" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num6">
@@ -108,9 +97,8 @@ print(' 3 a) An airplane begins its take-off run at A with zero velocity and a c
 <div id="outputDiv6" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 
 <br>
-
 <py-script>
-print(' 3 b) What is the take-off velocity [m/s] of the airplane? Rounded to the nearest tenth.')
+print('3 c) Determine the force [m/s] on the cord immediately after the impact. ')
 </py-script>
 <py-inputbox id="Question7" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen7" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num7">
@@ -119,6 +107,42 @@ print(' 3 b) What is the take-off velocity [m/s] of the airplane? Rounded to the
 
 <br>
 <py-script>
+print('4 a) Two identical billiard balls can move freely on a horizontal table. Ball A has a velocity v_0 as shown and hits ball B, which is at rest, at a point C defined by θ = 45°. Knowing that the coefficient of restitution between the two balls is e = 0.8 and assuming no friction, determine the velocity of ball A after impact as a function of the initial velocity.')
+</py-script>
+<py-inputbox id="Question8" style="margin-bottom: 10px;"> </py-inputbox>
+<div><button id="gen8" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num8">
+        Submit</div>
+<div id="outputDiv8" style="margin-top: 10px;margin-bottom: 10px;"></div> 
+
+<br>
+<py-script>
+print('4 b) Determine the direction [degrees] of velocity for ball A after impact with respect to the horizontal.')
+</py-script>
+<py-inputbox id="Question9" style="margin-bottom: 10px;"> </py-inputbox>
+<div><button id="gen9" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num9">
+        Submit</div>
+<div id="outputDiv9" style="margin-top: 10px;margin-bottom: 10px;"></div> 
+
+<br>
+<py-script>
+print('4 c) Determine the magnitude of velocity for ball B after impact as a function of the initial velocity.')
+</py-script>
+<py-inputbox id="Question10" style="margin-bottom: 10px;"> </py-inputbox>
+<div><button id="gen10" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num10">
+        Submit</div>
+<div id="outputDiv10" style="margin-top: 10px;margin-bottom: 10px;"></div> 
+
+<br>
+<py-script>
+print('4 d)  Determine the direction [degrees] of velocity for ball B after impact with respect to the horizontal.')
+</py-script>
+<py-inputbox id="Question11" style="margin-bottom: 10px;"> </py-inputbox>
+<div><button id="gen11" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num11">
+        Submit</div>
+<div id="outputDiv11" style="margin-top: 10px;margin-bottom: 10px;"></div> 
+
+
+<py-script>
 input_num1 = Element("Question1")
 input_num2 = Element("Question2")
 input_num3 = Element("Question3")
@@ -126,6 +150,11 @@ input_num4 = Element("Question4")
 input_num5 = Element("Question5")
 input_num6 = Element("Question6")
 input_num7 = Element("Question7")
+input_num8 = Element("Question8")
+input_num9 = Element("Question9")
+input_num10 = Element("Question10")
+input_num11 = Element("Question11")
+
 
 out1 = Element("outputDiv1") 
 out2 = Element("outputDiv2") 
@@ -134,6 +163,11 @@ out4 = Element("outputDiv4")
 out5 = Element("outputDiv5")
 out6 = Element("outputDiv6")
 out7 = Element("outputDiv7") 
+out8 = Element("outputDiv8") 
+out9 = Element("outputDiv9") 
+out10 = Element("outputDiv10")
+out11 = Element("outputDiv11")  
+
 
 def print_num1(*ags, **kws):
 	global pnt1
@@ -226,6 +260,54 @@ def print_num7(*ags, **kws):
 		out7.write(f"You typed in {input_num7.value}, that is not correct.")
 		pnt7 = 0
 
+def print_num8(*ags, **kws):
+	global pnt8
+	ans8 = round(2*x2/t2,1)
+	if input_num8.value=='':
+		out8.write(f"Blank value provided, please try again.")
+	elif input_num8.value == str(ans8):
+		out8.write(f"Correct!")
+		pnt8 = 1
+	else:
+		out8.write(f"You typed in {input_num8.value}, that is not correct.")
+		pnt8 = 0
+
+def print_num9(*ags, **kws):
+	global pnt9
+	ans9 = round(2*x2/t2,1)
+	if input_num9.value=='':
+		out9.write(f"Blank value provided, please try again.")
+	elif input_num9.value == str(ans9):
+		out9.write(f"Correct!")
+		pnt9 = 1
+	else:
+		out9.write(f"You typed in {input_num9.value}, that is not correct.")
+		pnt9 = 0
+
+def print_num10(*ags, **kws):
+	global pnt10
+	ans10 = round(2*x2/t2,1)
+	if input_num10.value=='':
+		out10.write(f"Blank value provided, please try again.")
+	elif input_num10.value == str(ans10):
+		out10.write(f"Correct!")
+		pnt10 = 1
+	else:
+		out10.write(f"You typed in {input_num10.value}, that is not correct.")
+		pnt10 = 0
+
+def print_num11(*ags, **kws):
+	global pnt11
+	ans11 = round(2*x2/t2,1)
+	if input_num11.value=='':
+		out11.write(f"Blank value provided, please try again.")
+	elif input_num11.value == str(ans11):
+		out11.write(f"Correct!")
+		pnt11 = 1
+	else:
+		out11.write(f"You typed in {input_num10.value}, that is not correct.")
+		pnt11 = 0
+
 
 </py-script>
 
@@ -245,6 +327,11 @@ def clear(*ags, **kws):
 	out5 = Element("outputDiv5")
 	out6 = Element("outputDiv6")
 	out7 = Element("outputDiv7")
+	out8 = Element("outputDiv8")
+	out9 = Element("outputDiv9")
+	out10 = Element("outputDiv10")
+	out11 = Element("outputDiv11")
+
 	out1.clear()	
 	out2.clear()
 	out3.clear()
@@ -252,6 +339,11 @@ def clear(*ags, **kws):
 	out5.clear()
 	out6.clear()
 	out7.clear()
+	out8.clear()
+	out9.clear()
+	out10.clear()
+	out11.clear()
+
 def final_sub(*ags, **kws):
 	out1 = Element("outputDiv1")
 	out2 = Element("outputDiv2")
@@ -260,7 +352,12 @@ def final_sub(*ags, **kws):
 	out5 = Element("outputDiv5")
 	out6 = Element("outputDiv6")
 	out7 = Element("outputDiv7")
-	grade = round(((pnt1+pnt2+pnt3+pnt4+pnt5+pnt6+pnt7)/7)*100,1)
+	out8 = Element("outputDiv8")
+	out9 = Element("outputDiv9")
+	out10 = Element("outputDiv10")
+	out11 = Element("outputDiv11")
+
+	grade = round(((pnt1+pnt2+pnt3+pnt4+pnt5+pnt6+pnt7+pnt8+pnt9+pnt10+pnt11)/10)*100,1)
 	name = Element('student-name')
 	out_final = Element('outputFinal')
 	out_final.write(f" Thank you {name.value}, your answers have been submitted. Your score is: {grade} %")
