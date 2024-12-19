@@ -47,6 +47,12 @@ th_r_2 = th_2*np.pi/180
 v_A_2 = np.random.randint(42,48)
 v_B_2 = np.random.randint(25,35)
 
+mu_4 = np.random.randint(6,10)/10
+x_4 = np.random.randint(50,70)
+W_f_4 = np.random.randint(55,65)
+W_r_4 = 100 - W_f_4
+g = 9.81
+
 </py-script>
 
 <py-script>
@@ -273,7 +279,7 @@ def print_num5(*ags, **kws):
 
 def print_num6(*ags, **kws):
 	global pnt6
-	ans6 = round(2*x2/t2**2,1)
+	ans6 = round(2,1)
 	if input_num6.value=='':
 		out6.write(f"Blank value provided, please try again.")
 	elif input_num6.value == str(ans6):
@@ -333,7 +339,7 @@ def print_num10(*ags, **kws):
 
 def print_num11(*ags, **kws):
 	global pnt11
-	ans11 = round(2*x2/t2,1)
+	ans11 = round(np.sqrt(2*mu_4*g*x_4),1)
 	if input_num11.value=='':
 		out11.write(f"Blank value provided, please try again.")
 	elif input_num11.value == str(ans11):
@@ -345,7 +351,7 @@ def print_num11(*ags, **kws):
 
 def print_num12(*ags, **kws):
 	global pnt12
-	ans12 = round(2*x2/t2,1)
+	ans12 = round(np.sqrt(2*(W_f_4/100)*mu_4*g*x_4),1)
 	if input_num12.value=='':
 		out12.write(f"Blank value provided, please try again.")
 	elif input_num12.value == str(ans12):
@@ -357,7 +363,7 @@ def print_num12(*ags, **kws):
 
 def print_num13(*ags, **kws):
 	global pnt13
-	ans13 = round(2*x2/t2,1)
+	ans13 = round(np.sqrt(2*(W_f_4/100)*mu_4*g*x_4),1)
 	if input_num13.value=='':
 		out13.write(f"Blank value provided, please try again.")
 	elif input_num13.value == str(ans13):
