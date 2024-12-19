@@ -41,6 +41,12 @@ print( 'Page is Ready!')
 <py-script>
 import numpy as np
 
+th_2_2= np.random.randint(65,75)
+th_2 = 90 - th_2_2  
+th_r_2 = th_2*np.pi/180
+v_A_2 = np.random.randint(42,48)
+v_B_2 = np.random.randint(25,35)
+
 </py-script>
 
 <py-script>
@@ -244,7 +250,7 @@ def print_num3(*ags, **kws):
 def print_num4(*ags, **kws):
 	global pnt4
 	global ans4
-	ans4 = round(np.sqrt(v**2-2*a*x),1)
+	ans4 = round(np.sqrt((v_A_2*np.cos(th_r_2))**2 + (v_B_2+v_A_2*np.sin(th_r_2))**2),1)
 	if input_num4.value=='':
 		out4.write(f"Blank value provided, please try again.")
 	elif input_num4.value == str(ans4):
@@ -255,7 +261,7 @@ def print_num4(*ags, **kws):
 		pnt4 = 0	
 def print_num5(*ags, **kws):
 	global pnt5
-	ans5 = round(-ans4/a,1)
+	ans5 = round(np.arctan2(v_B_2+v_A_2*np.sin(th_r_2) , v_A_2*np.cos(th_r_2) )*180/np.pi,1)
 	if input_num5.value=='':
 		out5.write(f"Blank value provided, please try again.")
 	elif input_num5.value == str(ans5):
