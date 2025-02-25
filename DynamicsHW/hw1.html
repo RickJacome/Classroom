@@ -10,7 +10,6 @@
   	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   	<link rel="stylesheet" href="https://pyscript.net/releases/2023.03.1/pyscript.css" />
     <script defer src="https://pyscript.net/releases/2023.03.1/pyscript.js"></script>
-  	
   </head>
   <body style="margin: 25px 75px 25px 75px;">
   	<py-config src="./pyscript.toml"></py-config>
@@ -29,6 +28,33 @@
 <p> Please write your name below. <strong> Do not forget your name.</strong>	</p>
 <py-inputbox id="student-name" style="margin-bottom: 10px;"> </py-inputbox>
 <br>
+
+<h1>Addition Game!</h1>
+<p id="question"></p>
+<input type="number" id="answer">
+<button onclick="checkAnswer()">Submit</button> 
+<p id="result"></p>
+
+<py-script>
+    import random
+
+    def generate_question():
+        num1 = random.randint(1, 10)
+        num2 = random.randint(1, 10)
+        question = f"What is {num1} + {num2}?"
+        document.getElementById("question").innerText = question
+        return num1 + num2 
+    
+    def checkAnswer():
+        user_answer = parseInt(document.getElementById("answer").value)
+        correct_answer = generate_question()
+        if (user_answer === correct_answer):
+            document.getElementById("result").innerText = "Correct!"
+        else:
+            document.getElementById("result").innerText = "Incorrect!"
+</py-script>
+
+
 <py-script>
 print( 'Page is Ready!')
 </py-script>
@@ -70,7 +96,7 @@ print(' 1 b) What is a - b = ? ')
 <div id="outputDiv2" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <br>
 <py-script>
-print('2) If a car traveled ' + str(x) + ' meters in about ' + str(t) + ' seconds. What is the velocity [m/s] of the car? Rounded to the nearest tenth.')
+print(' 2) If a car traveled ' + str(x) + ' meters in about ' + str(t) + ' seconds. What is the velocity [m/s] of the car? Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question3" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen3" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num3">
@@ -78,7 +104,7 @@ print('2) If a car traveled ' + str(x) + ' meters in about ' + str(t) + ' second
 <div id="outputDiv3" style="margin-top: 10px;margin-bottom: 10px;"></div> 
 <br>
 <py-script>
-print('3) If a car changed its speed from ' + str(v1) + ' (m/s) to ' + str(v2) + ' (m/s), while having traveled ' + str(d) + ' meters. What is the acceleration [m/s²] of the car? Rounded to the nearest tenth.')
+print(' 3) If a car changed its speed from ' + str(v1) + ' (m/s) to ' + str(v2) + ' (m/s), while having traveled ' + str(d) + ' meters. What is the acceleration [m/s²] of the car? Rounded to the nearest tenth.')
 </py-script>
 <py-inputbox id="Question4" style="margin-bottom: 10px;"> </py-inputbox>
 <div><button id="gen4" style="margin-top: 10px;margin-bottom: 10px;"  type="button" class="btn btn-primary" pys-onClick="print_num4">
