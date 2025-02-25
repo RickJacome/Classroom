@@ -32,9 +32,6 @@
 <h1>Addition Game!</h1>
 <p id="question"></p>
 <input type="number" id="answer">
-<button onclick="checkAnswer()">Submit</button> 
-<p id="result"></p>
-
 <py-script>
     import random
 
@@ -44,6 +41,11 @@
         question = f"What is {num1} + {num2}?"
         document.getElementById("question").innerText = question
         return num1 + num2 
+</py-script>
+<button onclick="checkAnswer()">Submit</button> 
+<p id="result"></p>
+
+<py-script>
     
     def checkAnswer():
         user_answer = parseInt(document.getElementById("answer").value)
