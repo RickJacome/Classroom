@@ -13,9 +13,13 @@ B2 = np.random.randint(-10,-4)
 
 paraQ1 = Element("Q1")
 paraQ1.write(f"if a = {str(a)} and b = {str(b)}")
+
 paraQ1a = Element("Q1a")
-paraQ1a.write(f" 1 a) What is a + b = ? ")
-#print(' 1 b) What is a - b = ? ')
+paraQ1a.write(f" 1 a) What is a + b = ?")
+
+paraQ1b = Element("Q1b")
+paraQab.write(f"1 b) What is a - b = ?")
+
 #print(' 2) If a car traveled ' + str(x) + ' meters in about ' + str(t) + ' seconds. What is the velocity [m/s] of the car? Rounded to the nearest tenth.')
 #print(' 3) If a car changed its speed from ' + str(v1) + ' (m/s) to ' + str(v2) + ' (m/s), while having traveled ' + str(d) + ' meters. What is the acceleration [m/s²] of the car? Rounded to the nearest tenth.')
 #print(' 4) Given vector A = ' + str(A1) + ' i + ' + str(A2) + ' j. Calculate the magnitude of A. Rounded to the nearest tenth.')
