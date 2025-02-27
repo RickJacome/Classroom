@@ -22,14 +22,19 @@ paraQ1b.write(f"1 b) What is a - b = ?")
 
 paraQ2 = Element("Q2")
 paraQ2.write(f"2) If a car traveled {str(x)} meters in about {str(t)} seconds. What is the velocity [m/s] of the car? Rounded to the nearest tenth.")
+
 paraQ3 = Element("Q3")
 paraQ3.write(f"3) If a car changed its speed from {str(v1)} (m/s) to {str(v2)} (m/s), while having traveled {str(d)} meters. What is the acceleration [m/s²] of the car? Rounded to the nearest tenth.")
+
 paraQ4 = Element("Q4")
-#print(' 4) Given vector A = ' + str(A1) + ' i + ' + str(A2) + ' j. Calculate the magnitude of A. Rounded to the nearest tenth.')
+paraQ4.write(f"4) Given vector A = {str(A1)} i + {str(A2)} j. Calculate the magnitude of A. Rounded to the nearest tenth.")
+
 paraQ5 = Element("Q5")
-#print(' 5) Given vector B = ' + str(B1) + ' i - ' + str(np.abs(B2)) + ' j. Calculate the angle [radians] in between vectors A and B. Rounded to the nearest tenth.')
+paraQ5.write(f"5) Given vector B = {str(B1)} i - {str(np.abs(B2))} j. Calculate the angle [radians] in between vectors A and B. Rounded to the nearest tenth. ")
+
 paraQ6 = Element("Q6")
-#print(' 6) Calculate the i-component of the vector A-B. Rounded to the nearest whole number.')
+paraQ6.write(f"6) Calculate the i-component of the vector A-B. Rounded to the nearest whole number.")
+
 
 
 input_num1 = Element("Question1")
