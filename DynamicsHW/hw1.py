@@ -13,7 +13,6 @@ B2 = np.random.randint(-10,-4)
 
 paraQ1 = Element("Q1")
 paraQ1.write(f"if a = {str(a)} and b = {str(b)}")
-
 paraQ1a = Element("Q1a")
 paraQ1a.write(f" 1 a) What is a + b = ? ")
 #print(' 1 b) What is a - b = ? ')
