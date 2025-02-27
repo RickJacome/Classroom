@@ -1,4 +1,7 @@
 import numpy as np
+import js
+
+
 a = np.random.randint(1, 5)
 b = np.random.randint(4, 10)
 x = np.random.randint(30,40)
@@ -56,14 +59,17 @@ out7 = Element("outputDiv7")
 def print_num1():
 	global pnt1
 	ans1 = a+b
-	if input_num1.value=='':
+	
+	ev1 = js.document.getElementsByName("input_num1").value
+	if ev1 =='':
 		out1.write(f"Blank value provided, please try again.")
-	elif input_num1.value == str(ans1):
+	elif ev1  == ans1:
 		out1.write(f"Correct!")
 		pnt1 = 1
 	else:
-		out1.write(f"You typed in {input_num1.value}, that is not correct")
+		out1.write(f"You typed in {ev1}, that is not correct")
 		pnt1 = 0
+
 def print_num2(*ags, **kws):
 	global pnt2
 	ans2 = a-b
