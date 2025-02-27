@@ -30,4 +30,5 @@ ax2.set_xlabel('x'); ax2.set_ylabel('y'); ax2.set_zlabel('z');
 ax3.contour3D(X, Y, Z, 50, cmap='binary')
 ax3.set_xlabel('x'); ax3.set_ylabel('y'); ax3.set_zlabel('z');
 
-fig
+
+display(fig, target="graph-area", append=False)
