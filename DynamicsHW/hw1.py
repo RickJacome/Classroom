@@ -12,7 +12,7 @@ B1 = np.random.randint(4,10)
 B2 = np.random.randint(-10,-4)
 
 paraQ1 = Element("Q1")
-paraQ1.write(f"if a = {a} and b = {str(b)}")
+paraQ1.write(f"if a = {a} and b = {b}")
 
 paraQ1a = Element("Q1a")
 paraQ1a.write(f" 1 a) What is a + b = ?")
@@ -21,16 +21,16 @@ paraQ1b = Element("Q1b")
 paraQ1b.write(f"1 b) What is a - b = ?")
 
 paraQ2 = Element("Q2")
-paraQ2.write(f"2) If a car traveled {str(x)} meters in about {str(t)} seconds. What is the velocity [m/s] of the car? Rounded to the nearest tenth.")
+paraQ2.write(f"2) If a car traveled {x} meters in about {t} seconds. What is the velocity [m/s] of the car? Rounded to the nearest tenth.")
 
 paraQ3 = Element("Q3")
-paraQ3.write(f"3) If a car changed its speed from {str(v1)} (m/s) to {str(v2)} (m/s), while having traveled {str(d)} meters. What is the acceleration [m/s²] of the car? Rounded to the nearest tenth.")
+paraQ3.write(f"3) If a car changed its speed from {v1} (m/s) to {v2} (m/s), while having traveled {d} meters. What is the acceleration [m/s²] of the car? Rounded to the nearest tenth.")
 
 paraQ4 = Element("Q4")
-paraQ4.write(f"4) Given vector A = {str(A1)} i + {str(A2)} j. Calculate the magnitude of A. Rounded to the nearest tenth.")
+paraQ4.write(f"4) Given vector A = {A1}i + {A2}j. Calculate the magnitude of A. Rounded to the nearest tenth.")
 
 paraQ5 = Element("Q5")
-paraQ5.write(f"5) Given vector B = {str(B1)} i - {str(np.abs(B2))} j. Calculate the angle [radians] in between vectors A and B. Rounded to the nearest tenth. ")
+paraQ5.write(f"5) Given vector B = {B1} i - {np.abs(B2)} j. Calculate the angle [radians] in between vectors A and B. Rounded to the nearest tenth. ")
 
 paraQ6 = Element("Q6")
 paraQ6.write(f"6) Calculate the i-component of the vector A-B. Rounded to the nearest whole number.")
