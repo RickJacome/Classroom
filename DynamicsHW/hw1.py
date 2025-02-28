@@ -60,14 +60,13 @@ def print_num1(*ags, **kws):
 	global pnt1
 	ans1 = a+b
 	
-	ev1 = js.document.getElementsByName("input_num1").value
-	if ev1 =='':
+	if input_num1.value =='':
 		out1.write(f"Blank value provided, please try again.")
-	elif ev1  == ans1:
+	elif input_num1.value  == ans1:
 		out1.write(f"Correct!")
 		pnt1 = 1
 	else:
-		out1.write(f"You typed in {ev1}, that is not correct")
+		out1.write(f"You typed in {input_num1.value}, that is not correct")
 		pnt1 = 0
 
 def print_num2(*ags, **kws):
