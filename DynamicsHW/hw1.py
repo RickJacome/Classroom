@@ -62,7 +62,7 @@ def print_num1(*ags, **kws):
 	
 	if input_num1.value =='':
 		out1.write(f"Blank value provided, please try again.")
-	elif input_num1.value  == ans1:
+	elif input_num1.value  == str(ans1):
 		out1.write(f"Correct!")
 		pnt1 = 1
 	else:
