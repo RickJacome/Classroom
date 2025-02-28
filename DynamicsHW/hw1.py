@@ -56,7 +56,7 @@ out5 = Element("outputDiv5")
 out6 = Element("outputDiv6")
 out7 = Element("outputDiv7") 
 
-def print_num1():
+def print_num1(*ags, **kws):
 	global pnt1
 	ans1 = a+b
 	
