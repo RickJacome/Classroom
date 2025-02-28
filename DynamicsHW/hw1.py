@@ -162,8 +162,9 @@ def final_sub(*ags, **kws):
 	name = Element('student-name')
 	out_final = Element('outputFinal')
 	try:
-		grade = round(((pnt1+pnt2+pnt3+pnt4+pnt5+pnt6+pnt7)/7)*100,1)
+		round(((pnt1+pnt2+pnt3+pnt4+pnt5+pnt6+pnt7)/7)*100,1)
 	except NameError:
 		out_final.write(f"You did not finish submitting all questions above. Refresh Page and start again. ")
 
+	grade = round(((pnt1+pnt2+pnt3+pnt4+pnt5+pnt6+pnt7)/7)*100,1)
 	out_final.write(f" Thank you {name.value}, your answers have been submitted. Your score is: {grade} %")
