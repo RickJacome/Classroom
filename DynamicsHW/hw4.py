@@ -230,7 +230,7 @@ def print_num13(*ags, **kws):
 		out13.write(f"You typed in {input_num13.value}, that is not correct.")
 		pnt13 = 0
 
-		def clear(*ags, **kws):
+def clear(*ags, **kws):
 	out1 = Element("outputDiv1")
 	out2 = Element("outputDiv2")
 	out3 = Element("outputDiv3")
