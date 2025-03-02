@@ -21,35 +21,35 @@ paraQ1b.write(f" 1 b) Calculate the velocity [mm/s] of portion C of the cable. R
 paraQ1c = Element("Q1c")
 paraQ1c.write(f" 1 c) Find the relative velocity [mm/s] of portion C of the cable with respect to slider block A. Rounded to the nearest tenth.")
 
-paraQ1a = Element("Q1a")
-paraQ1.write(f" 2 a) 3 seconds after car B passes through the intersection shown, car A passes through the same intersection. Knowing that the speed of each car is constant, determine the relative velocity [mph] of B with respect to A. Rounded to the nearest tenth.")
+paraQ2a = Element("Q2a")
+paraQ2a.write(f" 2 a) 3 seconds after car B passes through the intersection shown, car A passes through the same intersection. Knowing that the speed of each car is constant, determine the relative velocity [mph] of B with respect to A. Rounded to the nearest tenth.")
 
-paraQ1a = Element("Q1a")
-paraQ1.write(f" 2 b) State the direction [degrees] with respect to the horizontal of the velocity calculated in part 2a.  Rounded to the nearest tenth.")
+paraQ2b = Element("Q2b")
+paraQ2b.write(f" 2 b) State the direction [degrees] with respect to the horizontal of the velocity calculated in part 2a.  Rounded to the nearest tenth.")
 
-paraQ1a = Element("Q1a")
-paraQ1.write(f" 2 c) Calculate the change in position [miles] of B with respect to A during a 4 second interval. Rounded to the nearest tenth.")
+paraQ2c = Element("Q2c")
+paraQ2c.write(f" 2 c) Calculate the change in position [miles] of B with respect to A during a 4 second interval. Rounded to the nearest tenth.")
 
-paraQ1a = Element("Q1a")
-paraQ1.write(f" 3 a) Race car A is traveling on a straight portion of the track while race car B is traveling on a circular portion of the track. At the instant shown, the speed of A is increasing at the rate of 10 m/s², and the speed of B is decreasing at the rate of 6 m/s². For the position shown, determine the velocity [m/s²] of B relative to A. Rounded to the nearest tenth. ")
+paraQ3a = Element("Q3a")
+paraQ3a.write(f" 3 a) Race car A is traveling on a straight portion of the track while race car B is traveling on a circular portion of the track. At the instant shown, the speed of A is increasing at the rate of 10 m/s², and the speed of B is decreasing at the rate of 6 m/s². For the position shown, determine the velocity [m/s²] of B relative to A. Rounded to the nearest tenth. ")
 
-paraQ1a = Element("Q1a")
-paraQ1.write(f" 3 b)  State the direction [degrees] with respect to the horizontal of the velocity calculated in part 3a.  Rounded to the nearest tenth. ")
+paraQ3b = Element("Q3b")
+paraQ3b.write(f" 3 b)  State the direction [degrees] with respect to the horizontal of the velocity calculated in part 3a.  Rounded to the nearest tenth. ")
 
-paraQ1a = Element("Q1a")
-paraQ1.write(f" 3 c) Calculate the acceleration [m/s²] of B relative to A. Rounded to the nearest tenth. ")
+paraQ3c = Element("Q3c")
+paraQ3c.write(f" 3 c) Calculate the acceleration [m/s²] of B relative to A. Rounded to the nearest tenth. ")
 
-paraQ1a = Element("Q1a")
-paraQ1.write(f" 3 d) State the direction [degrees] with respect to the horizontal of the acceleration calculated in part 3c. Rounded to the nearest tenth. ")
+paraQ3d = Element("Q3d")
+paraQ3d.write(f" 3 d) State the direction [degrees] with respect to the horizontal of the acceleration calculated in part 3c. Rounded to the nearest tenth. ")
 
-paraQ1a = Element("Q1a")
-paraQ1.write(f" 4 a) Determine the maximum theoretical speed [m/s] that may be achieved over a distance of 60 m by a car starting from rest, knowing that the coefficient of static friction is 0.80 between the tires and the pavement, and that 60% of the weight of the car is distributed over its front wheels and 40% over its rear wheels. Assume a four-wheel drive. Rounded to the nearest tenth. ")
+paraQ4a = Element("Q4a")
+paraQ4a.write(f" 4 a) Determine the maximum theoretical speed [m/s] that may be achieved over a distance of 60 m by a car starting from rest, knowing that the coefficient of static friction is 0.80 between the tires and the pavement, and that 60% of the weight of the car is distributed over its front wheels and 40% over its rear wheels. Assume a four-wheel drive. Rounded to the nearest tenth. ")
 
-paraQ1a = Element("Q1a")
-paraQ1.write(f" 4 b) Determine the maximum theoretical speed [m/s]  now assuming a front-wheel drive. Rounded to the nearest tenth. ")
+paraQ4b = Element("Q4b")
+paraQ4b.write(f" 4 b) Determine the maximum theoretical speed [m/s]  now assuming a front-wheel drive. Rounded to the nearest tenth. ")
 
-paraQ1a = Element("Q1a")
-paraQ1.write(f" 4 c) Determine the maximum theoretical speed [m/s]  now assuming a rear-wheel drive. Rounded to the nearest tenth. ")
+paraQ4c = Element("Q4c")
+paraQ4c.write(f" 4 c) Determine the maximum theoretical speed [m/s]  now assuming a rear-wheel drive. Rounded to the nearest tenth. ")
 
 
 input_num1 = Element("Question1")
