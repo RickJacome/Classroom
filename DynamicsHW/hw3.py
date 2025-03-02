@@ -20,21 +20,29 @@ C_th = np.random.randint(2,5)
 C1_r = np.random.randint(4,8)
 C2_r = np.random.randint(-5,-1)
 
-print('1 a) A ball is thrown so that the motion is defined by the equations x = ' + str(a1_1) + 't and y = ' + str(a2_1) + ' + ' + str(a3_1) + 't ' + str(a4_1) + 't² , where x and y are expressed in meters and t is expressed in seconds. Determine the velocity [m/s] at t = ' + str(t_1) + ' s. Rounded to the nearest tenth.')
+paraQ1a = Element("Q1a")
+paraQ1a.write(f"1 a) A ball is thrown so that the motion is defined by the equations x = {a1_1}t and y = {a2_1} + {a3_1}t + {a4_1}t² , where x and y are expressed in meters and t is expressed in seconds. Determine the velocity [m/s] at t = {t_1} s. Rounded to the nearest tenth.")
 
-print('1 b) Calculate the horizontal distance [m] the ball travels before hitting the ground.')
+paraQ1b = Element("Q1b")
+paraQ1b.write(f"1 b) Calculate the horizontal distance [m] the ball travels before hitting the ground.")
 
-print(' 2 a) A basketball player shoots when she is '+str(x_2)+' ft from the backboard. Knowing that the ball has an initial velocity v₀ at an angle of '+str(th_2)+' deg with the horizontal, determine the value of v₀ [ft/s] when d is equal to '+str(d1_2)+' in. Rounded to the nearest tenth.')
+paraQ2a = Element("Q2a")
+paraQ2a.write(f"2 a) A basketball player shoots when she is {x_2} ft from the backboard. Knowing that the ball has an initial velocity v₀ at an angle of {th_2} deg with the horizontal, determine the value of v₀ [ft/s] when d is equal to {d1_2} in. Rounded to the nearest tenth.")
 
-print(' 2 b) Calculate the value of v₀ [ft/s] when d is now equal to '+str(d2_2)+' in. Rounded to the nearest tenth.')
+paraQ2b = Element("Q2b")
+paraQ2b.write(f"2 b) Calculate the value of v₀ [ft/s] when d is now equal to {d2_2} in. Rounded to the nearest tenth.")
 
-print(' 3 a) A golfer hits a golf ball from point A with an initial velocity of ' + str(v_3) +' m/s at an angle of ' + str(th_3) + '° with the horizontal axis. Determine the radius of curvature [m] of the trajectory described by the ball at point A. Rounded to the nearest tenth.')
+paraQ3a = Element("Q3a")
+paraQ3a.write(f"3 a) A golfer hits a golf ball from point A with an initial velocity of {v_3} m/s at an angle of {th_3}° with the horizontal axis. Determine the radius of curvature [m] of the trajectory described by the ball at point A. Rounded to the nearest tenth.")
 
-print(' 3 b) Determine the radius of curvature [m] at the highest point of the trajectory. Rounded to the nearest tenth.')
+paraQ3b = Element("Q3b")
+paraQ3b.write(f"3 b) Determine the radius of curvature [m] at the highest point of the trajectory. Rounded to the nearest tenth.")
 
-print(' 4 a) The oscillation of rod OA about O is defined by the relation θ = ('+ str(C_th) +'/π)(sin πt), where θ and t are expressed in radians and seconds, respectively. Collar B slides along the rod so that its distance from O is r = '+ str(C1_r) +'(1- exp('+ str(C2_r) + 't) ) where r and t are expressed in inches and seconds, respectively. When t = '+str(t_4)+' s, determine the velocity [in/s] of the collar. Rounded to the nearest tenth.')
+paraQ4a = Element("Q4a")
+paraQ4a.write(f"4 a) The oscillation of rod OA about O is defined by the relation θ = ({C_th}/π)(sin πt), where θ and t are expressed in radians and seconds, respectively. Collar B slides along the rod so that its distance from O is r = {C1_r} + (1- exp({C2_r}t) ) where r and t are expressed in inches and seconds, respectively. When t = {t_4} s, determine the velocity [in/s] of the collar. Rounded to the nearest tenth.")
 
-print(' 4 b) Calculate the acceleration [in/s²] of the collar. Rounded to the nearest tenth.')
+paraQ4b = Element("Q4b")
+paraQ4b.write(f"4 b) Calculate the acceleration [in/s²] of the collar. Rounded to the nearest tenth.")
 
 input_num1 = Element("Question1")
 input_num2 = Element("Question2")
