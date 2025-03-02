@@ -1,25 +1,32 @@
 import numpy as np
 # Define variables here
 
+paraQ1a = Element("Q1a")
+paraQ1a.write(f"1 a)  A 0.2 lb model rocket is launched vertically from rest at time t = 0 with a constant thrust of 2 lb for one second and no thrust for t > 1 s. Neglecting air resistance and the decrease in mass of the rocket, determine the maximum height [ft] reached by the rocket. Rounded to the nearest tenth.")
 
-print('1 a)  A 0.2 lb model rocket is launched vertically from rest at time t = 0 with a constant thrust of 2 lb for one second and no thrust for t > 1 s. Neglecting air resistance and the decrease in mass of the rocket, determine the maximum height [ft] reached by the rocket. Rounded to the nearest tenth.')
+paraQ1b = Element("Q1b")
+paraQ1b.write(f"1 b) Calculate the time [s] required to reach this maximum height. Rounded to the nearest tenth.")
 
+paraQ2a = Element("Q2a")
+paraQ2a.write(f"2 a) The system shown is initially at rest. Neglecting axle friction and the mass of the pulley. Determine the acceleration [ft/s²] of block A. Rounded to the nearest tenth.")
 
-print('1 b) Calculate the time [s] required to reach this maximum height. Rounded to the nearest tenth.')
+paraQ2b = Element("Q2b")
+paraQ2b.write(f"2 b) Calculate the velocity [ft/s] of block A after it has moved through 10 ft. Rounded to the nearest tenth.")
 
-print('2 a) The system shown is initially at rest. Neglecting axle friction and the mass of the pulley. Determine the acceleration [ft/s²] of block A. Rounded to the nearest tenth.')
+paraQ2c = Element("Q2c")
+paraQ2c.write(f"2 c) Determine the time [s] required for block A reach a velocity of 20 ft/s. Rounded to the nearest tenth.")
 
-print('2 b) Calculate the velocity [ft/s] of block A after it has moved through 10 ft. Rounded to the nearest tenth.')
+paraQ3a = Element("Q3a")
+paraQ3a.write(f"3 a) A single wire ACB passes through a ring at C attached to a sphere that revolves at a constant speed v in the horizontal circle shown. Knowing that the tension is the same in both portions of the wire, determine the speed v [m/s]. Rounded to the nearest tenth. ")
 
-print('2 c) Determine the time [s] required for block A reach a velocity of 20 ft/s. Rounded to the nearest tenth.')
+paraQ4a = Element("Q4a")
+paraQ4a.write(f"4 a) A turntable A is built into a stage for use in a theatrical production. It is observed during a rehearsal that a trunk B starts to slide outwards on the turntable 10 s after the turntable begins to rotate. Knowing that the trunk undergoes a constant tangential acceleration of 0.24 m/s², determine the coefficient of static friction between the trunk and the turntable. Rounded to the nearest hundred. ")
 
-print('3 a) A single wire ACB passes through a ring at C attached to a sphere that revolves at a constant speed v in the horizontal circle shown. Knowing that the tension is the same in both portions of the wire, determine the speed v [m/s]. Rounded to the nearest tenth. ')
+paraQ5a = Element("Q5a")
+paraQ5a.write(f"5 a) The orbit of the planet Venus is nearly circular with an orbital velocity of 126.5 x 10³ km/hr. Knowing that the mean distance from the center of the sun to the center of Venus is 108 x 10⁶ km and that the radius of the sun is 695.5 x 10³ km. Determine the mass [kg] of the sun. Rounded to the nearest integer. ")
 
-print('4 a) A turntable A is built into a stage for use in a theatrical production. It is observed during a rehearsal that a trunk B starts to slide outwards on the turntable 10 s after the turntable begins to rotate. Knowing that the trunk undergoes a constant tangential acceleration of 0.24 m/s², determine the coefficient of static friction between the trunk and the turntable. Rounded to the nearest hundred. ')
-
-print('5 a) The orbit of the planet Venus is nearly circular with an orbital velocity of 126.5 x 10³ km/hr. Knowing that the mean distance from the center of the sun to the center of Venus is 108 x 10⁶ km and that the radius of the sun is 695.5 x 10³ km. Determine the mass [kg] of the sun. Rounded to the nearest integer. ')
-
-print('5 b) Determine the acceleration [m/s²] of gravity at the surface of the sun. Rounded to the nearest tenth. ')
+paraQ5b = Element("Q5b")
+paraQ5b.write(f"5 b) Determine the acceleration [m/s²] of gravity at the surface of the sun. Rounded to the nearest tenth. ")
 
 input_num1 = Element("Question1")
 input_num2 = Element("Question2")
