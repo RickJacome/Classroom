@@ -1,25 +1,35 @@
 import numpy as np
 # Define Variables here
 
-print('1 a)  A 400-kg satellite is placed in a circular orbit 6394 km above the surface of the earth. At this elevation, the acceleration of gravity is 4.09 m/s². Knowing that its orbital speed is 20 000 km/h, determine the kinetic energy [GJ] of the satellite. Rounded to the nearest hundred. ')
+paraQ1a = Element("Q1a")
+paraQ1a.write(f"1 a)  A 400-kg satellite is placed in a circular orbit 6394 km above the surface of the earth. At this elevation, the acceleration of gravity is 4.09 m/s². Knowing that its orbital speed is 20 000 km/h, determine the kinetic energy [GJ] of the satellite. Rounded to the nearest hundred. ")
 
-print('2 a) A 2000 kg automobile starts from rest at point A on a 6° incline and coasts through a distance of 150 m to point B. The brakes are then applied, causing the automobile to come to a stop at point C, which is 20 m from B. Knowing that slipping is impending during the braking period and neglecting air resistance and rolling resistance, determine the speed [m/s] of the automobile at point B. Rounded to the nearest tenth.')
+paraQ2a = Element("Q2a")
+paraQ2a.write(f"2 a) A 2000 kg automobile starts from rest at point A on a 6° incline and coasts through a distance of 150 m to point B. The brakes are then applied, causing the automobile to come to a stop at point C, which is 20 m from B. Knowing that slipping is impending during the braking period and neglecting air resistance and rolling resistance, determine the speed [m/s] of the automobile at point B. Rounded to the nearest tenth.")
 
-print('2 b) Calculate the coefficient of static friction between the tires and the road. Rounded to the nearest hundred.')
+paraQ2b = Element("Q2b")
+paraQ2b.write(f"2 b) Calculate the coefficient of static friction between the tires and the road. Rounded to the nearest hundred.")
 
-print('3 a) A 7.5 lb collar is released from rest in the position shown, sliders down the inclined rod, and compresses the spring. The direction of motion is reversed, and the collar slides up the rod. Knowing that the maximum deflection of the spring is 5 in, determine the coefficient of kinetic friction between the collar and the rod. Rounded to the nearest hundred.')
+paraQ3a = Element("Q3a")
+paraQ3a.write(f"3 a) A 7.5 lb collar is released from rest in the position shown, sliders down the inclined rod, and compresses the spring. The direction of motion is reversed, and the collar slides up the rod. Knowing that the maximum deflection of the spring is 5 in, determine the coefficient of kinetic friction between the collar and the rod. Rounded to the nearest hundred.")
 
-print('3 b) Determine the maximum speed of the collar [ft/s]. Rounded to the nearest tenth.')
+paraQ3b = Element("Q3b")
+paraQ3b.write(f"3 b) Determine the maximum speed of the collar [ft/s]. Rounded to the nearest tenth.")
 
-print('4 a) A 4-lb collar can slide without friction along a horizontal rod and is in equilibrium at A when it is pushed 1 in. to the right and released from rest. The springs are undeformed when the collar is at a and the constant of each spring is 2800 lb/in. Determine the maximum velocity [ft/s] of the collar. Rounded to the nearest tenth.')
+paraQ4a = Element("Q4a")
+paraQ4a.write(f"4 a) A 4-lb collar can slide without friction along a horizontal rod and is in equilibrium at A when it is pushed 1 in. to the right and released from rest. The springs are undeformed when the collar is at a and the constant of each spring is 2800 lb/in. Determine the maximum velocity [ft/s] of the collar. Rounded to the nearest tenth.")
 
-print('4 b) Now in this case, starting from the same position shown. The 4-lb collar can slide without friction along a horizontal rod and is released from rest at A. The undeformed lengths of springs BA and CA are 10 in and 9 in respectively, and the constant of each spring is 2800 lb/in. Determine the velocity [ft/s] of the collar when it has moved 1 in to the right. Rounded to the nearest tenth.')
+paraQ4b = Element("Q4b")
+paraQ4b.write(f"4 b) Now in this case, starting from the same position shown. The 4-lb collar can slide without friction along a horizontal rod and is released from rest at A. The undeformed lengths of springs BA and CA are 10 in and 9 in respectively, and the constant of each spring is 2800 lb/in. Determine the velocity [ft/s] of the collar when it has moved 1 in to the right. Rounded to the nearest tenth.")
 
-print('5 a) A 1-lb collar is attached to a spring and slides without friction along a circular rod in a vertical plane. The spring has undeformed length of 5 in and a constant k =  10 lb/ft. Knowing that the collar is released from bring held at A, determine the speed of the collar [ft/s] as the collar passes through B. Rounded to the nearest tenth. ')
+paraQ5a = Element("Q5a")
+paraQ5a.write(f"5 a) A 1-lb collar is attached to a spring and slides without friction along a circular rod in a vertical plane. The spring has undeformed length of 5 in and a constant k =  10 lb/ft. Knowing that the collar is released from bring held at A, determine the speed of the collar [ft/s] as the collar passes through B. Rounded to the nearest tenth. ")
 
-print('5 b) Calculate the normal force [lbs] in between the collar and the road as it passes through point B. Rounded to the nearest tenth.')
+paraQ5b = Element("Q5b")
+paraQ5b.write(f"5 b) Calculate the normal force [lbs] in between the collar and the road as it passes through point B. Rounded to the nearest tenth.")
 
-print('6 a) A spacecraft is describing an elliptic orbit of minimum altitude at point A of 2400 km and maximum altitude at point B of 9600 km above the surface of the earth. Determine the speed [km/h] of the spacecraft at A. Rounded to the nearest integer. ')
+paraQ6a = Element("Q6a")
+paraQ6a.write(f"6 a) A spacecraft is describing an elliptic orbit of minimum altitude at point A of 2400 km and maximum altitude at point B of 9600 km above the surface of the earth. Determine the speed [km/h] of the spacecraft at A. Rounded to the nearest integer. ")
 
 input_num1 = Element("Question1")
 input_num2 = Element("Question2")
