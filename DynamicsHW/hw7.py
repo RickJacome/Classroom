@@ -1,28 +1,38 @@
 import numpy as np
 # Define Variables here
 
+paraQ1a = Element("Q1a")
+paraQ1a.write(f"1 a) An estimate of the expected load on over-the-shoulder seat belts is to be made before designing prototype belts that will be evaluated in automobile crash tests. Assuming that an automobile traveling at 45 mi/h is brought to a stop in 110 ms. Determine the average impulsive force [lb] exerted by a 200-lb man on the belt.  Rounded to nearest integer.")
 
-print('1 a) An estimate of the expected load on over-the-shoulder seat belts is to be made before designing prototype belts that will be evaluated in automobile crash tests. Assuming that an automobile traveling at 45 mi/h is brought to a stop in 110 ms. Determine the average impulsive force [lb] exerted by a 200-lb man on the belt.  Rounded to nearest integer.')
+paraQ1b = Element("Q1b")
+paraQ1b.write(f"1 b) Determine the maximum force [lb] exerted on the belt if the force-time diagram has the shape shown.  Rounded to nearest integer.")
 
-print('1 b) Determine the maximum force [lb] exerted on the belt if the force-time diagram has the shape shown.  Rounded to nearest integer.')
+paraQ2a = Element("Q2a")
+paraQ2a.write(f"2 a) At an intersection, car B was traveling south and car A was traveling 30° north of east  when they slammed into each other. Upon investigation it was found that after the crash the two cars got stuck and skidded off at an angle of 10° north of east. Each driver claimed that he was going at the speed limit of 50 km/h and that he tried to slow down but could not avoid the crash because the other driver was going a lot faster. Knowing that the masses of cars A and B were 1500 kg and 1200 kg, respectively, determine which car was going faster [A or B?] .")
 
-print('2 a) At an intersection, car B was traveling south and car A was traveling 30° north of east  when they slammed into each other. Upon investigation it was found that after the crash the two cars got stuck and skidded off at an angle of 10° north of east. Each driver claimed that he was going at the speed limit of 50 km/h and that he tried to slow down but could not avoid the crash because the other driver was going a lot faster. Knowing that the masses of cars A and B were 1500 kg and 1200 kg, respectively, determine which car was going faster [A or B?] .')
+paraQ2b = Element("Q2b")
+paraQ2b.write(f"2 b) Determine the speed [km/h] of the faster of the two cars if the slower car was traveling at the speed limit. Rounded to the nearest tenth.")
 
-print('2 b) Determine the speed [km/h] of the faster of the two cars if the slower car was traveling at the speed limit. Rounded to the nearest tenth.')
+paraQ3a = Element("Q3a")
+paraQ3a.write(f"3 a) A ballistic pendulum is used to measure the speed of high-speed projectiles. A 6-g bullet A is fired into a 1-kg wood block B suspended by a cord with a length of l = 2.2 m. The block then swings through a maximum angle of θ = 60°. Determine the initial speed [m/s] of the bullet v_0. Rounded to the nearest tenth.")
 
-print('3 a) A ballistic pendulum is used to measure the speed of high-speed projectiles. A 6-g bullet A is fired into a 1-kg wood block B suspended by a cord with a length of l = 2.2 m. The block then swings through a maximum angle of θ = 60°. Determine the initial speed [m/s] of the bullet v_0. Rounded to the nearest tenth.')
+paraQ3b = Element("Q3b")
+paraQ3b.write(f"3 b) Calculate the impulse [m/s] imparted by the bullet on the block. Rounded to the nearest tenth.")
 
-print('3 b) Calculate the impulse [m/s] imparted by the bullet on the block. Rounded to the nearest tenth.')
+paraQ3c = Element("Q3c")
+paraQ3c.write(f"'3 c) Determine the force [m/s] on the cord immediately after the impact. Rounded to the nearest tenth.")
 
-print('3 c) Determine the force [m/s] on the cord immediately after the impact. Rounded to the nearest tenth.')
+paraQ4a = Element("Q4a")
+paraQ4a.write(f"'4 a) Two identical billiard balls can move freely on a horizontal table. Ball A has a velocity v_0 as shown and hits ball B, which is at rest, at a point C defined by θ = 45°. Knowing that the coefficient of restitution between the two balls is e = 0.8 and assuming no friction, determine the velocity of ball A after impact as a function of the initial velocity. Rounded to the nearest hundred.")
 
-print('4 a) Two identical billiard balls can move freely on a horizontal table. Ball A has a velocity v_0 as shown and hits ball B, which is at rest, at a point C defined by θ = 45°. Knowing that the coefficient of restitution between the two balls is e = 0.8 and assuming no friction, determine the velocity of ball A after impact as a function of the initial velocity. Rounded to the nearest hundred.')
+paraQ4b = Element("Q4b")
+paraQ4b.write(f" 4 b) Determine the direction [degrees] of velocity for ball A after impact with respect to the horizontal. Rounded to the nearest tenth.")
 
-print('4 b) Determine the direction [degrees] of velocity for ball A after impact with respect to the horizontal. Rounded to the nearest tenth.')
+paraQ4c = Element("Q4c")
+paraQ4c.write(f"4 c) Determine the magnitude of velocity for ball B after impact as a function of the initial velocity. Rounded to the nearest hundred.")
 
-print('4 c) Determine the magnitude of velocity for ball B after impact as a function of the initial velocity. Rounded to the nearest hundred.')
-
-print('4 d)  Determine the direction [degrees] of velocity for ball B after impact with respect to the horizontal. Rounded to the nearest tenth.')
+paraQ4d = Element("Q4d")
+paraQ4d.write(f"4 d)  Determine the direction [degrees] of velocity for ball B after impact with respect to the horizontal. Rounded to the nearest tenth.")
 
 input_num1 = Element("Question1")
 input_num2 = Element("Question2")
