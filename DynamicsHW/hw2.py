@@ -1,7 +1,22 @@
 import numpy as np
+a1 = np.random.randint(1,10)
+a2 = np.random.randint(-1,-10)
+a3 = np.random.randint(-5,-15)
+a4 = np.random.randint(1,10)
+a5 = np.random.randint(1,10)
+v =0 ;
+a2a = np.random.randint(-1,-15)
+x2a = np.random.randint(150,230)
+
+t3a = np.random.randint(25,35)
+x3a = np.random.randint(800,950)
+
+v4a = random.randrange(50,60,1)
+t4a = random.randrange(25,35,1)
+d4a = random.randrange(800,950,1)
 
 paraQ1a = Element("Q1a")
-paraQ1a.write(f"1 a) The motion of a particle is defined by x = '  + str(a1) + 't⁴ - '  + str(np.abs(a2)) + 't³ - ' + str(np.abs(a3)) +  't² + ' +  str(a4) + 't + '  + str(a5) + '. Where x and t are in meters and seconds respectively. Determine the time [s] at which acceleration is zero. Rounded to the nearest hundred.")
+paraQ1a.write(f"1 a) The motion of a particle is defined by x = {a1}t⁴ - {np.abs(a2)}t³ - {np.abs(a3)}t² + {a4}t + {a5}. Where x and t are in meters and seconds respectively. Determine the time [s] at which acceleration is zero. Rounded to the nearest hundred.")
 
 paraQ1b = Element("Q1b")
 paraQ1b.write(f"1 b) What is the velocity [m/s] of the particle at this time? Rounded to the nearest tenth.")
@@ -10,19 +25,19 @@ paraQ1c = Element("Q1c")
 paraQ1c.write(f"1 c) What is the position [m] of the particle at this time? Rounded to the nearest tenth.")
 
 paraQ2a = Element("Q2a")
-paraQ2a.write(f"2 a) A car is driving at constant speed and starts applying the braking, causing it to slow down at a rate of ' + str(np.abs(a2a)) + ' ft/s². If the car stops in ' + str(x2a) + ' ft, determine how fast the car was traveling immediately before applying the brakes [m/s]. Rounded to the nearest tenth.")
+paraQ2a.write(f"2 a) A car is driving at constant speed and starts applying the braking, causing it to slow down at a rate of {np.abs(a2a)} ft/s². If the car stops in {x2a} ft, determine how fast the car was traveling immediately before applying the brakes [m/s]. Rounded to the nearest tenth.")
 
 paraQ2b = Element("Q2b")
 paraQ2b.write(f"2 b) Calculate the time required for the car to come to a stop [s]. Rounded to the nearest tenth.")
 
 paraQ3a = Element("Q3a")
-paraQ3a.write(f"3 a) An airplane begins its take-off run at A with zero velocity and a constant acceleration a. Knowing that the airplane becomes airbone ' +  str(t3a) + ' s later at B and that the distance AB is ' +  str(x3a) + ' m. Determine the acceleration a [m/s²]. Rounded to the nearest tenth.")
+paraQ3a.write(f"3 a) An airplane begins its take-off run at A with zero velocity and a constant acceleration a. Knowing that the airplane becomes airbone {t3a}s later at B and that the distance AB is {x3a} m. Determine the acceleration a [m/s²]. Rounded to the nearest tenth.")
 
 paraQ3b = Element("Q3b")
 paraQ3b.write(f"3 b) What is the take-off velocity [m/s] of the airplane? Rounded to the nearest tenth.")
 
 paraQ4a = Element("Q4a")
-paraQ4a.write(f"4 a) A motorist is traveling at ' + str(v4a) + ' km/h and observers that a traffic light ' + str(d4a) + ' m ahead has turned red. The traffic light is timed to stay red '+ str(t4a) +' s. If the motorist wishes to pass the light without stopping just as it turns green again, determine the required uniform deceleration [m/s²] of the car for it to cross without stopping. Rounded to the nearest hundred.")
+paraQ4a.write(f"4 a) A motorist is traveling at {v4a} km/h and observers that a traffic light {d4a} m ahead has turned red. The traffic light is timed to stay red {t4a} s. If the motorist wishes to pass the light without stopping just as it turns green again, determine the required uniform deceleration [m/s²] of the car for it to cross without stopping. Rounded to the nearest hundred.")
 
 paraQ4b = Element("Q4b")
 paraQ4b.write(f"4 b) What is the velocity [m/s] of the car as it passes the light? Rounded to the nearest tenth.")
@@ -95,7 +110,7 @@ def print_num3(*ags, **kws):
 def print_num4(*ags, **kws):
 	global pnt4
 	global ans4
-	ans4 = round(np.sqrt(v**2-2*a*x),1)
+	ans4 = round(np.sqrt(v**2-2*a2a*x2a),1)
 	if input_num4.value=='':
 		out4.write(f"Blank value provided, please try again.")
 	elif input_num4.value == str(ans4):
@@ -106,7 +121,7 @@ def print_num4(*ags, **kws):
 		pnt4 = 0	
 def print_num5(*ags, **kws):
 	global pnt5
-	ans5 = round(-ans4/a,1)
+	ans5 = round(-ans4/a2a,1)
 	if input_num5.value=='':
 		out5.write(f"Blank value provided, please try again.")
 	elif input_num5.value == str(ans5):
@@ -118,7 +133,7 @@ def print_num5(*ags, **kws):
 
 def print_num6(*ags, **kws):
 	global pnt6
-	ans6 = round(2*x2/t2**2,1)
+	ans6 = round(2*x3a/t3a**2,1)
 	if input_num6.value=='':
 		out6.write(f"Blank value provided, please try again.")
 	elif input_num6.value == str(ans6):
@@ -130,7 +145,7 @@ def print_num6(*ags, **kws):
 
 def print_num7(*ags, **kws):
 	global pnt7
-	ans7 = round(2*x2/t2,1)
+	ans7 = round(2*x3a/t3a,1)
 	if input_num7.value=='':
 		out7.write(f"Blank value provided, please try again.")
 	elif input_num7.value == str(ans7):
@@ -142,7 +157,7 @@ def print_num7(*ags, **kws):
 
 def print_num8(*ags, **kws):
 	global pnt8
-	ans8 = round(2*x2/t2,1)
+	ans8 = round((d4a - (v4a*10/36)*t4a)*2/t4a**2,1)
 	if input_num8.value=='':
 		out8.write(f"Blank value provided, please try again.")
 	elif input_num8.value == str(ans8):
@@ -154,7 +169,7 @@ def print_num8(*ags, **kws):
 
 def print_num9(*ags, **kws):
 	global pnt9
-	ans9 = round(2*x2/t2,1)
+	ans9 = round(np.sqrt((v4a*10/36)**2 + 2*d4a*ans9),1)
 	if input_num9.value=='':
 		out9.write(f"Blank value provided, please try again.")
 	elif input_num9.value == str(ans9):
