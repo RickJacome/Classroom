@@ -21,7 +21,7 @@ C1_r = np.random.randint(4,8)
 C2_r = np.random.randint(-5,-1)
 
 paraQ1a = Element("Q1a")
-paraQ1a.write(f"1 a) A ball is thrown so that the motion is defined by the equations x = {a1_1}t and y = {a2_1} + {a3_1}t + {a4_1}t² , where x and y are expressed in meters and t is expressed in seconds. Determine the velocity [m/s] at t = {t_1} s. Rounded to the nearest tenth.")
+paraQ1a.write(f"1 a) A ball is thrown so that the motion is defined by the equations x = {a1_1}t and y = {a2_1} + {a3_1}t {a4_1}t² , where x and y are expressed in meters and t is expressed in seconds. Determine the velocity [m/s] at t = {t_1} s. Rounded to the nearest tenth.")
 
 paraQ1b = Element("Q1b")
 paraQ1b.write(f"1 b) Calculate the horizontal distance [m] the ball travels before hitting the ground.")
