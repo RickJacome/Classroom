@@ -1,11 +1,11 @@
 import numpy as np
 a1 = np.random.randint(1,10)
-a2 = np.random.randint(-1,-10)
-a3 = np.random.randint(-5,-15)
+a2 = np.random.randint(-10,-1)
+a3 = np.random.randint(-15,-5)
 a4 = np.random.randint(1,10)
 a5 = np.random.randint(1,10)
 v =0 ;
-a2a = np.random.randint(-1,-15)
+a2a = np.random.randint(-15,-1)
 x2a = np.random.randint(150,230)
 
 t3a = np.random.randint(25,35)
