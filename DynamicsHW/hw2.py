@@ -11,9 +11,9 @@ x2a = np.random.randint(150,230)
 t3a = np.random.randint(25,35)
 x3a = np.random.randint(800,950)
 
-v4a = np.random.randrange(50,60,1)
-t4a = np.random.randrange(25,35,1)
-d4a = np.random.randrange(800,950,1)
+v4a = np.random.randint(50,60)
+t4a = np.random.randint(25,35)
+d4a = np.random.randint(800,950)
 
 paraQ1a = Element("Q1a")
 paraQ1a.write(f"1 a) The motion of a particle is defined by x = {a1}t⁴ - {np.abs(a2)}t³ - {np.abs(a3)}t² + {a4}t + {a5}. Where x and t are in meters and seconds respectively. Determine the time [s] at which acceleration is zero. Rounded to the nearest hundred.")
