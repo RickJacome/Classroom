@@ -2,13 +2,13 @@ import numpy as np
 import js
 
 
-a = np.random.randint(1, 5)
-b = np.random.randint(4, 10)
-x = np.random.randint(30,40)
-t = np.random.randint(2,5)
+ a = np.random.randint(1, 5)
+ b = np.random.randint(4, 10)
+ x = np.random.randint(30,40)
+ t = np.random.randint(2,5)
 v1 = np.random.randint(10,15)
 v2 = np.random.randint(25,35)
-d = np.random.randint(45,80)
+ d = np.random.randint(45,80)
 A1 = np.random.randint(2,10)
 A2 = np.random.randint(11,20)
 B1 = np.random.randint(4,10)
