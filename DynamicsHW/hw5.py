@@ -3,7 +3,11 @@ P1a = 2
 g1a = 32.2 
 m1a = np.random.randint(1,4)/10
 t1a = np.random.randint(1,3)
-a = (P - m1a)/(m1a/g1a)
+a = (P1a - m1a)/(m1a/g1a)
+r3a = np.random.randint(12,18)/10
+th1_3a = np.random.randint(28,32)
+th2_3a = np.random.randint(43,47)
+
 
 paraQ1a = Element("Q1a")
 paraQ1a.write(f"1 a)  A {m1a} lb model rocket is launched vertically from rest at time t = 0 with a constant thrust of 2 lb for one second and no thrust for t > {t1a} s. Neglecting air resistance and the decrease in mass of the rocket, determine the maximum height [ft] reached by the rocket. Rounded to the nearest integer.")
