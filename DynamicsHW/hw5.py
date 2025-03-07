@@ -8,6 +8,9 @@ r3a = np.random.randint(12,18)/10
 th1_3a = np.random.randint(28,32)
 th2_3a = np.random.randint(43,47)
 
+t4a = np.random.randint(8,12)
+at4a = np.random.randint(18,28)/100
+r4a = np.random.randint(23,32)/10
 
 paraQ1a = Element("Q1a")
 paraQ1a.write(f"1 a)  A {m1a} lb model rocket is launched vertically from rest at time t = 0 with a constant thrust of 2 lb for one second and no thrust for t > {t1a} s. Neglecting air resistance and the decrease in mass of the rocket, determine the maximum height [ft] reached by the rocket. Rounded to the nearest integer.")
@@ -124,7 +127,8 @@ def print_num5(*ags, **kws):
 
 def print_num6(*ags, **kws):
 	global pnt6
-	ans6 = round(2*x2/t2**2,1)
+	
+	ans6 = round(np.sqrt(g3a*r3a*(np.sin(th1_3a*np. pi/180)+np.sin(th2_3a*np. pi/180))/(np.cos(th1_3a*np. pi/180)+np.cos(th2_3a*np. pi/180))),1)
 	if input_num6.value=='':
 		out6.write(f"Blank value provided, please try again.")
 	elif input_num6.value == str(ans6):
@@ -136,7 +140,7 @@ def print_num6(*ags, **kws):
 
 def print_num7(*ags, **kws):
 	global pnt7
-	ans7 = round(2*x2/t2,1)
+	ans7 = round(((at4a/r4a)*t4a)**2*r/g,2)
 	if input_num7.value=='':
 		out7.write(f"Blank value provided, please try again.")
 	elif input_num7.value == str(ans7):
