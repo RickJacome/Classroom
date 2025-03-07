@@ -12,7 +12,11 @@ t4a = np.random.randint(8,12)
 at4a = np.random.randint(18,28)/100
 r4a = np.random.randint(23,32)/10  # This does not appear yet, need it in image. 
 
-
+vi = np.random.randint(123,130)
+v5a = vi*1e3 
+G = 66.73e-12 
+ri = np.random.randint(690,700)
+rs = ri*1e3
 
 paraQ1a = Element("Q1a")
 paraQ1a.write(f"1 a)  A {m1a} lb model rocket is launched vertically from rest at time t = 0 with a constant thrust of 2 lb for one second and no thrust for t > {t1a} s. Neglecting air resistance and the decrease in mass of the rocket, determine the maximum height [ft] reached by the rocket. Rounded to the nearest integer.")
@@ -36,7 +40,7 @@ paraQ4a = Element("Q4a")
 paraQ4a.write(f"4 a) A turntable A is built into a stage for use in a theatrical production. It is observed during a rehearsal that a trunk B starts to slide outwards on the turntable {t4a} s after the turntable begins to rotate. Knowing that the trunk undergoes a constant tangential acceleration of {at4a} m/s², determine the coefficient of static friction between the trunk and the turntable. Rounded to the nearest hundred. ")
 
 paraQ5a = Element("Q5a")
-paraQ5a.write(f"5 a) The orbit of the planet Venus is nearly circular with an orbital velocity of 126.5 x 10³ km/hr. Knowing that the mean distance from the center of the sun to the center of Venus is 108 x 10⁶ km and that the radius of the sun is 695.5 x 10³ km. Determine the mass [x10³⁰ kg] of the sun. Rounded to the nearest integer. ")
+paraQ5a.write(f"5 a) The orbit of the planet Venus is nearly circular with an orbital velocity of {v5a} x 10³ km/hr. Knowing that the mean distance from the center of the sun to the center of Venus is 108 x 10⁶ km and that the radius of the sun is {rs} x 10³ km. Determine the mass [x10³⁰ kg] of the sun. Rounded to the nearest integer. ")
 
 paraQ5b = Element("Q5b")
 paraQ5b.write(f"5 b) Determine the acceleration [m/s²] of gravity at the surface of the sun. Rounded to the nearest tenth. ")
@@ -154,7 +158,7 @@ def print_num7(*ags, **kws):
 
 def print_num8(*ags, **kws):
 	global pnt8
-	ans8 = round(2*x2/t2,1)
+	ans8 = 2
 	if input_num8.value=='':
 		out8.write(f"Blank value provided, please try again.")
 	elif input_num8.value == str(ans8):
@@ -166,7 +170,7 @@ def print_num8(*ags, **kws):
 
 def print_num9(*ags, **kws):
 	global pnt9
-	ans9 = round(2*x2/t2,1)
+	ans9 = round(G*2e30/(rs*1000)**2)
 	if input_num9.value=='':
 		out9.write(f"Blank value provided, please try again.")
 	elif input_num9.value == str(ans9):
