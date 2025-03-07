@@ -40,10 +40,10 @@ paraQ4a = Element("Q4a")
 paraQ4a.write(f"4 a) A turntable A is built into a stage for use in a theatrical production. It is observed during a rehearsal that a trunk B starts to slide outwards on the turntable {t4a} s after the turntable begins to rotate. Knowing that the trunk undergoes a constant tangential acceleration of {at4a} m/s², determine the coefficient of static friction between the trunk and the turntable. Rounded to the nearest hundred. ")
 
 paraQ5a = Element("Q5a")
-paraQ5a.write(f"5 a) The orbit of the planet Venus is nearly circular with an orbital velocity of {v5a} x 10³ km/hr. Knowing that the mean distance from the center of the sun to the center of Venus is 108 x 10⁶ km and that the radius of the sun is {rs} x 10³ km. Determine the mass [x10³⁰ kg] of the sun. Rounded to the nearest integer. ")
+paraQ5a.write(f"5 a) The orbit of the planet Venus is nearly circular with an orbital velocity of {vi} x 10³ km/hr. Knowing that the mean distance from the center of the sun to the center of Venus is 108 x 10⁶ km and that the radius of the sun is {rs} x 10³ km. Determine the mass [x10³⁰ kg] of the sun. Rounded to the nearest integer. ")
 
 paraQ5b = Element("Q5b")
-paraQ5b.write(f"5 b) Determine the acceleration [m/s²] of gravity at the surface of the sun. Rounded to the nearest tenth. ")
+paraQ5b.write(f"5 b) Determine the acceleration [m/s²] of gravity at the surface of the sun. Rounded to the nearest integer. ")
 
 input_num1 = Element("Question1")
 input_num2 = Element("Question2")
