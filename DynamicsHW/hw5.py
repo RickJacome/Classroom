@@ -1,11 +1,15 @@
 import numpy as np
-# Define variables here
+P1a = 2 
+g1a = 32.2 
+m1a = np.random.randint(1,4)/10
+t1a = np.random.randint(1,3)
+a = (P - m1a)/(m1a/g1a)
 
 paraQ1a = Element("Q1a")
-paraQ1a.write(f"1 a)  A 0.2 lb model rocket is launched vertically from rest at time t = 0 with a constant thrust of 2 lb for one second and no thrust for t > 1 s. Neglecting air resistance and the decrease in mass of the rocket, determine the maximum height [ft] reached by the rocket. Rounded to the nearest tenth.")
+paraQ1a.write(f"1 a)  A {m1a} lb model rocket is launched vertically from rest at time t = 0 with a constant thrust of 2 lb for one second and no thrust for t > {t1a} s. Neglecting air resistance and the decrease in mass of the rocket, determine the maximum height [ft] reached by the rocket. Rounded to the nearest integer.")
 
 paraQ1b = Element("Q1b")
-paraQ1b.write(f"1 b) Calculate the time [s] required to reach this maximum height. Rounded to the nearest tenth.")
+paraQ1b.write(f"1 b) Calculate the time [s] required to reach this maximum height. Rounded to the nearest integer.")
 
 paraQ2a = Element("Q2a")
 paraQ2a.write(f"2 a) The system shown is initially at rest. Neglecting axle friction and the mass of the pulley. Determine the acceleration [ft/s²] of block A. Rounded to the nearest tenth.")
@@ -50,15 +54,12 @@ out9 = Element("outputDiv9")
 
 def print_num1(*ags, **kws):
 	global pnt1
-	global ans1
-	t1 = (-1*3*2*a2 + np.sqrt( (3*2*a2)**2 -4*(4*3*a1)*(a3*2) )) / (2*4*3*a1)
-	t2 = (-1*3*2*a2 - np.sqrt( (3*2*a2)**2 -4*(4*3*a1)*(a3*2) )) / (2*4*3*a1)
-
-	if t1 >= 0:
-	    ans1 = round(t1,2)
-	else:
-	    ans1 = round(t2,2)
-
+	global y2
+	y1 = 0.5*a*t1a**2
+	v = np.sqrt(2*a*y1)
+	y2 = v**2/(2*g1a)
+	y = y1 + y2
+	ans1 = round(y)
 	if input_num1.value=='':
 		out1.write(f"Blank value provided, please try again.")
 	elif input_num1.value == str(ans1):
@@ -69,8 +70,10 @@ def print_num1(*ags, **kws):
 		pnt1 = 0
 def print_num2(*ags, **kws):
 	global pnt2
-	ans2 = round(4*a1*ans1**3 + 3*a2*ans1**2 + 2*a3*ans1 + a4,1)
-	
+	y1 = 0.5*a*t1a**2
+	v = np.sqrt(2*a*y1)
+	t = y2/(v/2) + t1a
+	ans2 = round(t)
 	if input_num2.value=='':
 		out2.write(f"Blank value provided, please try again.")
 	elif input_num2.value == str(ans2):
