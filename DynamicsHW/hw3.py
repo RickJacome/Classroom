@@ -170,7 +170,6 @@ def print_num6(*ags, **kws):
 
 	th_d = th_3*np.pi/180;
 	ans6 = round( (v_3*np.cos(th_d))**2/(9.81),1)
-	
 	if input_num6.value=='':
 		out6.write(f"Blank value provided, please try again.")
 	elif input_num6.value == str(ans6):
