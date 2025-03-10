@@ -157,6 +157,7 @@ def print_num7(*ags, **kws):
 
 def print_num8(*ags, **kws):
 	global pnt8
+	global ans8
 	ans8 = round((d4a - (v4a*10/36)*t4a)*2/t4a**2,1)
 	if input_num8.value=='':
 		out8.write(f"Blank value provided, please try again.")
@@ -169,7 +170,7 @@ def print_num8(*ags, **kws):
 
 def print_num9(*ags, **kws):
 	global pnt9
-	ans9 = round(np.sqrt((v4a*10/36)**2 + 2*d4a*ans9),1)
+	ans9 = round(np.sqrt((v4a*10/36)**2 + 2*d4a*ans8),1)
 	if input_num9.value=='':
 		out9.write(f"Blank value provided, please try again.")
 	elif input_num9.value == str(ans9):
