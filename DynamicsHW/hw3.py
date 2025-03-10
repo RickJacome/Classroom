@@ -169,7 +169,7 @@ def print_num6(*ags, **kws):
 	global pnt6
 
 	th_d = th_3*np.pi/180;
-	ans6 = round((v_3*np.cos(th_d))**2/(9.81),1)
+	ans6 = round( (v_3*np.cos(th_d))**2/(9.81),1)
 	
 	if input_num6.value=='':
 		out6.write(f"Blank value provided, please try again.")
@@ -178,7 +178,7 @@ def print_num6(*ags, **kws):
 		pnt6 = 1
 	else:
 		out6.write(f"You typed in {input_num6.value}, that is not correct.")
-		pnt6 = 0
+		pnt6 = 0	
 
 def print_num7(*ags, **kws):
 	global pnt7
