@@ -43,7 +43,7 @@ paraQ3d = Element("Q3d")
 paraQ3d.write(f" 3 d) State the direction [degrees] with respect to the horizontal of the acceleration calculated in part 3c. Rounded to the nearest tenth. ")
 
 paraQ4a = Element("Q4a")
-paraQ4a.write(f" 4 a) Determine the maximum theoretical speed [m/s] that may be achieved over a distance of 60 m by a car starting from rest, knowing that the coefficient of static friction is 0.80 between the tires and the pavement, and that 60% of the weight of the car is distributed over its front wheels and 40% over its rear wheels. Assume a four-wheel drive. Rounded to the nearest tenth. ")
+paraQ4a.write(f" 4 a) Determine the maximum theoretical (no engine losses) speed [m/s] that may be achieved over a distance of {x_4} m by a car starting from rest, knowing that the coefficient of static friction is {mu_4} between the tires and the pavement, and that {W_f_4}% of the weight of the car is distributed over its front wheels and {W_r_4}% over its rear wheels. Assume a four-wheel drive. Rounded to the nearest tenth. ")
 
 paraQ4b = Element("Q4b")
 paraQ4b.write(f" 4 b) Determine the maximum theoretical speed [m/s]  now assuming a front-wheel drive. Rounded to the nearest tenth. ")
@@ -83,8 +83,8 @@ out13 = Element("outputDiv13")
 def print_num1(*ags, **kws):
 	global pnt1
 	global ans1
-	t1 = (-1*3*2*a2 + np.sqrt( (3*2*a2)**2 -4*(4*3*a1)*(a3*2) )) / (2*4*3*a1)
-	t2 = (-1*3*2*a2 - np.sqrt( (3*2*a2)**2 -4*(4*3*a1)*(a3*2) )) / (2*4*3*a1)
+	t1 = 1
+	t2 = 1
 
 	if t1 >= 0:
 	    ans1 = round(t1,2)
@@ -101,7 +101,7 @@ def print_num1(*ags, **kws):
 		pnt1 = 0
 def print_num2(*ags, **kws):
 	global pnt2
-	ans2 = round(4*a1*ans1**3 + 3*a2*ans1**2 + 2*a3*ans1 + a4,1)
+	ans2 = round(1)
 	
 	if input_num2.value=='':
 		out2.write(f"Blank value provided, please try again.")
@@ -113,7 +113,7 @@ def print_num2(*ags, **kws):
 		pnt2 = 0		
 def print_num3(*ags, **kws):
 	global pnt3
-	ans3 = round(a1*ans1**4 + a2*ans1**3 + a3*ans1**2 + a4*ans1 + a5 ,1)
+	ans3 = round(1,1)
 	
 	if input_num3.value=='':
 		out3.write(f"Blank value provided, please try again.")
@@ -161,7 +161,7 @@ def print_num6(*ags, **kws):
 
 def print_num7(*ags, **kws):
 	global pnt7
-	ans7 = round(2*x2/t2,1)
+	ans7 = round(2,1)
 	if input_num7.value=='':
 		out7.write(f"Blank value provided, please try again.")
 	elif input_num7.value == str(ans7):
@@ -173,7 +173,7 @@ def print_num7(*ags, **kws):
 
 def print_num8(*ags, **kws):
 	global pnt8
-	ans8 = round(2*x2/t2,1)
+	ans8 = round(2,1)
 	if input_num8.value=='':
 		out8.write(f"Blank value provided, please try again.")
 	elif input_num8.value == str(ans8):
