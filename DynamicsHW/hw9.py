@@ -1,220 +1,704 @@
 import numpy as np
-# Define Variables here
-
-print('1 a) A 15-lb block B starts from rest and slides on the 25-lb wedge A, which is supported by a horizontal surface. Neglecting friction, determine the magnitude velocity [ft/s] of B relative to A after it has slid 3 ft down the inclined surface of the wedge. Rounded to the nearest tenth.')
-
-print('1 b) Calculate the corresponding velocity [ft/s] of A. Rounded to the nearest tenth.')
-
-print('2 a) A 40-lb block B is suspended from a 6-ft cord attached to a 60-lb cart A, which may roll freely on a frictionless, horizontal track. If the system is released from rest in the position shown, determine the velocity of A [ft/s] as B passes directly under A. Rounded to the nearest tenth.')
-
-print('2 b) Calculate the velocity of B [ft/s] as B passes directly under A. Rounded to the nearest tenth.')
-
-print('In a game of pool, ball A is moving with a velocity v_0 with a magnitude of 15 ft/s when it strikes balls B and C, which are at rest and aligned as shown in the image below. Knowing that after the collision the three balls move in the directions indicated and assuming frictionless surfaces and perfectly elastic impact (e.g. , conservation of energy).')
-print('3 a) Determine the magnitude of the velocity [ft/s] of ball A. Rounded to the nearest tenth.')
-
-print('3 b) Determine the velocity [ft/s] of ball B. Rounded to the nearest tenth.')
-
-print('3 c) Determine the velocity [ft/s] of ball C. Rounded to the nearest tenth.')
-
-print('In a game of pool, ball A is moving with a velocity v_0 with a magnitude of 15 ft/s when it strikes balls B and C, which are at rest and aligned as shown in the image below. Knowing that after the collision the three balls move in the directions indicated and assuming frictionless surfaces and perfectly elastic impact (e.g. , conservation of energy).')
-print('4 a) Determine the magnitude of the velocity [ft/s] of ball A. Rounded to the nearest tenth.')
-
-print('4 b) Determine the velocity [ft/s] of ball B. Rounded to the nearest tenth.')
-
-print('4 c) Determine the velocity [ft/s] of ball C. Rounded to the nearest tenth.')
-
-input_num1 = Element("Question1")
-input_num2 = Element("Question2")
-input_num3 = Element("Question3")
-input_num4 = Element("Question4")
-input_num5 = Element("Question5")
-input_num6 = Element("Question6")
-input_num7 = Element("Question7")
-input_num8 = Element("Question8")
-input_num9 = Element("Question9")
-input_num10 = Element("Question10")
-
-out1 = Element("outputDiv1") 
-out2 = Element("outputDiv2") 
-out3 = Element("outputDiv3") 
-out4 = Element("outputDiv4") 
-out5 = Element("outputDiv5")
-out6 = Element("outputDiv6")
-out7 = Element("outputDiv7") 
-out8 = Element("outputDiv8") 
-out9 = Element("outputDiv9") 
-out10 = Element("outputDiv10") 
+from pyscript import Element
 
 
-def print_num1(*ags, **kws):
-	global pnt1
-	global ans1
-	t1 = (-1*3*2*a2 + np.sqrt( (3*2*a2)**2 -4*(4*3*a1)*(a3*2) )) / (2*4*3*a1)
-	t2 = (-1*3*2*a2 - np.sqrt( (3*2*a2)**2 -4*(4*3*a1)*(a3*2) )) / (2*4*3*a1)
+# ============================================================
+# General settings
+# ============================================================
 
-	if t1 >= 0:
-	    ans1 = round(t1,2)
-	else:
-	    ans1 = round(t2,2)
+NUMBER_OF_QUESTIONS = 10
+G_ENGLISH = 32.2  # ft/s^2
 
-	if input_num1.value=='':
-		out1.write(f"Blank value provided, please try again.")
-	elif input_num1.value == str(ans1):
-		out1.write(f"Correct!")
-		pnt1 = 1
-	else:
-		out1.write(f"You typed in {input_num1.value}, that is not correct")
-		pnt1 = 0
-def print_num2(*ags, **kws):
-	global pnt2
-	ans2 = round(4*a1*ans1**3 + 3*a2*ans1**2 + 2*a3*ans1 + a4,1)
-	
-	if input_num2.value=='':
-		out2.write(f"Blank value provided, please try again.")
-	elif input_num2.value == str(ans2):
-		out2.write(f"Correct!")
-		pnt2 = 1
-	else:
-		out2.write(f"You typed in {input_num2.value}, that is not correct.")
-		pnt2 = 0		
-def print_num3(*ags, **kws):
-	global pnt3
-	ans3 = round(a1*ans1**4 + a2*ans1**3 + a3*ans1**2 + a4*ans1 + a5 ,1)
-	
-	if input_num3.value=='':
-		out3.write(f"Blank value provided, please try again.")
-	elif input_num3.value == str(ans3):
-		out3.write(f"Correct!")
-		pnt3 = 1
-	else:
-		out3.write(f"You typed in {input_num3.value}, that is not correct.")
-		pnt3 = 0
-def print_num4(*ags, **kws):
-	global pnt4
-	global ans4
-	ans4 = round(np.sqrt(v**2-2*a*x),1)
-	if input_num4.value=='':
-		out4.write(f"Blank value provided, please try again.")
-	elif input_num4.value == str(ans4):
-		out4.write(f"Correct!")
-		pnt4 = 1
-	else:
-		out4.write(f"You typed in {input_num4.value}, that is not correct.")
-		pnt4 = 0	
-def print_num5(*ags, **kws):
-	global pnt5
-	ans5 = round(-ans4/a,1)
-	if input_num5.value=='':
-		out5.write(f"Blank value provided, please try again.")
-	elif input_num5.value == str(ans5):
-		out5.write(f"Correct!")
-		pnt5 = 1
-	else:
-		out5.write(f"You typed in {input_num5.value}, that is not correct.")
-		pnt5 = 0	
-
-def print_num6(*ags, **kws):
-	global pnt6
-	ans6 = round(2*x2/t2**2,1)
-	if input_num6.value=='':
-		out6.write(f"Blank value provided, please try again.")
-	elif input_num6.value == str(ans6):
-		out6.write(f"Correct!")
-		pnt6 = 1
-	else:
-		out6.write(f"You typed in {input_num6.value}, that is not correct.")
-		pnt6 = 0
-
-def print_num7(*ags, **kws):
-	global pnt7
-	ans7 = round(2*x2/t2,1)
-	if input_num7.value=='':
-		out7.write(f"Blank value provided, please try again.")
-	elif input_num7.value == str(ans7):
-		out7.write(f"Correct!")
-		pnt7 = 1
-	else:
-		out7.write(f"You typed in {input_num7.value}, that is not correct.")
-		pnt7 = 0
-
-def print_num8(*ags, **kws):
-	global pnt8
-	ans8 = round(2*x2/t2,1)
-	if input_num8.value=='':
-		out8.write(f"Blank value provided, please try again.")
-	elif input_num8.value == str(ans8):
-		out8.write(f"Correct!")
-		pnt8 = 1
-	else:
-		out8.write(f"You typed in {input_num8.value}, that is not correct.")
-		pnt8 = 0
-
-def print_num9(*ags, **kws):
-	global pnt9
-	ans9 = round(2*x2/t2,1)
-	if input_num9.value=='':
-		out9.write(f"Blank value provided, please try again.")
-	elif input_num9.value == str(ans9):
-		out9.write(f"Correct!")
-		pnt9 = 1
-	else:
-		out9.write(f"You typed in {input_num9.value}, that is not correct.")
-		pnt9 = 0
-
-def print_num10(*ags, **kws):
-	global pnt10
-	ans10 = round(2*x2/t2,1)
-	if input_num10.value=='':
-		out10.write(f"Blank value provided, please try again.")
-	elif input_num10.value == str(ans10):
-		out10.write(f"Correct!")
-		pnt10 = 1
-	else:
-		out10.write(f"You typed in {input_num10.value}, that is not correct.")
-		pnt10 = 0
-
-def clear(*ags, **kws):
-	out1 = Element("outputDiv1")
-	out2 = Element("outputDiv2")
-	out3 = Element("outputDiv3")
-	out4 = Element("outputDiv4")
-	out5 = Element("outputDiv5")
-	out6 = Element("outputDiv6")
-	out7 = Element("outputDiv7")
-	out8 = Element("outputDiv8")
-	out9 = Element("outputDiv9")
-	out10 = Element("outputDiv10")
-
-	out1.clear()	
-	out2.clear()
-	out3.clear()
-	out4.clear()
-	out5.clear()
-	out6.clear()
-	out7.clear()
-	out8.clear()
-	out9.clear()
-	out10.clear()
-
-def final_sub(*ags, **kws):
-	out1 = Element("outputDiv1")
-	out2 = Element("outputDiv2")
-	out3 = Element("outputDiv3")
-	out4 = Element("outputDiv4")
-	out5 = Element("outputDiv5")
-	out6 = Element("outputDiv6")
-	out7 = Element("outputDiv7")
-	out8 = Element("outputDiv8")
-	out9 = Element("outputDiv9")
-	out10 = Element("outputDiv10")
-
-	name = Element('student-name')
-	out_final = Element('outputFinal')
-	try:
-		round(((pnt1+pnt2+pnt3+pnt4+pnt5+pnt6+pnt7+pnt8+pnt9+pnt10)/10)*100,1)
-	except NameError:
-		out_final.write(f"You did not finish submitting all questions above. Refresh Page and start again. ")
-	grade = round(((pnt1+pnt2+pnt3+pnt4+pnt5+pnt6+pnt7+pnt8+pnt9+pnt10)/10)*100,1)
-	out_final.write(f" Thank you {name.value}, your answers have been submitted. Your score is: {grade} %")
+# Track the student's score and whether each question was submitted.
+points = [0] * NUMBER_OF_QUESTIONS
+submitted = [False] * NUMBER_OF_QUESTIONS
 
 
+# ============================================================
+# Random-number helper functions
+# ============================================================
+
+def random_integer(base_value, minimum_value=1):
+    """
+    Generate an integer approximately within ±20% of base_value.
+    """
+    lower = int(np.floor(base_value * 0.80))
+    upper = int(np.ceil(base_value * 1.20))
+
+    lower = max(lower, minimum_value)
+
+    return int(np.random.randint(lower, upper + 1))
+
+
+def random_decimal(base_value, decimals=1, minimum_value=0.1):
+    """
+    Generate a decimal approximately within ±20% of base_value.
+    """
+    scale = 10 ** decimals
+
+    lower = int(np.ceil(base_value * 0.80 * scale))
+    upper = int(np.floor(base_value * 1.20 * scale))
+
+    lower = max(lower, int(np.ceil(minimum_value * scale)))
+
+    return float(np.random.randint(lower, upper + 1) / scale)
+
+
+def random_angle(base_angle):
+    """
+    Generate an integer angle approximately within ±20% of the
+    magnitude of base_angle while preserving its general sign.
+    """
+    if base_angle == 0:
+        return 0
+
+    magnitude = abs(base_angle)
+
+    lower = int(np.floor(magnitude * 0.80))
+    upper = int(np.ceil(magnitude * 1.20))
+
+    generated_angle = int(np.random.randint(lower, upper + 1))
+
+    if base_angle < 0:
+        return -generated_angle
+
+    return generated_angle
+
+
+def clean_number(value):
+    """
+    Format a number without unnecessary trailing zeros.
+    """
+    value = float(value)
+
+    if value.is_integer():
+        return str(int(value))
+
+    return f"{value:g}"
+
+
+def direction_description(angle):
+    """
+    Return a readable description of an angle measured from the
+    positive x-axis.
+    """
+    if angle > 0:
+        return (
+            f"{clean_number(angle)}° counterclockwise from the "
+            f"positive x-axis"
+        )
+
+    if angle < 0:
+        return (
+            f"{clean_number(abs(angle))}° clockwise from the "
+            f"positive x-axis"
+        )
+
+    return "along the positive x-axis"
+
+
+# ============================================================
+# Problem 1
+# Block sliding on a freely moving wedge
+# ============================================================
+
+# Randomized values based on the original 15-lb block,
+# 25-lb wedge, and 3-ft sliding distance.
+weight_block_1 = random_integer(15, minimum_value=5)
+weight_wedge_1 = random_integer(25, minimum_value=5)
+slide_distance_1 = random_decimal(
+    3.0,
+    decimals=1,
+    minimum_value=1.0
+)
+
+# The original question referred to a missing diagram. An angle is
+# explicitly generated and included so the problem is self-contained.
+wedge_angle_1 = random_integer(30, minimum_value=10)
+theta_1 = np.radians(wedge_angle_1)
+
+# Let u be the velocity of block B relative to wedge A.
+#
+# Horizontal momentum:
+#
+# (W_A/g)V_A + (W_B/g)(V_A + u cos(theta)) = 0
+#
+# Therefore:
+#
+# V_A = -W_B/(W_A + W_B) * u cos(theta)
+#
+# Conservation of energy gives:
+#
+# W_B*s*sin(theta)
+#   = (1/2g)[W_A*V_A^2 + W_B*v_B^2]
+#
+# Solving for u:
+effective_weight_1 = weight_block_1 * (
+    1.0
+    - (
+        weight_block_1
+        / (weight_wedge_1 + weight_block_1)
+    ) * np.cos(theta_1) ** 2
+)
+
+relative_velocity_1 = np.sqrt(
+    (
+        2.0
+        * G_ENGLISH
+        * weight_block_1
+        * slide_distance_1
+        * np.sin(theta_1)
+    )
+    / effective_weight_1
+)
+
+wedge_velocity_1 = (
+    weight_block_1
+    / (weight_wedge_1 + weight_block_1)
+) * relative_velocity_1 * np.cos(theta_1)
+
+answer1 = round(float(relative_velocity_1), 1)
+answer2 = round(float(wedge_velocity_1), 1)
+
+
+# ============================================================
+# Problem 2
+# Pendulum attached to a freely rolling cart
+# ============================================================
+
+weight_block_2 = random_integer(40, minimum_value=10)
+weight_cart_2 = random_integer(60, minimum_value=10)
+cord_length_2 = random_decimal(
+    6.0,
+    decimals=1,
+    minimum_value=2.0
+)
+
+# The initial cord angle was provided by a missing diagram in the
+# original assignment. It is included explicitly here.
+initial_angle_2 = random_integer(45, minimum_value=15)
+theta_2 = np.radians(initial_angle_2)
+
+# Vertical drop of block B.
+vertical_drop_2 = cord_length_2 * (
+    1.0 - np.cos(theta_2)
+)
+
+# At the bottom, let u be B's velocity relative to the cart.
+#
+# Horizontal momentum:
+#
+# W_A*v_A + W_B*v_B = 0
+#
+# and
+#
+# v_B - v_A = u
+#
+# Conservation of energy gives:
+#
+# u^2 = 2*g*h*(W_A + W_B)/W_A
+relative_velocity_2 = np.sqrt(
+    2.0
+    * G_ENGLISH
+    * vertical_drop_2
+    * (weight_cart_2 + weight_block_2)
+    / weight_cart_2
+)
+
+cart_velocity_2 = (
+    weight_block_2
+    / (weight_cart_2 + weight_block_2)
+) * relative_velocity_2
+
+block_velocity_2 = (
+    weight_cart_2
+    / (weight_cart_2 + weight_block_2)
+) * relative_velocity_2
+
+answer3 = round(float(cart_velocity_2), 1)
+answer4 = round(float(block_velocity_2), 1)
+
+
+# ============================================================
+# Pool-ball collision generator
+# ============================================================
+
+def solve_pool_collision(initial_speed, angles_degrees):
+    """
+    Solve for the three outgoing ball speeds.
+
+    All three balls have identical masses. Ball A initially travels
+    along the positive x-axis, while balls B and C are initially at
+    rest.
+
+    The outgoing directions are specified by angles measured from
+    the positive x-axis.
+
+    The equations are:
+
+        U @ speeds = [initial_speed, 0]
+
+    and
+
+        speed_A^2 + speed_B^2 + speed_C^2 = initial_speed^2
+
+    Linear momentum provides two equations. Conservation of kinetic
+    energy provides the third equation.
+    """
+    angles_radians = np.radians(
+        np.array(angles_degrees, dtype=float)
+    )
+
+    direction_matrix = np.array([
+        np.cos(angles_radians),
+        np.sin(angles_radians)
+    ])
+
+    initial_momentum_per_unit_mass = np.array([
+        float(initial_speed),
+        0.0
+    ])
+
+    # Minimum-norm solution of the two momentum equations.
+    minimum_solution = (
+        direction_matrix.T
+        @ np.linalg.solve(
+            direction_matrix @ direction_matrix.T,
+            initial_momentum_per_unit_mass
+        )
+    )
+
+    # A vector in the null space of the 2-by-3 direction matrix.
+    null_vector = np.cross(
+        direction_matrix[0],
+        direction_matrix[1]
+    )
+
+    null_norm_squared = float(
+        np.dot(null_vector, null_vector)
+    )
+
+    if null_norm_squared < 1.0e-10:
+        return None
+
+    remaining_energy = (
+        initial_speed ** 2
+        - float(np.dot(minimum_solution, minimum_solution))
+    )
+
+    if remaining_energy <= 0:
+        return None
+
+    root_size = np.sqrt(
+        remaining_energy / null_norm_squared
+    )
+
+    candidate_1 = minimum_solution + root_size * null_vector
+    candidate_2 = minimum_solution - root_size * null_vector
+
+    candidates = [candidate_1, candidate_2]
+
+    for candidate in candidates:
+        # Every requested result should represent motion in the
+        # stated outgoing direction, so each speed must be positive.
+        if np.all(candidate > 0.25):
+            return candidate
+
+    return None
+
+
+def generate_pool_problem(base_angles):
+    """
+    Generate randomized incoming speed and outgoing directions for
+    a physically valid elastic three-ball collision.
+    """
+    for attempt in range(2000):
+        initial_speed = random_integer(15, minimum_value=5)
+
+        generated_angles = [
+            random_angle(base_angles[0]),
+            random_angle(base_angles[1]),
+            random_angle(base_angles[2])
+        ]
+
+        speeds = solve_pool_collision(
+            initial_speed,
+            generated_angles
+        )
+
+        if speeds is None:
+            continue
+
+        # Avoid generated cases with excessively large or nearly
+        # stationary outgoing speeds.
+        if np.any(speeds > 2.0 * initial_speed):
+            continue
+
+        return (
+            initial_speed,
+            generated_angles,
+            speeds
+        )
+
+    # A safe fallback in the unlikely event random generation does
+    # not produce a suitable case.
+    fallback_speed = 15
+    fallback_angles = list(base_angles)
+    fallback_speeds = solve_pool_collision(
+        fallback_speed,
+        fallback_angles
+    )
+
+    if fallback_speeds is None:
+        raise ValueError(
+            "Unable to generate a valid pool-ball collision."
+        )
+
+    return (
+        fallback_speed,
+        fallback_angles,
+        fallback_speeds
+    )
+
+
+# ============================================================
+# Problem 3
+# First three-ball elastic collision
+# ============================================================
+
+# The outgoing direction angles are randomized around a valid
+# representative collision configuration.
+(
+    initial_speed_3,
+    outgoing_angles_3,
+    outgoing_speeds_3
+) = generate_pool_problem([18, 106, -55])
+
+angle_A_3 = outgoing_angles_3[0]
+angle_B_3 = outgoing_angles_3[1]
+angle_C_3 = outgoing_angles_3[2]
+
+speed_A_3 = float(outgoing_speeds_3[0])
+speed_B_3 = float(outgoing_speeds_3[1])
+speed_C_3 = float(outgoing_speeds_3[2])
+
+answer5 = round(speed_A_3, 1)
+answer6 = round(speed_B_3, 1)
+answer7 = round(speed_C_3, 1)
+
+
+# ============================================================
+# Problem 4
+# Second three-ball elastic collision
+# ============================================================
+
+(
+    initial_speed_4,
+    outgoing_angles_4,
+    outgoing_speeds_4
+) = generate_pool_problem([26, 77, -61])
+
+angle_A_4 = outgoing_angles_4[0]
+angle_B_4 = outgoing_angles_4[1]
+angle_C_4 = outgoing_angles_4[2]
+
+speed_A_4 = float(outgoing_speeds_4[0])
+speed_B_4 = float(outgoing_speeds_4[1])
+speed_C_4 = float(outgoing_speeds_4[2])
+
+answer8 = round(speed_A_4, 1)
+answer9 = round(speed_B_4, 1)
+answer10 = round(speed_C_4, 1)
+
+
+# ============================================================
+# Write the randomized questions to the HTML page
+# ============================================================
+
+Element("Q1a").write(
+    f"1 a) A {weight_block_1}-lb block B starts from rest and "
+    f"slides on a {weight_wedge_1}-lb wedge A. The wedge is "
+    f"supported by a frictionless horizontal surface, and its "
+    f"inclined surface makes an angle of {wedge_angle_1}° with "
+    f"the horizontal. Neglecting friction, determine the magnitude "
+    f"of the velocity of B relative to A [ft/s] after B has slid "
+    f"{clean_number(slide_distance_1)} ft down the inclined "
+    f"surface. Round to the nearest tenth."
+)
+
+Element("Q1b").write(
+    f"1 b) For the {weight_block_1}-lb block and "
+    f"{weight_wedge_1}-lb wedge described in part 1 a, calculate "
+    f"the corresponding magnitude of the velocity of wedge A "
+    f"[ft/s]. Round to the nearest tenth."
+)
+
+Element("Q2a").write(
+    f"2 a) A {weight_block_2}-lb block B is suspended from a "
+    f"{clean_number(cord_length_2)}-ft cord attached to a "
+    f"{weight_cart_2}-lb cart A. The cart may roll freely on a "
+    f"frictionless horizontal track. Initially, the cord makes an "
+    f"angle of {initial_angle_2}° with the downward vertical, and "
+    f"the system is released from rest. Determine the magnitude of "
+    f"the velocity of cart A [ft/s] as B passes directly under the "
+    f"cord attachment point. Round to the nearest tenth."
+)
+
+Element("Q2b").write(
+    f"2 b) For the {weight_block_2}-lb block and "
+    f"{weight_cart_2}-lb cart described in part 2 a, calculate the "
+    f"magnitude of the velocity of block B [ft/s] as B passes "
+    f"directly under the cord attachment point. Round to the "
+    f"nearest tenth."
+)
+
+Element("Q3a").write(
+    f"3 a) In a game of pool, three balls A, B, and C have "
+    f"identical masses. Ball A initially moves along the positive "
+    f"x-axis at {initial_speed_3} ft/s, while balls B and C are at "
+    f"rest. After a perfectly elastic collision, ball A moves "
+    f"{direction_description(angle_A_3)}, ball B moves "
+    f"{direction_description(angle_B_3)}, and ball C moves "
+    f"{direction_description(angle_C_3)}. Neglect friction. "
+    f"Determine the magnitude of the velocity of ball A [ft/s]. "
+    f"Round to the nearest tenth."
+)
+
+Element("Q3b").write(
+    f"3 b) For the perfectly elastic collision described in "
+    f"part 3 a, determine the magnitude of the velocity of ball B "
+    f"[ft/s]. Round to the nearest tenth."
+)
+
+Element("Q3c").write(
+    f"3 c) For the perfectly elastic collision described in "
+    f"part 3 a, determine the magnitude of the velocity of ball C "
+    f"[ft/s]. Round to the nearest tenth."
+)
+
+Element("Q4a").write(
+    f"4 a) In a second game of pool, three balls A, B, and C have "
+    f"identical masses. Ball A initially moves along the positive "
+    f"x-axis at {initial_speed_4} ft/s, while balls B and C are at "
+    f"rest. After a perfectly elastic collision, ball A moves "
+    f"{direction_description(angle_A_4)}, ball B moves "
+    f"{direction_description(angle_B_4)}, and ball C moves "
+    f"{direction_description(angle_C_4)}. Neglect friction. "
+    f"Determine the magnitude of the velocity of ball A [ft/s]. "
+    f"Round to the nearest tenth."
+)
+
+Element("Q4b").write(
+    f"4 b) For the perfectly elastic collision described in "
+    f"part 4 a, determine the magnitude of the velocity of ball B "
+    f"[ft/s]. Round to the nearest tenth."
+)
+
+Element("Q4c").write(
+    f"4 c) For the perfectly elastic collision described in "
+    f"part 4 a, determine the magnitude of the velocity of ball C "
+    f"[ft/s]. Round to the nearest tenth."
+)
+
+
+# ============================================================
+# Connect Python to the HTML elements
+# ============================================================
+
+inputs = [
+    Element("Question1"),
+    Element("Question2"),
+    Element("Question3"),
+    Element("Question4"),
+    Element("Question5"),
+    Element("Question6"),
+    Element("Question7"),
+    Element("Question8"),
+    Element("Question9"),
+    Element("Question10")
+]
+
+outputs = [
+    Element("outputDiv1"),
+    Element("outputDiv2"),
+    Element("outputDiv3"),
+    Element("outputDiv4"),
+    Element("outputDiv5"),
+    Element("outputDiv6"),
+    Element("outputDiv7"),
+    Element("outputDiv8"),
+    Element("outputDiv9"),
+    Element("outputDiv10")
+]
+
+answers = [
+    answer1,
+    answer2,
+    answer3,
+    answer4,
+    answer5,
+    answer6,
+    answer7,
+    answer8,
+    answer9,
+    answer10
+]
+
+
+# ============================================================
+# Answer checking
+# ============================================================
+
+def check_answer(question_index):
+    """
+    Check one submitted answer and update its score.
+    """
+    entered_text = inputs[question_index].value.strip()
+    output = outputs[question_index]
+    correct_answer = float(answers[question_index])
+
+    output.clear()
+
+    if entered_text == "":
+        output.write(
+            "Blank value provided, please try again."
+        )
+        points[question_index] = 0
+        submitted[question_index] = False
+        return
+
+    try:
+        entered_answer = float(entered_text)
+    except ValueError:
+        output.write(
+            f"You typed in {entered_text}. "
+            f"Please enter a numeric value."
+        )
+        points[question_index] = 0
+        submitted[question_index] = True
+        return
+
+    submitted[question_index] = True
+
+    # Accept equivalent numeric entries such as 2, 2.0, and 2.00.
+    if np.isclose(
+        entered_answer,
+        correct_answer,
+        rtol=0.0,
+        atol=1.0e-9
+    ):
+        output.write("Correct!")
+        points[question_index] = 1
+    else:
+        output.write(
+            f"You typed in {entered_text}; that is not correct."
+        )
+        points[question_index] = 0
+
+
+# ============================================================
+# Individual question-submit functions
+# ============================================================
+
+def print_num1(*args, **kwargs):
+    check_answer(0)
+
+
+def print_num2(*args, **kwargs):
+    check_answer(1)
+
+
+def print_num3(*args, **kwargs):
+    check_answer(2)
+
+
+def print_num4(*args, **kwargs):
+    check_answer(3)
+
+
+def print_num5(*args, **kwargs):
+    check_answer(4)
+
+
+def print_num6(*args, **kwargs):
+    check_answer(5)
+
+
+def print_num7(*args, **kwargs):
+    check_answer(6)
+
+
+def print_num8(*args, **kwargs):
+    check_answer(7)
+
+
+def print_num9(*args, **kwargs):
+    check_answer(8)
+
+
+def print_num10(*args, **kwargs):
+    check_answer(9)
+
+
+# ============================================================
+# Clear and final-submission functions
+# ============================================================
+
+def clear(*args, **kwargs):
+    """
+    Clear the answer inputs, feedback messages, final message,
+    and recorded scores.
+    """
+    for input_element in inputs:
+        input_element.element.value = ""
+
+    for output in outputs:
+        output.clear()
+
+    Element("outputFinal").clear()
+
+    for index in range(NUMBER_OF_QUESTIONS):
+        points[index] = 0
+        submitted[index] = False
+
+
+def final_sub(*args, **kwargs):
+    """
+    Verify that all questions were submitted, then calculate and
+    display the student's grade.
+    """
+    name = Element("student-name").value.strip()
+    out_final = Element("outputFinal")
+
+    out_final.clear()
+
+    if name == "":
+        out_final.write(
+            "Please enter your name before submitting your answers."
+        )
+        return
+
+    unanswered_questions = [
+        str(index + 1)
+        for index in range(NUMBER_OF_QUESTIONS)
+        if not submitted[index]
+    ]
+
+    if unanswered_questions:
+        out_final.write(
+            "You have not submitted all questions. "
+            "Please submit question(s): "
+            + ", ".join(unanswered_questions)
+            + "."
+        )
+        return
+
+    grade = round(
+        (sum(points) / NUMBER_OF_QUESTIONS) * 100.0,
+        1
+    )
+
+    out_final.write(
+        f"Thank you {name}, your answers have been submitted. "
+        f"Your score is: {grade}%"
+    )
